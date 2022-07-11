@@ -1,0 +1,24 @@
+<mvc:View controllerName="sustainabilitypro.controller.SD2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+    <Page
+		id="sd2fragments"
+        showNavButton="true"
+        navButtonPress="onNavPress" 
+		title="Goal Creation">
+		
+		<footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button id="edit" text="Edit" visible="false" press="handleEditPress"/>
+				<Button id="save" text="Save" type="Emphasized" visible="true" press="onSaveSubmit"/>
+                <Button id="submit" text="Submit" type="Emphasized" visible="false" press="onSaveSubmit"/>
+				<Button id="cancel" text="Cancel" visible="true" press="handleCancelPress"/>
+			</OverflowToolbar>
+		</footer>		
+		
+	</Page>
+</mvc:View>

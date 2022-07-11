@@ -1,0 +1,152 @@
+TemplateID,ClientID,FieldID,FieldName,FieldDescription,FieldSRN
+TID001,CL0001,1,Supplier,Supplier Name,1
+TID001,CL0001,2,SupplierNumber,SupplierNumber,2
+TID001,CL0001,3,BusinessUnit,BusinessUnit,3
+TID001,CL0001,4,CategoryLevel1,CategoryLevel1,4
+TID001,CL0001,5,CategoryLevel2,CategoryLevel2,5
+TID001,CL0001,6,Country,Country Location,6
+TID001,CL0001,7,PlantSite,Plant Site,7
+TID001,CL0001,8,EVID,EcoVidus ID,8
+TID001,CL0001,9,InvCompName,Invited Company Name,9
+TID001,CL0001,10,LegalEntName,Legal entity name,10
+TID001,CL0001,11,ScopeChange,ScopeChange,11
+TID001,CL0001,12,SCTCompName,Scope change Target Company name,12
+TID001,CL0001,13,CurrentStage,Current stage,13
+TID001,CL0001,14,StageStatus,Stage status,14
+TID001,CL0001,15,ReqOutcome,Request outcome,15
+TID001,CL0001,16,SharingStatus,Sharing status,16
+TID001,CL0001,17,OverallScore,Overall score,17
+TID001,CL0001,18,LSPubDt,Latest scorecard publication date,18
+TID001,CL0001,19,EnvScore,Environment score,19
+TID001,CL0001,20,LHRightsScore,Labor & Human Rights score,20
+TID001,CL0001,21,EthicsScore,Ethics score,21
+TID001,CL0001,22,SProcScore,Sustainable Procurement score,22
+TID001,CL0001,23,AHOverallScore,Assessment history - Overall score,23
+TID001,CL0001,24,AHPubDt,Assessment history - Publication date,24
+TID001,CL0001,25,AHEnvScore,Assessment history - Environment score,25
+TID001,CL0001,26,AHLHRightsScore,Assessment history - Labor & Human Rights score,26
+TID001,CL0001,27,AHEthicsScore,Assessment history - Ethics score,27
+TID001,CL0001,28,AHSProScore,Assessment history - Sustainable Procurement score,28
+TID001,CL0001,29,ScoreValidity,Scorecard validity,29
+TID001,CL0001,30,DeclinedDt,Declined date,30
+TID001,CL0001,31,CampaignName,Campaign name,31
+TID001,CL0001,32,InvDt,Invitation date,32
+TID001,CL0001,33,ReqDeadline,Request deadline,33
+TID001,CL0001,34,ConLogEntry,Contact log entry,34
+TID001,CL0001,35,ConLogEntryDt,Contact log entry date,35
+TID001,CL0001,36,ActionReqAlert,Action required alert,36
+TID001,CL0001,37,ActionReqDetails,Action required details,37
+TID001,CL0001,38,ActionReqDt,Action required date,38
+TID001,CL0001,39,Origin,Origin,39
+TID001,CL0001,40,ParentCompName,Parent company name,40
+TID001,CL0001,41,Phone,Phone,41
+TID001,CL0001,42,Address1,Address 1,42
+TID001,CL0001,43,Address2,Address 2,43
+TID001,CL0001,44,City,City,44
+TID001,CL0001,45,RegionState,Region/State,45
+TID001,CL0001,46,PCFirstName,Primary contact first name,46
+TID001,CL0001,47,PCLastName,Primary contact last name,47
+TID001,CL0001,48,PCEmail,Primary contact email,48
+TID001,CL0001,49,PCPhone,Primary contact phone,49
+TID001,CL0001,50,RCName,Requesting contact name,50
+TID001,CL0001,51,RCEmail,Requesting contact email,51
+TID001,CL0001,52,AStatus,Activation status,52
+TID001,CL0001,53,NumbTags,Number of tags,53
+TID001,CL0001,54,NumbDocs,Number of documents,54
+TID001,CL0001,55,Industry,Industry,55
+TID001,CL0001,56,RCOp,Risk country operations,56
+TID001,CL0001,57,Company size,Company size,57
+TID001,CL0001,58,VAT,VAT,58
+TID001,CL0001,59,TaxID,Tax ID,59
+TID001,CL0001,60,IntID,Integration ID,60
+TID001,CL0001,61,GESSup,GES Suppliers,61
+TID001,CL0001,62,IEF,I&EF,62
+TID001,CL0001,63,ISSupp,IS Suppliers,63
+TID001,CL0001,64,MediaSup,Media Suppliers,64
+TID001,CL0001,65,MKTG,MKTG,65
+TID001,CL0001,66,OBU,OBU,66
+TID001,CL0001,67,Operations,Operations,67
+TID001,CL0001,68,RD,R&D,68
+TID001,CL0001,69,Top250,Top250,69
+TID001,CL0001,70,AltCompNames,Alternative company names,70
+TID002,CL0001,1,AZResPerson,AZ Responsible person,1
+TID002,CL0001,2,ReqSuppName,Requested supplier name,2
+TID002,CL0001,3,RefNo,Reference number,3
+TID002,CL0001,4,IntMemCName,Internal member contact name,4
+TID002,CL0001,5,EVStatus,Was not Assessed - EcoVadis status,5
+TID002,CL0001,6,IntDivision,Internal division,6
+TID002,CL0001,7,IntRegion,Internal region,7
+TID002,CL0001,8,DisOrgName,Disclosing organisation name,8
+TID002,CL0001,9,ResStatus,Response status,9
+TID002,CL0001,10,PNB,Public / Non public,10
+TID002,CL0001,11,DtSub,Date submitted,11
+TID002,CL0001,12,ExtDt,Extension date,12
+TID002,CL0001,13,NoCustReq,Number of customer requests,13
+TID002,CL0001,14,InvbyInvesrs,Invited by investors,14
+TID002,CL0001,15,PYrRespStatus,Previous year response status,15
+TID002,CL0001,16, HQCountry, HQ country,16
+TID002,CL0001,17,CDPACSind,CDP ACS industry,17
+TID002,CL0001,18,CDPACSActGrp,CDP ACS activity group ,18
+TID002,CL0001,19,CDPACSAct,CDP ACS activity ,19
+TID002,CL0001,20,QueSect,Questionnaire sector,20
+TID002,CL0001,21,SME,SME,21
+TID002,CL0001,22,QuesVs,Questionnaire version,22
+TID002,CL0001,23,CnctFName,Contact first name,23
+TID002,CL0001,24,CnctLName,Contact last name,24
+TID002,CL0001,25,Contact email,Contact email,25
+TID002,CL0001,26,CnctLanguage,Contact language,26
+TID002,CL0001,27,MainUsrFName,Main user first name,27
+TID002,CL0001,28,MainUsrLName,Main user last name,28
+TID002,CL0001,29,MainUsrEmail,Main user email,29
+TID002,CL0001,30,MainUsrLanguage,Main user language,30
+TID002,CL0001,31,CDPReqOrgNo,CDP Requested org number,31
+TID002,CL0001,32,CDPInvOrgNo,CDP Invited oyrg number,32
+TID002,CL0001,33,CDPMemNo,CDP member number,33
+TID003,CL0001,1,AZResPerson,AZ Responsible person,1
+TID003,CL0001,2,ReqSuppName,Requested supplier name,2
+TID003,CL0001,3,RefNo,Reference number,3
+TID003,CL0001,4,EVStatus,Was not Assessed - EcoVadis status,4
+TID003,CL0001,5,IntDivision,Internal division,5
+TID003,CL0001,6,IntRegion,Internal region,6
+TID003,CL0001,7,DisOrgName,Disclosing organisation name,7
+TID003,CL0001,8,ResStatus,Response status,8
+TID003,CL0001,9,PNB,Public / Non public,9
+TID003,CL0001,10,DtSub,Date submitted,10
+TID003,CL0001,11,ExtDt,Extension date,11
+TID003,CL0001,12,NoCustReq,Number of customer requests,12
+TID003,CL0001,13,PYrRespStatus,Previous year response status,13
+TID003,CL0001,14,CDPACSind,CDP ACS industry,14
+TID003,CL0001,15,CDPACSActGrp,CDP ACS activity group ,15
+TID003,CL0001,16,CDPACSAct,CDP ACS activity ,16
+TID003,CL0001,17,QueSect,Questionnaire sector,17
+TID003,CL0001,18,SME,SME,18
+TID003,CL0001,19,QuesVs,Questionnaire version,19
+TID003,CL0001,20,CDPReqOrgNo,CDP requested org number,20
+TID003,CL0001,21,CDPInvOrgNo,CDP invited org number,21
+TID003,CL0001,22,CDPMemNo,CDP member number,22
+TID004,CL0001,1,Categories?,Categories?,1
+TID004,CL0001,2,CatLeads,Category Leads,2
+TID004,CL0001,3,GCM,GCM,3
+TID004,CL0001,4,SuppManager,GES/BES Supplier Manager (where applicable),4
+TID004,CL0001,5,Suppliers?,Suppliers?,5
+TID004,CL0001,6,ParentSupp,Parent Supplier,6
+TID004,CL0001,7,Spend,Spend current year ,7
+TID004,CL0001,8,TotalCO2e,Total tCO2e emission in  2020 ,8
+TID004,CL0001,9,EVID,EVID,9
+TID004,CL0001,10,NameEcoVadis,Name on EcoVadis,10
+TID004,CL0001,11,EVScore,EcoVadis Score,11
+TID004,CL0001,12,ScoreValidity,Scorecard validity,12
+TID004,CL0001,13,CDPInvParentComp,CDP invited parent company,13
+TID004,CL0001,14,CDPProg,CDP Progress as of August 2nd,14
+TID004,CL0001,15,SBTiName,SBTi name,15
+TID004,CL0001,16,SBTiStatus,SBTi status,16
+TID004,CL0001,17,Date,Date,17
+TID004,CL0001,18,RollOut,In 2021 Roll out,18
+TID004,CL0001,19,SuppScope1N2Commit,Supplier Scope 1 &2 Commitments,19
+TID004,CL0001,20,SuppScope3Commit,Supplier Scope 3 Commitments,20
+TID004,CL0001,21,AZBusStakeholdGroupDef,AZ Business Stakeholder Group Defined,21
+TID004,CL0001,22,ConsidMTP,Considerations into MTP,22
+TID004,CL0001,23,PrimaryDecarbonArea,Primary Decarbonization Area,23
+TID004,CL0001,24,ActPlanAZPlace ?,Action Plan with AZ in place ?,24
+TID004,CL0001,25,CarbonOffRisk,Carbon Offsetting Risk,25
+TID004,CL0001,26,CONFIAchieveZeroBy2030,CONFIDENCE in achieving Carbon Zero by 2030,26

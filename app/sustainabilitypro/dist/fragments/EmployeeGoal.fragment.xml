@@ -1,0 +1,25 @@
+<core:FragmentDefinition
+	xmlns="sap.ui.comp.valuehelpdialog"
+	xmlns:m="sap.m"
+	xmlns:smartFilterBar="sap.ui.comp.smartfilterbar"
+	xmlns:core="sap.ui.core">
+	<ValueHelpDialog
+		title="Employees"
+		supportRanges="true"
+        tokenDisplayBehaviour="descriptionOnly"
+		key="EmployeeName"
+        descriptionKey="EmployeeName"
+	>
+    <buttons>
+    <m:Button text="Assign" type="Emphasized" press="onEmployeeAssign"/>
+    <m:Button text="Cancel" press="onEmployeeDialogClose"/>
+    </buttons>
+		<filterBar>
+			<smartFilterBar:SmartFilterBar id="empSmartFilterBar" persistencyKey="UniqueAndStablePersistencyKey"
+			considerSelectionVariants="true" entitySet="EmployeeGoal" enableBasicSearch="true" basicSearchFieldName="EmployeeID" search=".onFilterBarSearch" showClearButton="true">
+			<!-- layout data used to make the table growing but the filter bar fixed -->
+
+		    </smartFilterBar:SmartFilterBar>
+		</filterBar>
+	</ValueHelpDialog>
+</core:FragmentDefinition>

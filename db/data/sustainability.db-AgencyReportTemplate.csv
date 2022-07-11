@@ -1,0 +1,5 @@
+ClientID,TemplateID,Agency,TemplateName,TemplateDescription,TemplateType
+CL0001,TID001,EcoVadis,EcoVidusTemplate,Template by EcoVadus,External 
+CL0001,TID002,CDP,CDPProgDataReport_AZ,CDP Progress Data Report,Internal
+CL0001,TID003,CDP,CDPStdDataReport,CDP Standard Agency Data Report,Internal
+CL0001,TID004,CDP,ListTopRnDOpsSup_AZ,List of top R&D and Ops suppliers_AZ,Internal

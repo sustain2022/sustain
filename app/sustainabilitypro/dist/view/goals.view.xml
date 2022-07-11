@@ -1,0 +1,122 @@
+<mvc:View controllerName="sustainabilitypro.controller.goals"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.m">
+
+    <Page title="Goals" backgroundDesign="List">
+        <Panel expandable="true" headerText="Economic" width="auto" class="sapUiResponsiveMargin">
+            <content>
+                <Table id ="GoalsTable1" width="95%" items="{path: '/GoalHeader', filters: [{path: 'ImpactCategory', operator: 'EQ', value1: 'Economical'}]}" class="sapUiResponsiveMargin">
+                    <columns>
+                        <Column>
+                            <Text text="Visibility" />
+                        </Column>
+                        <Column>
+                            <Text text="Goal Name" />
+                        </Column>
+                        <Column>
+                            <Text text="Begin Date" />
+                        </Column>
+                        <Column>
+                            <Text text="End Date" />
+                        </Column>
+                        <Column>
+                            <Text text="%Complete" />
+                        </Column>
+                        <Column>
+                            <Text text="Status" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Middle" type="Navigation" press="showGoalDetails">
+                            <cells>
+                                <Text text="{Visibility}"/>
+                                <Text text="{GoalName}" />
+                                <Text text="{path:'BeginDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <Text text="{path:'EndDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <ProgressIndicator percentValue="{GoalCompletion}" displayValue="{GoalCompletion}%" showValue="true" state="Information"/>
+                                <Text text="{path:'GoalStaus_Biz',formatter: '.setGoalStatus'}" />
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Panel>
+        <Panel expandable="true" headerText="Environmental" width="auto" class="sapUiResponsiveMargin">
+            <content>
+                <Table id ="GoalsTable2" width="95%" items="{path: '/GoalHeader', filters: [{path: 'ImpactCategory', operator: 'EQ', value1: 'Environmental'}]}" class="sapUiResponsiveMargin">
+                    <columns>
+                        <Column>
+                            <Text text="Visibility" />
+                        </Column>
+                        <Column>
+                            <Text text="Goal Name" />
+                        </Column>
+                        <Column>
+                            <Text text="Begin Date" />
+                        </Column>
+                        <Column>
+                            <Text text="End Date" />
+                        </Column>
+                        <Column>
+                            <Text text="%Complete" />
+                        </Column>
+                        <Column>
+                            <Text text="Status" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Middle" type="Navigation" press="showGoalDetails">
+                            <cells>
+                                <Text text="{Visibility}"/>
+                                <Text text="{GoalName}" />
+                                <Text text="{path:'BeginDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <Text text="{path:'EndDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <ProgressIndicator percentValue="{GoalCompletion}" displayValue="{GoalCompletion}%" showValue="true" state="Information"/>
+                                <Text text="{path:'GoalStaus_Biz',formatter: '.setGoalStatus'}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Panel>
+        <Panel expandable="true" headerText="Social" width="auto" class="sapUiResponsiveMargin">
+            <content>
+                <Table id ="GoalsTable3" width="95%" items="{path: '/GoalHeader', filters: [{path: 'ImpactCategory', operator: 'EQ', value1: 'Social'}]}" class="sapUiResponsiveMargin">
+                    <columns>
+                        <Column>
+                            <Text text="Visibility" />
+                        </Column>
+                        <Column>
+                            <Text text="Goal Name" />
+                        </Column>
+                        <Column>
+                            <Text text="Begin Date" />
+                        </Column>
+                        <Column>
+                            <Text text="End Date" />
+                        </Column>
+                        <Column>
+                            <Text text="%Complete" />
+                        </Column>
+                        <Column>
+                            <Text text="Status" />
+                        </Column>
+                    </columns>
+                    <items>
+                        <ColumnListItem vAlign="Middle" type="Navigation" press="showGoalDetails">
+                            <cells>
+                                <Text text="{Visibility}"/>
+                                <Text text="{GoalName}" />
+                                <Text text="{path:'BeginDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <Text text="{path:'EndDate', type: 'sap.ui.model.odata.type.Date'}"/>
+                                <ProgressIndicator percentValue="{GoalCompletion}" displayValue="{GoalCompletion}%" showValue="true" state="Information"/>
+                                <Text text="{path:'GoalStaus_Biz',formatter: '.setGoalStatus'}"/>
+                            </cells>
+                        </ColumnListItem>
+                    </items>
+                </Table>
+            </content>
+        </Panel>
+    </Page>
+</mvc:View>

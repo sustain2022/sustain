@@ -1,0 +1,63 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_EMPLOYEEUSER",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-EmployeeUser.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "CREATEDAT",
+          "CREATEDBY",
+          "MODIFIEDAT",
+          "MODIFIEDBY",
+          "CLIENTID",
+          "EMPLOYEEID",
+          "USERID",
+          "SUPPLIERID",
+          "EMPLOYEENAME",
+          "EMPLOYEETYPE",
+          "EMAIL",
+          "CONTACTNUMBER",
+          "COUNTRYID",
+          "VALIDFROM",
+          "VALIDTO",
+          "USERSTATUS",
+          "DEPARTMENTID",
+          "POSITION",
+          "SUPERVISOR",
+          "ISSUPERVISOR"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "CREATEDAT": "createdAt",
+        "CREATEDBY": "createdBy",
+        "MODIFIEDAT": "modifiedAt",
+        "MODIFIEDBY": "modifiedBy",
+        "CLIENTID": "ClientID",
+        "EMPLOYEEID": "EmployeeID",
+        "USERID": "UserID",
+        "SUPPLIERID": "SupplierID",
+        "EMPLOYEENAME": "EmployeeName",
+        "EMPLOYEETYPE": "EmployeeType",
+        "EMAIL": "Email",
+        "CONTACTNUMBER": "ContactNumber",
+        "COUNTRYID": "CountryID",
+        "VALIDFROM": "ValidFrom",
+        "VALIDTO": "ValidTo",
+        "USERSTATUS": "UserStatus",
+        "DEPARTMENTID": "DepartmentID",
+        "POSITION": "Position",
+        "SUPERVISOR": "Supervisor",
+        "ISSUPERVISOR": "isSupervisor"
+      }
+    }
+  ]
+}

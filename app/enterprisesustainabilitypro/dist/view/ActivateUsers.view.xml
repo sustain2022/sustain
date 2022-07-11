@@ -1,0 +1,15 @@
+<mvc:View
+    controllerName="enterprisesustainabilitypro.controller.ActivateUsers"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Page showHeader="false" backgroundDesign="List">
+	<List
+		headerText="Activate Users" items="{/EmployeeUser}">
+		<InputListItem label="{EmployeeName}">
+			<Switch state="true" />
+		</InputListItem>
+        </List>
+</Page>
+</mvc:View>

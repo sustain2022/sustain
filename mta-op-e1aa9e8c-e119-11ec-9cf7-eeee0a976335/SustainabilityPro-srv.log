@@ -1,0 +1,772 @@
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:41 UTC 2022] Added process: "web" (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:41 UTC 2022] Created app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:41 UTC 2022] Updating process: "web" (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:41 UTC 2022] Scaling process: "web" (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:42 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"route"=>"8b764255-5fa9-4251-b876-29977999b594", :verb=>"add", :relation=>"routes", :related_guid=>"8b764255-5fa9-4251-b876-29977999b594"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:42 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:44 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"metadata"=>{"annotations"=>{"mta_id"=>"SustainabilityPro", "mta_version"=>"1.0.0", "mta_module"=>"{\"name\":\"SustainabilityPro-srv\"}", "mta_module_provided_dependencies"=>"[]", "mta_bound_services"=>"[\"SustainabilityPro-db\"]"}, "labels"=>{"mta_id"=>"9985dd450d516e4f83c9edc67decb4e2"}}}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:46 UTC 2022] Uploading app package for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:46 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:58 UTC 2022] Scaling process: "web" (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:59 UTC 2022] Creating build for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:59 UTC 2022] Downloading nodejs_buildpack... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.364#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:59 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 creating container for instance eb118586-f6ba-4327-ad8f-6aa6411c936b (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:59 UTC 2022] Downloaded nodejs_buildpack (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:49:59 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 successfully created container for instance eb118586-f6ba-4327-ad8f-6aa6411c936b (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:00 UTC 2022] Downloading app package... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] Downloaded app package (12M) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] -----> Nodejs Buildpack version 1.7.69 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] Copy [/tmp/buildpacks/53ac64d216da37b7cfb293ba2a1e84a0/dependencies/e414433958753d574af7c0fe11f74713/node_16.14.2_linux_x64_cflinuxfs3_fb3f87c7.tgz] (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] -----> Installing node 16.14.2 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] [31;1m**WARNING**[0m Dangerous semver range (>) in engines.node. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] engines.node (package.json): >=12.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:01 UTC 2022] -----> Installing binaries (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:02 UTC 2022] Copy [/tmp/buildpacks/53ac64d216da37b7cfb293ba2a1e84a0/dependencies/584e43947dbdc85a5abee0933bc2af4f/yarn_1.22.18_linux_noarch_any-stack_4fc4a734.tgz] (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:02 UTC 2022] -----> Installing yarn 1.22.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:02 UTC 2022] Using default npm version: 8.5.0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] -----> Creating runtime environment (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] Installed yarn 1.22.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] Rebuilding any native modules (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] Prebuild detected (node_modules already exists) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] -----> Building dependencies (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NODE_VERBOSE=false (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NODE_MODULES_CACHE=true (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NODE_HOME=/tmp/contents3715823717/deps/0/node (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:03 UTC 2022] NODE_ENV=production (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] rebuilt dependencies successfully (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] npm notice (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] npm notice Run `npm install -g npm@8.11.0` to update! (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] npm notice Changelog: <https://github.com/npm/cli/releases/tag/v8.11.0> (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] npm notice New minor version of npm available! 8.5.0 -> 8.11.0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] npm notice (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:04 UTC 2022] Installing any new modules (package.json + package-lock.json) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:07 UTC 2022] run `npm fund` for details (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:07 UTC 2022] 48 packages are looking for funding (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:07 UTC 2022] added 2 packages in 3s (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:08 UTC 2022] Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:14 UTC 2022] Uploading droplet... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:14 UTC 2022] Uploading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:14 UTC 2022] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.365#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:14 UTC 2022] Exit status 0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:14 UTC 2022] Uploaded build artifacts cache (217B) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:15 UTC 2022] Creating droplet for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:21 UTC 2022] Uploaded droplet (42.5M) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:21 UTC 2022] Uploading complete (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:21 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 destroying container for instance eb118586-f6ba-4327-ad8f-6aa6411c936b (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:21 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 stopping instance eb118586-f6ba-4327-ad8f-6aa6411c936b (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:22 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 successfully destroyed container for instance eb118586-f6ba-4327-ad8f-6aa6411c936b (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:28 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({:droplet_guid=>"ea0a4744-5b39-4486-a049-72b6b80e76c7"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:29 UTC 2022] Creating revision for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:29 UTC 2022] Starting app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:29 UTC 2022] Cell d5f8ba8f-6b80-4d41-b335-1a257634845d creating container for instance 873c6155-534d-4f05-7b6e-1a69 (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:29 UTC 2022] Cell d5f8ba8f-6b80-4d41-b335-1a257634845d successfully created container for instance 873c6155-534d-4f05-7b6e-1a69 (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:30 UTC 2022] Downloading droplet... (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:32 UTC 2022] Starting health monitoring of container (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:32 UTC 2022] Downloaded droplet (42.5M) (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:32 UTC 2022] > cds run (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:32 UTC 2022] > SustainabilityPro@1.0.0 start (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - Loading server from { file: './srv/server.js' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] {"written_at":"2022-05-31T18:50:33.292Z","written_ts":1654023033292000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.32.2.6","component_type":"application","component_id":"fc0496f3-3e1a-44da-bca7-ad89fda304ca","component_name":"SustainabilityPro-srv","component_instance":-1,"source_instance":-1,"organization_id":"887968af-4f47-4ef7-860c-50d3d781db0a","organization_name":"e379a242trial","space_id":"d5503dda-9245-4ba3-9f72-33cea09abd7d","space_name":"Sustainability-dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [HPM] Proxy rewrite rule created: "^/v2" ~> "" (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [HPM] Proxy created: /  -> http://localhost:8080 (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [0m (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] ./srv/csn.json (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [2m (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - model loaded from 1 file(s): (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] certificate: '...' (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] password: '...', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] user: '0F78AAFA8DD84EF8833CE3429FADDDC5_7BBHYSJQDZ1ZBJ5W1N4AO6R7Z_RT', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] hdi_password: '...', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] hdi_user: '0F78AAFA8DD84EF8833CE3429FADDDC5_7BBHYSJQDZ1ZBJ5W1N4AO6R7Z_DT', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] schema: '0F78AAFA8DD84EF8833CE3429FADDDC5', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] url: 'jdbc:sap://e90a48ed-15da-46a3-8f4c-cde29e79cd45.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=0F78AAFA8DD84EF8833CE3429FADDDC5', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] driver: 'com.sap.db.jdbc.Driver', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] port: '443', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] host: 'e90a48ed-15da-46a3-8f4c-cde29e79cd45.hana.trial-us10.hanacloud.ondemand.com', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - connect to db > hana { (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - serving SustainabilityService { at: '/sustainability' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - Service SustainabilityService is unrestricted. This is not recommended in production. (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.366#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - launched at 5/31/2022, 6:50:33 PM, in: 768.959ms (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:33 UTC 2022] [cds] - server listening on { url: 'http://localhost:8080' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:50:35 UTC 2022] Container became healthy (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:51:48 UTC 2022] e379a242trial-sustainability-dev-sustainabilitypro-srv.cfapps.us10.hana.ondemand.com - [2022-05-31T18:51:48.455884279Z] "GET / HTTP/1.1" 200 0 8801 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" "10.0.200.7:56030" "10.32.2.6:61056" x_forwarded_for:"124.123.169.161, 10.0.200.7" x_forwarded_proto:"https" vcap_request_id:"a37d911a-713f-44be-54c6-059f2d058a18" response_time:0.016052 gorouter_time:0.000072 app_id:"fc0496f3-3e1a-44da-bca7-ad89fda304ca" app_index:"0" instance_id:"873c6155-534d-4f05-7b6e-1a69" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"6fea23c1-3276-4314-8e6e-47cd1dd033f7-629663C3-BE70CA" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" traceparent:"-" x_b3_traceid:"5d2993ba1108673d79555ece361508bf" x_b3_spanid:"79555ece361508bf" x_b3_parentspanid:"-" b3:"5d2993ba1108673d79555ece361508bf-79555ece361508bf" (STDOUT, RTR)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 18:51:48 UTC 2022] e379a242trial-sustainability-dev-sustainabilitypro-srv.cfapps.us10.hana.ondemand.com - [2022-05-31T18:51:48.808725215Z] "GET /favicon.ico HTTP/1.1" 200 0 15086 "https://e379a242trial-sustainability-dev-sustainabilitypro-srv.cfapps.us10.hana.ondemand.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.64 Safari/537.36" "10.0.200.7:48312" "10.32.2.6:61056" x_forwarded_for:"124.123.169.161, 10.0.200.7" x_forwarded_proto:"https" vcap_request_id:"3e5b9144-70a5-4616-60e4-c812ee08356d" response_time:0.012937 gorouter_time:0.000045 app_id:"fc0496f3-3e1a-44da-bca7-ad89fda304ca" app_index:"0" instance_id:"873c6155-534d-4f05-7b6e-1a69" x_cf_routererror:"-" x_correlationid:"-" tenantid:"-" sap_passport:"-" x_scp_request_id:"6fea23c1-3276-4314-8e6e-47cd1dd033f7-629663C4-BE70E1" x_cf_app_instance:"-" x_forwarded_host:"-" x_custom_host:"-" x_ssl_client:"-" x_ssl_client_session_id:"-" x_ssl_client_verify:"-" x_ssl_client_subject_dn:"-" x_ssl_client_subject_cn:"-" x_ssl_client_issuer_dn:"-" x_ssl_client_notbefore:"-" x_ssl_client_notafter:"-" traceparent:"-" x_b3_traceid:"22900ad5c797ff8b67afa4f9e1b8130f" x_b3_spanid:"67afa4f9e1b8130f" x_b3_parentspanid:"-" b3:"22900ad5c797ff8b67afa4f9e1b8130f-67afa4f9e1b8130f" (STDOUT, RTR)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:43:44 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"lifecycle"=>{"data"=>{"buildpacks"=>["nodejs_buildpack"]}, "type"=>"buildpack"}}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:43:45 UTC 2022] Updating process: "web" (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:43:57 UTC 2022] Uploading app package for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:43:57 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({"environment_variables"=>"[PRIVATE DATA HIDDEN]"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:12 UTC 2022] Stopping app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:12 UTC 2022] Cell d5f8ba8f-6b80-4d41-b335-1a257634845d stopping instance 873c6155-534d-4f05-7b6e-1a69 (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:12 UTC 2022] Creating build for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Downloading nodejs_buildpack... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 creating container for instance 15306c0c-1beb-4d56-8712-9cfa3ffe3bca (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Downloaded nodejs_buildpack (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 successfully created container for instance 15306c0c-1beb-4d56-8712-9cfa3ffe3bca (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Downloading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Downloading app package... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:13 UTC 2022] Downloaded build artifacts cache (217B) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:14 UTC 2022] Downloaded app package (12M) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:14 UTC 2022] -----> Nodejs Buildpack version 1.7.69 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] Copy [/tmp/buildpacks/53ac64d216da37b7cfb293ba2a1e84a0/dependencies/e414433958753d574af7c0fe11f74713/node_16.14.2_linux_x64_cflinuxfs3_fb3f87c7.tgz] (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] -----> Installing node 16.14.2 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] [31;1m**WARNING**[0m Dangerous semver range (>) in engines.node. See: http://docs.cloudfoundry.org/buildpacks/node/node-tips.html (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] engines.npm (package.json): unspecified (use default) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] engines.node (package.json): >=12.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:15 UTC 2022] -----> Installing binaries (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] Copy [/tmp/buildpacks/53ac64d216da37b7cfb293ba2a1e84a0/dependencies/584e43947dbdc85a5abee0933bc2af4f/yarn_1.22.18_linux_noarch_any-stack_4fc4a734.tgz] (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] -----> Installing yarn 1.22.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] Using default npm version: 8.5.0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] -----> Creating runtime environment (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] Installed yarn 1.22.18 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NODE_ENV=production (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] Rebuilding any native modules (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] Prebuild detected (node_modules already exists) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] -----> Building dependencies (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NPM_CONFIG_PRODUCTION=true (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NPM_CONFIG_LOGLEVEL=error (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NODE_VERBOSE=false (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NODE_MODULES_CACHE=true (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:16 UTC 2022] NODE_HOME=/tmp/contents1498203300/deps/0/node (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] rebuilt dependencies successfully (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] npm notice (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.367#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] npm notice Run `npm install -g npm@8.11.0` to update! (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] npm notice Changelog: <https://github.com/npm/cli/releases/tag/v8.11.0> (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] npm notice New minor version of npm available! 8.5.0 -> 8.11.0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] npm notice (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:17 UTC 2022] Installing any new modules (package.json + package-lock.json) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:20 UTC 2022] run `npm fund` for details (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:20 UTC 2022] 48 packages are looking for funding (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:20 UTC 2022] added 2 packages in 3s (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:22.368#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37640###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:21 UTC 2022] Contrast Security no credentials found. Will not write environment files. (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Uploading build artifacts cache... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Uploading droplet... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Uploading droplet, build artifacts cache... (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Exit status 0 (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Uploaded build artifacts cache (226B) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Cell d5f8ba8f-6b80-4d41-b335-1a257634845d destroying container for instance 873c6155-534d-4f05-7b6e-1a69 (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:28 UTC 2022] Exit status 137 (STDOUT, PROXY)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:29 UTC 2022] Creating droplet for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:32.360#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37644###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:29 UTC 2022] Cell d5f8ba8f-6b80-4d41-b335-1a257634845d successfully destroyed container for instance 873c6155-534d-4f05-7b6e-1a69 (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:42.403#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-29950###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:34 UTC 2022] Uploaded droplet (42.5M) (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:42.403#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-29950###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:34 UTC 2022] Uploading complete (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:42.403#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-29950###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:34 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 destroying container for instance 15306c0c-1beb-4d56-8712-9cfa3ffe3bca (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:42.403#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-29950###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:34 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 stopping instance 15306c0c-1beb-4d56-8712-9cfa3ffe3bca (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:42.403#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.stageAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-29950###
+[PollStageAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:35 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 successfully destroyed container for instance 15306c0c-1beb-4d56-8712-9cfa3ffe3bca (STDOUT, STG)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:42 UTC 2022] Updated app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca ({:droplet_guid=>"bf15b417-b3d4-4499-80bf-2b104de7804c"}) (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:42 UTC 2022] Creating revision for app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:43 UTC 2022] Starting app with guid fc0496f3-3e1a-44da-bca7-ad89fda304ca (STDOUT, API)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:43 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 creating container for instance 034f4166-78bf-4b39-599d-769e (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:43 UTC 2022] Cell 800e5d0e-1e57-43c7-9235-41a3e350b7e0 successfully created container for instance 034f4166-78bf-4b39-599d-769e (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:44 UTC 2022] Downloading droplet... (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:46 UTC 2022] Starting health monitoring of container (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:46 UTC 2022] Downloaded droplet (42.5M) (STDOUT, CELL)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:46 UTC 2022] > cds run (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:46 UTC 2022] > SustainabilityPro@1.0.0 start (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [cds] - Loading server from { file: './srv/server.js' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] {"written_at":"2022-05-31T19:44:47.372Z","written_ts":1654026287372000000,"csn_component":"-","correlation_id":"-","type":"log","logger":"nodejs-logger","layer":"/LoggingLibrary","level":"warning","container_id":"10.32.1.10","component_type":"application","component_id":"fc0496f3-3e1a-44da-bca7-ad89fda304ca","component_name":"SustainabilityPro-srv","component_instance":-1,"source_instance":-1,"organization_id":"887968af-4f47-4ef7-860c-50d3d781db0a","organization_name":"e379a242trial","space_id":"d5503dda-9245-4ba3-9f72-33cea09abd7d","space_name":"Sustainability-dev","context_id":"","msg":"Dynamic log level switching not available"} (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [HPM] Proxy rewrite rule created: "^/v2" ~> "" (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [HPM] Proxy created: /  -> http://localhost:8080 (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [0m (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] ./srv/csn.json (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [2m (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [cds] - model loaded from 1 file(s): (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] certificate: '...' (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] password: '...', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] user: '0F78AAFA8DD84EF8833CE3429FADDDC5_F07VZ0GOFJXMF7WQO2T05VLF6_RT', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] hdi_password: '...', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] hdi_user: '0F78AAFA8DD84EF8833CE3429FADDDC5_F07VZ0GOFJXMF7WQO2T05VLF6_DT', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] schema: '0F78AAFA8DD84EF8833CE3429FADDDC5', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] url: 'jdbc:sap://e90a48ed-15da-46a3-8f4c-cde29e79cd45.hana.trial-us10.hanacloud.ondemand.com:443?encrypt=true&validateCertificate=true&currentschema=0F78AAFA8DD84EF8833CE3429FADDDC5', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] driver: 'com.sap.db.jdbc.Driver', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] port: '443', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] host: 'e90a48ed-15da-46a3-8f4c-cde29e79cd45.hana.trial-us10.hanacloud.ondemand.com', (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:47 UTC 2022] [cds] - connect to db > hana { (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:48 UTC 2022] [cds] - serving SustainabilityService { at: '/sustainability' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.728#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:48 UTC 2022] [cds] - Service SustainabilityService is unrestricted. This is not recommended in production. (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.729#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:48 UTC 2022] [cds] - launched at 5/31/2022, 7:44:47 PM, in: 827.705ms (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.729#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:48 UTC 2022] [cds] - server listening on { url: 'http://localhost:8080' } (STDOUT, APP/PROC/WEB)#
+
+#2.0#2022 05 31 19:44:52.729#Z#DEBUG#com.sap.cloud.lm.sl.xs2.e1aa9e8c-e119-11ec-9cf7-eeee0a976335.SustainabilityPro-srv.startAppTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-37651###
+[PollStartAppStatusExecution] [SustainabilityPro-srv] fc0496f3-3e1a-44da-bca7-ad89fda304ca [Tue May 31 19:44:49 UTC 2022] Container became healthy (STDOUT, CELL)#
+

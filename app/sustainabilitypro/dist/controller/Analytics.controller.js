@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(n){return n.extend("sustainabilitypro.controller.Analytics",{})});

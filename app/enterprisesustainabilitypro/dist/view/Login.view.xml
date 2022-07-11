@@ -1,0 +1,53 @@
+<mvc:View controllerName="enterprisesustainabilitypro.controller.Login"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page floatingFooter="true" showHeader="false" backgroundDesign="List">
+        <VBox class="sapUiSmallMargin">
+            <f:SimpleForm id="idSimpleRegistration" visible="{prop>/vRegister}" editable="true" layout="ResponsiveGridLayout" title="Enterprise Registration" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                <f:toolbar></f:toolbar>
+                <f:content>
+                    <Label text="Client Name" />
+                    <Input id="name" value="{ClientName}" />
+
+                    <Label text="Address" />
+                    <Input value="{Address}"/>
+                    <Label text="Contact Person" />
+                    <Input value="{ContactPerson}"/>
+                    <Label text="Contact Number" />
+                    <Input value="{ContactNumber}"/>
+                    <Label text="Email" />
+                    <Input value="{Email}"/>
+                    <Label text="Password" />
+                    <Input value="{Password}" type="Password"/>
+                    <!-- <Label text="Country" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select> -->
+                </f:content>
+            </f:SimpleForm>
+            <f:SimpleForm id="idSimpleLogin" visible="{= !${prop>/vRegister}}" editable="true" layout="ResponsiveGridLayout" title="Enterprise Login" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
+                <f:content>
+                    <Label text="Email" />
+                    <Input value="{Email}"/>
+                    <Label text="Password" />
+                    <Input value="{Password}" type="Password"/>
+                </f:content>
+            </f:SimpleForm>            
+        </VBox>
+        <footer>
+			<OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button id="regButton" type="Emphasized" text="Register" press="onAction"/>
+                <Button id="logButton" text="Login" press="onAction"/>
+				<Button type="Reject" text="Cancel"/>
+			</OverflowToolbar>
+		</footer>
+    </Page>
+</mvc:View>

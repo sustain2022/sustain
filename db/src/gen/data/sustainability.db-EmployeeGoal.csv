@@ -1,0 +1,5 @@
+createdAt,createdBy,modifiedAt,modifiedBy,ClientID,GoalID,AssignmentID,EmployeeID,AgencyID,TargetAssigned,Status_Biz,AssignedBy,AdditionalInfo,BeginDate,EndDate
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,CL0001,1,1,EID0001,AGID0001,10,1,Max,Assignmet 1 data,2021-02-02 00:00:00,2021-02-02 00:00:00
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,CL0001,1,2,EID0002,AGID0001,15,1,Max,Assignmet 2 data,2021-02-02 00:00:00,2021-02-02 00:00:00
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,CL0001,1,3,EID0003,AGID0001,5,1,Max,Assignmet 3 data,2021-02-02 00:00:00,2021-02-02 00:00:00
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,CL0001,1,4,EID0004,AGID0001,10,1,Max,Assignmet 4 data,2021-02-02 00:00:00,2021-02-02 00:00:00

@@ -1,0 +1,103 @@
+<mvc:View controllerName="sustainabilitypro.controller.SD2previewdata"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+    <Page title="Goal Preview" showNavButton="true" navButtonPress="onNavBack">
+    		<VBox class="sapUiSmallMargin">
+		<f:Form id="FormDisplay354"
+			editable="false">
+			<f:title>
+				<core:Title text="Goal Creation" />
+			</f:title>
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="3"
+					labelSpanL="3"
+					labelSpanM="3"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="4"
+					emptySpanL="4"
+					emptySpanM="4"
+					emptySpanS="0"
+					columnsM="2"
+					columnsL="3"
+					columnsXL="4"
+					singleContainerFullSize="false" />
+			</f:layout>
+				<f:formContainers>
+				<f:FormContainer >
+					<f:formElements>
+						<f:FormElement label="Visibility">
+							<f:fields>
+								<Text text="Visibility"   />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Goal Name">
+							<f:fields>
+								<Text text="Goal Name" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Metric">
+							<f:fields>
+								<Text text="Metric" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="End Date">
+							<f:fields>
+								<Text text="End Date"  />
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="%Complete">
+							<f:fields>
+								<Text text="%Complete"  />
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Status">
+							<f:fields>
+								<Text text="Status"  />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+				<f:FormContainer >
+					<f:formElements>
+						<f:FormElement label="Category">
+							<f:fields>
+								<Text text="Category" />
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Description">
+							<f:fields>
+								<Text text="Description" />
+							</f:fields>
+						</f:FormElement>
+                        	<f:FormElement label="Begin date">
+							<f:fields>
+								<Text text="Begin date" />
+							</f:fields>
+						</f:FormElement>
+                        	<f:FormElement label="Weight">
+							<f:fields>
+								<Text text="Weight" />
+							</f:fields>
+						</f:FormElement>
+                        	<f:FormElement label="Milestones">
+							<f:fields>
+								<Text text="Milestones" />
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+	</VBox>
+        <HBox width="100%" justifyContent="End">
+        <Button text="Edit" class="sapUiSmallMarginEnd" press="onNavBack"/>
+        <Button text="Submit" type="Emphasized" class="sapUiMediumMarginEnd" press="onSubmit"/>
+       
+        </HBox>
+    </Page>
+</mvc:View>

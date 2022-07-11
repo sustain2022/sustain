@@ -1,0 +1,23 @@
+<mvc:View
+    controllerName="sustainabilitypro.controller.S1"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+<Page backgroundDesign="List" title="Menu" class="cl_menu">
+<List>
+    <StandardListItem type="Active"
+        title="Dashboard" press="onItemPress"/>
+    <StandardListItem type="Active"
+		title="Goals" press="handleGoals"/>		
+    <StandardListItem type="Active"
+		title="Enterprise Admin" press="onItemPress"/>
+    <StandardListItem type="Active"
+		title="Business User Area" press="onItemPress"/>
+    <StandardListItem type="Active"
+		title="Team Management" press="onItemPress"/>  
+    <StandardListItem type="Active"
+		title="Reports" press="onItemPress"/>        
+</List>
+</Page>
+</mvc:View>

@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+    xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Upload Reports">
+        <content>
+            <VBox class="sapUiResponsiveMargin">
+            	<RadioButtonGroup id="rbgUpload" columns="2" select="onSelectingRBG">
+					<RadioButton text="Select Existing Templates" selected="true" />
+					<RadioButton text="Create New Template" />
+				</RadioButtonGroup>
+                <ComboBox id="idSelectTemplate" width="16rem" placeholder="Select Template" valueStateText="Select Template"
+					items="{/AgencyReportTemplate}" required="true" change="onTemplateSelection">
+					<core:Item key="{TemplateID}" text="{TemplateDescription}" />
+				</ComboBox>
+                <Select id="idSelectTemplateType" visible="false" width="16rem"	required="true">
+					<core:Item key="Internal" text="Internal" />
+                    <core:Item key="External" text="External" />
+				</Select>
+                	<StepInput id="dataStartingRow" value="1" min="1" description="Header Row"/>
+                    <Input id="templateName" visible="false" width="70%" placeholder="Enter Template Name"/>
+                <u:FileUploader id="fileUploader" name="myFileUpload" multiple="true" tooltip="Upload your file to the local server" change="onUpload" uploadComplete="handleUploadComplete"/>
+            </VBox>
+        </content>
+        <beginButton>
+            <Button text="Upload" type="Emphasized" press="onUploadReport"/>
+        </beginButton>
+        <endButton>
+            <Button text="Close" press="onCloseUploadDlg"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

@@ -1,0 +1,273 @@
+{
+    "_version": "1.32.0",
+    "sap.app": {
+        "id": "sustainabilitypro",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "0.0.1"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "resources": "resources.json",
+        "dataSources": {
+            "mainService": {
+                "uri": "v2/sustainability/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [],
+                    "localUri": "localService/metadata.xml",
+                    "odataVersion": "2.0"
+                }
+            }
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "flexEnabled": true,
+        "dependencies": {
+            "minUI5Version": "1.99.0",
+            "libs": {
+                "sap.m": {},
+                "sap.ui.core": {},
+                "sap.f": {},
+                "sap.suite.ui.generic.template": {},
+                "sap.ui.comp": {},
+                "sap.ui.generic.app": {},
+                "sap.ui.table": {},
+                "sap.ushell": {}
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "settings": {
+                    "bundleName": "sustainabilitypro.i18n.i18n"
+                }
+            },
+            "utility": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
+            "goals": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true,
+                    "groupId": "$direct"
+                }
+            }
+        },
+        "resources": {
+            "css": [
+                {
+                    "uri": "css/style.css"
+                }
+            ]
+        },
+        "routing": {
+            "config": {
+                "routerClass": "sap.m.routing.Router",
+                "viewType": "XML",
+                "async": true,
+                "viewPath": "sustainabilitypro.view",
+                "controlAggregation": "pages",
+                "controlId": "rootControl",
+                "clearControlAggregation": false
+            },
+            "routes": [
+                {
+                    "name": "detailsd1",
+                    "pattern": "detailsd1",
+                    "target": [
+                        "detailsd1"
+                    ]
+                },
+                {
+                    "name": "detailsd14",
+                    "pattern": "detailsd14",
+                    "target": [
+                        "detailsd14"
+                    ]
+                },
+                {
+                    "name": "detailsd2",
+                    "pattern": "detailsd2/{templateid}",
+                    "target": [
+                        "detailsd2"
+                    ]
+                },
+                {
+                    "name": "previewsd2",
+                    "pattern": "previewsd2",
+                    "target": [
+                        "targetpreviewsd2"
+                    ]
+                },
+                {
+                    "name": "login",
+                    "pattern": "",
+                    "target": [
+                        "targetlogin"
+                    ]
+                },
+                {
+                    "name": "goals",
+                    "pattern": "goals",
+                    "target": [
+                        "goals"
+                    ]
+                },
+                {
+                    "name": "goaldet",
+                    "pattern": "goaldet/{path}",
+                    "target": [
+                        "goaldet"
+                    ]
+                },
+                {
+                    "name": "teammgmnt",
+                    "pattern": "teammgmnt",
+                    "target": [
+                        "teammgmnt"
+                    ]
+                },
+                {
+                    "name": "reports",
+                    "pattern": "reports",
+                    "target": [
+                        "reports"
+                    ]
+                },
+                {
+                    "name": "analytics",
+                    "pattern": "analytics",
+                    "target": [
+                        "analytics"
+                    ]
+                }
+            ],
+            "targets": {
+                "masters1": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "masterPages",
+                    "viewId": "S1",
+                    "viewName": "S1",
+                    "level": 0
+                },
+                "detailsd1": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "SD1",
+                    "viewName": "SD1",
+                    "level": 1
+                },
+                "detailsd2": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "SD2",
+                    "viewName": "SD2",
+                    "level": 2
+                },
+                "goals": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "viewId": "goals",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewName": "goals",
+                    "level": 2
+                },
+                "targetpreviewsd2": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "SD2previewdata",
+                    "viewName": "SD2previewdata",
+                    "level": 3
+                },
+                "targetlogin": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "login",
+                    "viewName": "login",
+                    "level": 3
+                },
+                "goaldet": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "goaldet",
+                    "viewName": "GoalDetail",
+                    "level": 2
+                },
+                "teammgmnt": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "team",
+                    "viewName": "TeamManagement",
+                    "level": 2
+                },
+                "reports": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "reports",
+                    "viewName": "Reports",
+                    "level": 2
+                },
+                "analytics": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "controlAggregation": "pages",
+                    "viewId": "analytics",
+                    "viewName": "Analytics",
+                    "level": 2
+                }
+            }
+        },
+        "rootView": {
+            "viewName": "sustainabilitypro.view.App",
+            "type": "XML",
+            "async": true
+        }
+    }
+}

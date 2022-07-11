@@ -1,0 +1,69 @@
+/* Enter your custom styles here */
+
+.text-center {
+    text-align: center;
+    width: 100%;
+}
+a{cursor: pointer; outline: none; text-decoration: none;}
+a:hover{cursor: pointer; outline: none; text-decoration: none;}
+.card-bg {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:300px;
+    min-height:300px;
+    background:#fff;
+    box-shadow:0 20px 50px rgba(0,0,0,.1);
+    border-radius:10px;
+    transition:0.5s;
+}
+.card-bg:hover {
+    box-shadow:0 30px 70px rgba(0,0,0,.2);
+}
+.card-bg .box {
+    position:absolute;
+    top:50%;
+    left:0;
+    transform:translateY(-50%);
+    text-align:center;
+    padding:20px;
+    box-sizing:border-box;
+    width:100%;
+}
+
+.title-center {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: #0A6ED1;
+}
+
+.btn-border .sapMBtnDefault{
+background-color:#0854a0 !important; color:#f3f3f3 !important;
+}
+
+.cl_GoalTile,.cl_InternalTeam,.cl_ExternalTeam,.cl_GoalStatus{
+    background: #dedede;
+}
+.cl_GoalTile .sapMNCLargeFontSize{
+color: green;
+}
+
+.cl_InternalTeam .sapMNCLargeFontSize{
+    color: orange;
+}
+
+.cl_ExternalTeam .sapMNCLargeFontSize{
+    color: blue;
+}
+/* .cl_menu .sapMPageHeader{
+    background:#3f5161;
+}
+.cl_menu .sapMTitle{
+    color:white;
+} */
+
+.backgroundColor {
+    background-color: white;
+}

@@ -1,0 +1,10 @@
+createdAt,createdBy,modifiedAt,modifiedBy,ClientID,DepartmentID,DepartmentName,HOD,DepartmentStatus,DepartmentType
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0001,DT0001,Operations,Steve,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0001,DT0002,Marketing,Peter,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0001,DT0003,Finance,Mark,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0001,DT0004,HR,Mathew,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0002,DT0005,Purchase,Henry,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0002,DT0006,Sales,Pat,Active,Internal
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0002,DT0007,Production,Victor,Active,External
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0002,DT0008,General management,Keith,Active,External
+2021-02-02 04:04:42,anonymous,2021-02-02 04:04:42,anonymous,CL0002,DT0009,Transport,Jim,Active,External

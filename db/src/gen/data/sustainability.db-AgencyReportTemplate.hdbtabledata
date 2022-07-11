@@ -1,0 +1,35 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_AGENCYREPORTTEMPLATE",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-AgencyReportTemplate.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "CLIENTID",
+          "TEMPLATEID",
+          "AGENCY",
+          "TEMPLATENAME",
+          "TEMPLATEDESCRIPTION",
+          "TEMPLATETYPE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "CLIENTID": "ClientID",
+        "TEMPLATEID": "TemplateID",
+        "AGENCY": "Agency",
+        "TEMPLATENAME": "TemplateName",
+        "TEMPLATEDESCRIPTION": "TemplateDescription",
+        "TEMPLATETYPE": "TemplateType"
+      }
+    }
+  ]
+}

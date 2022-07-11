@@ -1,0 +1,24 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core">
+	<ViewSettingsDialog
+		confirm="handleFilterConfirm">
+		<filterItems>
+			<ViewSettingsFilterItem text="Department" key="1" items="{/DepartmentHeader}">
+				<items>
+					<ViewSettingsItem text="{DepartmentName}" key="{DepartmentID}" />
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Employee" key="2" items="{/EmployeeUser}">
+				<items>
+					<ViewSettingsItem text="{EmployeeName}" key="{EmployeeID}" />
+				</items>
+			</ViewSettingsFilterItem>
+			<ViewSettingsFilterItem text="Supplier" key="3" items="{/SupplierHeader}">
+				<items>
+					<ViewSettingsItem text="{SupplierName}" key="{SupplierID}" />
+				</items>
+			</ViewSettingsFilterItem>
+		</filterItems>
+	</ViewSettingsDialog>
+</core:FragmentDefinition>

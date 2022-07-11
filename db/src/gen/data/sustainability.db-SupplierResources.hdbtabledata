@@ -1,0 +1,39 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_SUPPLIERRESOURCES",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-SupplierResources.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "CREATEDAT",
+          "CREATEDBY",
+          "MODIFIEDAT",
+          "MODIFIEDBY",
+          "SUPPLIERID",
+          "EMPLOYEEID",
+          "ROLEID",
+          "CLIENTID"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "CREATEDAT": "createdAt",
+        "CREATEDBY": "createdBy",
+        "MODIFIEDAT": "modifiedAt",
+        "MODIFIEDBY": "modifiedBy",
+        "SUPPLIERID": "SupplierID",
+        "EMPLOYEEID": "EmployeeID",
+        "ROLEID": "RoleID",
+        "CLIENTID": "ClientID"
+      }
+    }
+  ]
+}

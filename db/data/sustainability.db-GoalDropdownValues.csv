@@ -1,0 +1,21 @@
+createdAt,createdBy,modifiedAt,modifiedBy,SRNo,GoalTemplateID,FieldID,Value
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0001,1,Private
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0001,1,Public
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0001,2,Economic
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0001,2,Premium
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,1,Private
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,1,Public
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,2,Economic
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,2,Premium
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,16,Valid
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,16,Invalid
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,17,Submitted
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,17,Inprocess
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,19,Yes
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,19,No
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,24,High
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,24,Medium
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,3,GT0002,24,Low
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,1,GT0002,25,High
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,2,GT0002,25,Medium
+2021-02-02 02:03:02,anonymous,2021-02-02 02:03:02,anonymous,3,GT0002,25,Low

@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_USERASSIGNEDROLES",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-UserAssignedRoles.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "CLIENTID",
+          "USERID",
+          "ROLEID",
+          "USERROLESTATUS"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "CLIENTID": "ClientID",
+        "USERID": "UserID",
+        "ROLEID": "RoleID",
+        "USERROLESTATUS": "UserRoleStatus"
+      }
+    }
+  ]
+}

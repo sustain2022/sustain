@@ -1,0 +1,290 @@
+{
+  "_version": "1.12.0",
+  "sap.app": {
+    "id": "enterprisesustainabilitypro",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap-ux/fiori-freestyle-writer:basic",
+      "version": "0.11.6"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/v2/sustainability/",
+        "type": "OData",
+        "settings": {
+          "annotations": [],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "2.0"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.101.0",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.f": {},
+        "sap.suite.ui.generic.template": {},
+        "sap.ui.comp": {},
+        "sap.ui.generic.app": {},
+        "sap.ui.table": {},
+        "sap.ushell": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "enterprisesustainabilitypro.i18n.i18n"
+        }
+      },
+      "prop": {
+        "type": "sap.ui.model.json.JSONModel"
+      },  
+      "util": {
+        "type": "sap.ui.model.json.JSONModel"
+      },            
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true,
+          "groupId": "$direct"
+        }
+      }
+    },
+    "resources": {
+      "css": [
+        {
+          "uri": "css/style.css"
+        }
+      ]
+    },
+    "routing": {
+      "config": {
+        "routerClass": "sap.m.routing.Router",
+        "viewType": "XML",
+        "async": true,
+        "viewPath": "enterprisesustainabilitypro.view",
+        "controlAggregation": "pages",
+        "controlId": "rootControl",
+        "clearControlAggregation": false
+      },
+      "routes": [
+        {
+            "name": "login",
+            "pattern": "",
+            "target": [
+                "TargetLogin"
+            ]
+        },
+        {
+          "name": "RouteApp",
+          "pattern": "RouteApp",
+          "target": [
+            "TargetApp"
+          ]
+        },
+        {
+            "name": "Invite",
+            "pattern": "Invite",
+            "target": [
+              "TargetInvite"
+            ]
+        },
+        {
+            "name": "AddUser",
+            "pattern": "AddUser",
+            "target": [
+              "AddUser"
+            ]
+        },
+        {
+            "name": "ActivateUsers",
+            "pattern": "ActivateUsers",
+            "target": [
+              "ActivateUsers"
+            ]
+        },
+        {
+            "name": "ActivateSuppliers",
+            "pattern": "ActivateSuppliers",
+            "target": [
+              "ActivateSuppliers"
+            ]
+        },
+        {
+            "name": "AddSupplier",
+            "pattern": "AddSupplier",
+            "target": [
+              "AddSupplier"
+            ]
+        },
+        {
+            "name": "MaintainDepartment",
+            "pattern": "MaintainDepartment",
+            "target": [
+              "MaintainDepartment"
+            ]
+        },
+        {
+            "name": "MaintainGoal",
+            "pattern": "MaintainGoal",
+            "target": [
+              "MaintainGoal"
+            ]
+        },
+        {
+            "name": "EnhancementReq",
+            "pattern": "EnhancementReq",
+            "target": [
+              "EnhancementReq"
+            ]
+        },
+        {
+            "name": "OrgStructure",
+            "pattern": "OrgStructure",
+            "target": [
+              "OrgStructure"
+            ]
+        },
+        {
+            "name": "RoleMaintain",
+            "pattern": "RoleMaintain",
+            "target": [
+              "RoleMaintain"
+            ]
+        }               
+
+      ],
+      "targets": {
+        "TargetLogin": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "Login",
+            "viewName": "Login",
+            "level": 3
+        },
+        "TargetInvite": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "Invite",
+            "viewName": "Invite",
+            "level": 3
+        },
+        "TargetApp": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "App",
+          "viewName": "App"
+        },
+        "AddUser": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "AddUser",
+            "viewName": "AddUser"
+          },
+          "ActivateUsers": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "ActivateUsers",
+            "viewName": "ActivateUsers"
+          },
+          "AddSupplier": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "AddSupplier",
+            "viewName": "AddSupplier"
+          },
+          "ActivateSuppliers": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "ActivateSuppliers",
+            "viewName": "ActivateSuppliers"
+          },
+          "MaintainDepartment": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "MaintainDepartment",
+            "viewName": "MaintainDepartment"
+          },
+          "MaintainGoal": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "MaintainGoal",
+            "viewName": "MaintainGoal"
+          },
+          "EnhancementReq": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "EnhancementReq",
+            "viewName": "EnhancementReq"
+          },
+          "OrgStructure": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "OrgStructure",
+            "viewName": "OrgStructure"
+          },
+          "RoleMaintain": {
+            "viewType": "XML",
+            "transition": "slide",
+            "clearControlAggregation": false,
+            "viewId": "RoleMaintain",
+            "viewName": "RoleMaintain"
+          }  
+
+      }
+    },
+    "rootView": {
+      "viewName": "enterprisesustainabilitypro.view.App",
+      "type": "XML",
+      "async": true,
+      "id": "App"
+    }
+  }
+}

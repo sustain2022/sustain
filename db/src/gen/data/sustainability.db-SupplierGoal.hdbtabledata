@@ -1,0 +1,53 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_SUPPLIERGOAL",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-SupplierGoal.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "CREATEDAT",
+          "CREATEDBY",
+          "MODIFIEDAT",
+          "MODIFIEDBY",
+          "CLIENTID",
+          "GOALID",
+          "ASSIGNMENTID",
+          "SUPPLIERID",
+          "EMPLOYEEID",
+          "AGENCYID",
+          "TARGETASSIGNED",
+          "STATUS_BIZ",
+          "ASSIGNEDBY",
+          "BEGINDATE",
+          "ENDDATE"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "CREATEDAT": "createdAt",
+        "CREATEDBY": "createdBy",
+        "MODIFIEDAT": "modifiedAt",
+        "MODIFIEDBY": "modifiedBy",
+        "CLIENTID": "ClientID",
+        "GOALID": "GoalID",
+        "ASSIGNMENTID": "AssignmentID",
+        "SUPPLIERID": "SupplierID",
+        "EMPLOYEEID": "EmployeeID",
+        "AGENCYID": "AgencyID",
+        "TARGETASSIGNED": "TargetAssigned",
+        "STATUS_BIZ": "Status_Biz",
+        "ASSIGNEDBY": "AssignedBy",
+        "BEGINDATE": "BeginDate",
+        "ENDDATE": "EndDate"
+      }
+    }
+  ]
+}

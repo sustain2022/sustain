@@ -1,0 +1,384 @@
+<mvc:View
+    controllerName="sustainabilitypro.controller.TeamManagement"
+    xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.uxap"
+	xmlns:m="sap.m"
+	xmlns:core="sap.ui.core"
+	xmlns:forms="sap.ui.layout.form"
+	height="100%"
+>
+<ObjectPageLayout id="ObjectPageLayout" upperCaseAnchorBar="false">
+		<headerTitle>
+			<ObjectPageDynamicHeaderTitle>
+				<expandedHeading>
+                <m:HBox alignItems="Center">
+                    <m:Button type="Transparent" icon="sap-icon://nav-back" press="onNavback" class="sapUiTinyMarginEnd"/>
+					<m:Title text="Super User" />
+                </m:HBox>
+				</expandedHeading>
+
+				<snappedHeading>
+					<m:HBox>
+						<m:Avatar initials="S"
+							class="sapUiMediumMarginEnd"
+							displayShape="Square" />
+						<m:VBox>
+							<m:Title text="Head of Department" />
+						</m:VBox>
+					</m:HBox>
+				</snappedHeading>
+
+				<snappedTitleOnMobile>
+					<m:Title text="Head of Department" />
+				</snappedTitleOnMobile>
+
+				<actions>
+					<!-- <m:Button text="Delete" /> -->
+				</actions>
+			</ObjectPageDynamicHeaderTitle>
+		</headerTitle>
+
+		<headerContent>
+			<m:FlexBox wrap="Wrap" fitContainer="true">
+				<m:Avatar
+                    initials="S"
+					class="sapUiMediumMarginEnd sapUiSmallMarginBottom"
+                    showBorder="true"
+					displayShape="Square"
+					displaySize="L" />
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Name:" class="sapUiTinyMarginEnd" />
+						<m:Text text="Super User" />
+                        <!-- <m:Text id="idOfGoal" text="{GoalID}" visible="false"/> -->
+					</m:HBox>
+
+					<m:HBox class="sapUiTinyMarginBottom" renderType="Bare">
+						<m:Label text="Start Date:" class="sapUiTinyMarginEnd" />
+						<m:Text text="20-01-2001" />
+					</m:HBox>
+
+					<m:HBox>
+						<m:Label text="End Date:" class="sapUiTinyMarginEnd" />
+						<m:Text text="31-12-9999" />
+					</m:HBox>
+				</m:VBox>
+
+				<m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Status" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="Active"
+						state="Success"
+						class="sapMObjectStatusLarge" />
+				</m:VBox>
+
+				<!-- <m:VBox class="sapUiLargeMarginEnd sapUiSmallMarginBottom">
+					<m:Title text="Metric" class="sapUiTinyMarginBottom" />
+					<m:ObjectStatus text="{Metric}"
+						class="sapMObjectStatusLarge" />
+				</m:VBox> -->
+			</m:FlexBox>
+		</headerContent>
+
+		<sections>
+            <ObjectPageSection id="sectDept" title="Departments" showTitle="false">
+				<subSections>
+					<ObjectPageSubSection title="Departments" showTitle="false">
+                    <blocks>
+                        <m:Table id="dptTbl" class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{path:'/DepartmentHeader'}">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Departments" level="H2" />
+										<m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+										<m:Button tooltip="Add Department"
+											text="New Department"
+                                            press="onDeptAddRequest"/>
+										<m:OverflowToolbarButton tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2" />
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Department Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="DepartmentDescription" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="HOD" />
+									</m:Column>
+									<m:Column  minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="DepartmentStatus" />
+									</m:Column>
+									<m:Column hAlign="End">
+										<m:Text text="DepartmentType" />
+									</m:Column>                                   
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Link text="{DepartmentName}" />
+										<m:Text text="{DepartmentDescription}" />
+										<m:Text text="{HOD}" />
+										<m:Text text="{DepartmentStatus}" />
+										<m:Text text="{DepartmentType}" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+                        </blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>            
+			<ObjectPageSection id="sectInternalTeam" title="Internal Team" showTitle="false">
+				<subSections>
+					<ObjectPageSubSection title="Internal Team" showTitle="false">
+						<blocks>
+                        <m:Table id="teamTbl" class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{path:'/TeamHeader',
+                        filters: [{path: 'TeamType', operator: 'EQ', value1: 'Internal'}],
+                        parameters:{'expand':'DepartmentDetails'}}">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Internal Team" level="H2" />
+										<m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+                                        <m:Button tooltip="New Team"
+											text="New Team"
+                                            press="onTeamAddRequest">
+                                        <m:customData>
+                                            <core:CustomData key="Internal" value="Internal"/>
+                                        </m:customData>
+                                        </m:Button>
+										<m:OverflowToolbarButton tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2" />
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Team Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Team Description" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Team Type" />
+									</m:Column>
+                                    <m:Column hAlign="End">
+										<m:Text text="Department Name" />
+									</m:Column>                                 
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Link text="{TeamName}" />
+										<m:Text text="{TeamDescription}" />
+										<m:Text text="{TeamType}" />
+										<m:Text text="{DepartmentDetails/DepartmentName}" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            <ObjectPageSection id="sectExternalTeam" title="External Team" showTitle="false">
+				<subSections>
+					<ObjectPageSubSection title="External Team" showTitle="false">
+						<blocks>
+                        <m:Table id="teamTbl1" class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{path:'/TeamHeader',
+                        filters: [{path: 'TeamType', operator: 'EQ', value1: 'External'}],
+                        parameters:{'expand':'DepartmentDetails'}}">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="External Team" level="H2" />
+										<m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+                                        <m:Button tooltip="New Team"
+											text="New Team"
+                                            press="onTeamAddRequest">
+                                        <m:customData>
+                                            <core:CustomData key="External" value="External"/>
+                                        </m:customData>
+                                        </m:Button>
+										<m:OverflowToolbarButton tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2" />
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Team Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Team Description" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Team Type" />
+									</m:Column>
+                                    <m:Column hAlign="End">
+										<m:Text text="Department Name" />
+									</m:Column>                                 
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Link text="{TeamName}" />
+										<m:Text text="{TeamDescription}" />
+										<m:Text text="{TeamType}" />
+										<m:Text text="{DepartmentDetails/DepartmentName}" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+                        </blocks>
+                    </ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            <ObjectPageSection id="sectEmp" title="Employees" showTitle="false">
+				<subSections>
+					<ObjectPageSubSection title="Employees" showTitle="false">
+						<blocks>
+							<m:Table id="empTbl" class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{path:'/EmployeeUser',parameters:{'expand':'DepartmentDetails'}}">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Employees" level="H2" />
+										<m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+                                        <m:Button tooltip="New Employee"
+											text="New Employee"
+                                            press="onEmpAddRequest"/>
+										<m:OverflowToolbarButton tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2" />
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Employee Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="User ID" />
+									</m:Column>
+                                    <m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Department Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Employee Type" />
+									</m:Column>
+									<m:Column  minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Email" />
+									</m:Column>
+									<m:Column hAlign="End">
+										<m:Text text="Contact Number" />
+									</m:Column>
+									<m:Column hAlign="End">
+										<m:Text text="Valid From" />
+									</m:Column>                     
+                                    <m:Column hAlign="End">
+										<m:Text text="Valid To" />
+									</m:Column>                     
+                                    <m:Column hAlign="End">
+										<m:Text text="User Status" />
+									</m:Column>                                    
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Link text="{EmployeeName}" />
+										<m:Text text="{UserID}" />
+                                        <m:Text text="{DepartmentDetails/DepartmentName}" />
+										<m:Text text="{EmployeeType}" />
+										<m:Text text="{Email}" />
+										<m:Text text="{ContactNumber}" />
+                                        <m:Text text="{path:'ValidFrom', type: 'sap.ui.model.odata.type.Date'}" />
+                                        <m:Text text="{path:'ValidTo', type: 'sap.ui.model.odata.type.Date'}" />
+                                        <m:Text text="{UserStatus}" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+            <ObjectPageSection id="sectSup" title="Suppliers" showTitle="false">
+				<subSections>
+                    <ObjectPageSubSection title="Suppliers" showTitle="false">
+						<blocks>
+							<m:Table id="supTbl" class="sapUxAPObjectPageSubSectionAlignContent" width="auto" items="{path:'/SupplierHeader',parameters:{'expand':'DepartmentDetails'}}">
+								<m:headerToolbar>
+									<m:OverflowToolbar>
+										<m:Title text="Suppliers" level="H2" />
+										<m:ToolbarSpacer />
+										<m:SearchField width="17.5rem" />
+                                        <m:Button tooltip="New Supplier"
+											text="New Supplier"
+                                            press="onSupAddRequest"/>
+										<m:OverflowToolbarButton tooltip="Filter"
+											text="Filter"
+											icon="sap-icon://filter" />
+										<m:OverflowToolbarButton tooltip="Group"
+											text="Group"
+											icon="sap-icon://group-2" />
+									</m:OverflowToolbar>
+								</m:headerToolbar>
+
+								<m:columns>
+									<m:Column>
+										<m:Text text="Supplier Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Contact Name" />
+									</m:Column>
+                                    <m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Department Name" />
+									</m:Column>
+									<m:Column minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Address" />
+									</m:Column>
+									<m:Column  minScreenWidth="Tablet" demandPopin="true">
+										<m:Text text="Email" />
+									</m:Column>
+									<m:Column hAlign="End">
+										<m:Text text="Contact Number" />
+									</m:Column>                   
+                                    <m:Column hAlign="End">
+										<m:Text text="Supplier Status" />
+									</m:Column>                                    
+								</m:columns>
+
+								<m:items>
+									<m:ColumnListItem>
+										<m:Link text="{SupplierName}" />
+										<m:Text text="{ContactName}" />
+                                        <m:Text text="{DepartmentDetails/DepartmentName}" />
+										<m:Text text="{Address}" />
+										<m:Text text="{Email}" />
+										<m:Text text="{ContactNumber}" />
+                                        <m:Text text="{SupplierStatus}" />
+									</m:ColumnListItem>
+								</m:items>
+							</m:Table>
+						</blocks>
+					</ObjectPageSubSection>
+				</subSections>
+			</ObjectPageSection>
+		</sections>
+	</ObjectPageLayout>
+</mvc:View>

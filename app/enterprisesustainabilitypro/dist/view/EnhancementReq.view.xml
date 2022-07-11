@@ -1,0 +1,22 @@
+<mvc:View controllerName="enterprisesustainabilitypro.controller.EnhancementReq"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form">
+    <Page title="Enhancement Request">
+        <f:SimpleForm editable="true" layout="ResponsiveGridLayout">
+            <Label text="Category"/>
+            <ComboBox/>
+            <Label text="Subject"/>
+            <Input/>
+            <Label text="Message"/>
+            <TextArea growing="true" width="100%"/>
+        </f:SimpleForm>
+        <footer>
+        <OverflowToolbar>
+				<ToolbarSpacer/>
+				<Button type="Accept" text="Submit"/>
+				<Button type="Reject" text="Cancel"/>
+			</OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

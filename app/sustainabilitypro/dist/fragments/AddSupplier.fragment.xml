@@ -1,0 +1,82 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Add Supplier" contentWidth="400px">
+        <content>
+            <f:Form id="addSupForm"
+			editable="true">
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Supplier Name">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Email">
+							<f:fields>
+								<Input tyep="Email" value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Contact Number">
+							<f:fields>
+								<Input type="Tel"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Department">
+							<f:fields>
+                                <ComboBox id="addSupDptCB" items="{/DepartmentHeader}">
+                                        <core:Item key="{DepartmentID}" text="{DepartmentName}" />
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Address">
+							<f:fields>
+								<Input/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Country">
+							<f:fields>
+								<Input/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Supplier Status">
+							<f:fields>
+								<Select>
+                                    <core:Item key="01" text="Internal" />
+                                    <core:Item key="02" text="External" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+        </content>
+        <beginButton>
+            <Button text="Save" type="Emphasized" press="onSupSave"/>
+        </beginButton>
+        <endButton>
+            <Button text="Close" press="onCloseAddSupDlg"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

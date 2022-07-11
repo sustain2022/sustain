@@ -1,0 +1,27 @@
+<mvc:View controllerName="sustainabilitypro.controller.Requests"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core">
+    <Page showHeader="false" backgroundDesign="List">
+    <FeedInput
+		post="onPost"
+		icon="test-resources/sap/m/images/dronning_victoria.jpg"
+		class="sapUiSmallMarginTopBottom" />
+	<List
+		showSeparators="Inner"
+		items="{/EntryCollection}">
+		<FeedListItem
+			sender="{Author}"
+			icon="{AuthorPicUrl}"
+			senderPress="onSenderPress"
+			iconPress="onIconPress"
+			iconDensityAware="false"
+			info="{Type}"
+			timestamp="{Date}"
+			text="{Text}"
+			convertLinksToAnchorTags="All"/>
+	</List>
+    </Page>
+</mvc:View>

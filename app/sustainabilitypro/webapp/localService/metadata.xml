@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/UI.xml">
+        <edmx:Include Alias="UI" Namespace="com.sap.vocabularies.UI.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Validation.V1.xml">
+        <edmx:Include Alias="Validation" Namespace="Org.OData.Validation.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="SustainabilityService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="GoalTemplate" EntityType="SustainabilityService.GoalTemplate"/>
+                <EntitySet Name="GoaTemplateFields" EntityType="SustainabilityService.GoaTemplateFields"/>
+                <EntitySet Name="GoalDetails" EntityType="SustainabilityService.GoalDetails">
+                    <NavigationPropertyBinding Path="EmployeeAssignment" Target="EmployeeGoal"/>
+                    <NavigationPropertyBinding Path="SupplierAssignment" Target="SupplierGoal"/>
+                </EntitySet>
+                <EntitySet Name="GoalDropdownValues" EntityType="SustainabilityService.GoalDropdownValues"/>
+                <EntitySet Name="EmployeeGoal" EntityType="SustainabilityService.EmployeeGoal"/>
+                <EntitySet Name="Employee" EntityType="SustainabilityService.Employee"/>
+                <EntitySet Name="SupplierHeader" EntityType="SustainabilityService.SupplierHeader"/>
+                <EntitySet Name="SupplierResources" EntityType="SustainabilityService.SupplierResources"/>
+                <EntitySet Name="ClientResources" EntityType="SustainabilityService.ClientResources"/>
+                <EntitySet Name="Client" EntityType="SustainabilityService.Client"/>
+                <EntitySet Name="SupplierGoal" EntityType="SustainabilityService.SupplierGoal"/>
+                <EntitySet Name="DepartmentHeader" EntityType="SustainabilityService.DepartmentHeader"/>
+                <EntitySet Name="DepartmentDetails" EntityType="SustainabilityService.DepartmentDetails">
+                    <NavigationPropertyBinding Path="DepartmentDetails" Target="DepartmentHeader"/>
+                </EntitySet>
+                <EntitySet Name="TeamHeader" EntityType="SustainabilityService.TeamHeader"/>
+                <EntitySet Name="TeamDetails" EntityType="SustainabilityService.TeamDetails">
+                    <NavigationPropertyBinding Path="TeamDetails" Target="TeamHeader"/>
+                    <NavigationPropertyBinding Path="EmployeeDetails" Target="Employee"/>
+                </EntitySet>
+            </EntityContainer>
+            <EntityType Name="GoalTemplate">
+                <Key>
+                    <PropertyRef Name="GoalTemplateID"/>
+                    <PropertyRef Name="ClientID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="GoalTemplateID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="AgencyID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TemplateName" Type="Edm.String" MaxLength="25"/>
+                <Property Name="TemplateDescription" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="GoaTemplateFields">
+                <Key>
+                    <PropertyRef Name="GoalTemplateID"/>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="FieldID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="GoalTemplateID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="FieldID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="FieldName" Type="Edm.String" MaxLength="30"/>
+                <Property Name="FieldDescription" Type="Edm.String"/>
+                <Property Name="FieldSRN" Type="Edm.Int32"/>
+                <Property Name="FInputType" Type="Edm.String" MaxLength="30"/>
+                <Property Name="DataType" Type="Edm.String" MaxLength="30"/>
+                <Property Name="IsMandatory" Type="Edm.Boolean"/>
+                <Property Name="IsActive" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="GoalDetails">
+                <Key>
+                    <PropertyRef Name="GoalTemplateID"/>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="GoalID"/>
+                    <PropertyRef Name="FieldID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="GoalTemplateID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="GoalID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="FieldID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="FieldValue" Type="Edm.String" MaxLength="40"/>
+                <NavigationProperty Name="EmployeeAssignment" Type="SustainabilityService.EmployeeGoal">
+                    <ReferentialConstraint Property="GoalID" ReferencedProperty="GoalID"/>
+                </NavigationProperty>
+                <NavigationProperty Name="SupplierAssignment" Type="SustainabilityService.SupplierGoal">
+                    <ReferentialConstraint Property="GoalID" ReferencedProperty="GoalID"/>
+                </NavigationProperty>
+                <Property Name="GoalStatus" Type="Edm.String" MaxLength="2"/>
+            </EntityType>
+            <EntityType Name="GoalDropdownValues">
+                <Key>
+                    <PropertyRef Name="SRNo"/>
+                    <PropertyRef Name="GoalTemplateID"/>
+                    <PropertyRef Name="FieldID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="SRNo" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="GoalTemplateID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="FieldID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="Value" Type="Edm.String" MaxLength="40"/>
+            </EntityType>
+            <EntityType Name="EmployeeGoal">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="GoalID"/>
+                    <PropertyRef Name="AssignmentID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="GoalID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="AssignmentID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="AgencyID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TargetAssigned" Type="Edm.Int64"/>
+                <Property Name="TargetAchieved" Type="Edm.Int64"/>
+                <Property Name="Status" Type="Edm.Int32"/>
+                <Property Name="AssignedBy" Type="Edm.String" MaxLength="10"/>
+                <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Precision="7" Nullable="false"/>
+                <Property Name="ValidTo" Type="Edm.DateTimeOffset" Precision="7" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="Employee">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="EmployeeID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="EmployeeName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ContactNumber" Type="Edm.Int64"/>
+            </EntityType>
+            <EntityType Name="SupplierHeader">
+                <Key>
+                    <PropertyRef Name="SupplierID"/>
+                    <PropertyRef Name="ClientID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="SupplierID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="SupplierName" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ContactName" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="30"/>
+                <Property Name="PhoneNo" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="256"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ContactNumber" Type="Edm.Int64"/>
+            </EntityType>
+            <EntityType Name="SupplierResources">
+                <Key>
+                    <PropertyRef Name="SupplierID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="SupplierID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="RoleID" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="ClientResources">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="RoleID" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="Client">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="ClientName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ContactPerson" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Email" Type="Edm.String" MaxLength="100"/>
+                <Property Name="PhoneNo" Type="Edm.String" MaxLength="30"/>
+                <Property Name="Address" Type="Edm.String" MaxLength="256"/>
+                <Property Name="Country" Type="Edm.String" MaxLength="30"/>
+                <Property Name="ContactNumber" Type="Edm.Int64"/>
+            </EntityType>
+            <EntityType Name="SupplierGoal">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="GoalID"/>
+                    <PropertyRef Name="AssignmentID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="GoalID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="AssignmentID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="SupplierID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="AgencyID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="TargetAssigned" Type="Edm.Int64"/>
+                <Property Name="TargetAchieved" Type="Edm.Int64"/>
+                <Property Name="Status" Type="Edm.Int32"/>
+                <Property Name="AssignedBy" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="DepartmentHeader">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="DepartmentID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="DepartmentID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="DepartmentName" Type="Edm.String" MaxLength="100"/>
+                <Property Name="HOD" Type="Edm.String" MaxLength="30"/>
+            </EntityType>
+            <EntityType Name="DepartmentDetails">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="DepartmentID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="DepartmentID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="TeamID" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="DepartmentDetails" Type="SustainabilityService.DepartmentHeader">
+                    <ReferentialConstraint Property="DepartmentID" ReferencedProperty="DepartmentID"/>
+                </NavigationProperty>
+            </EntityType>
+            <EntityType Name="TeamHeader">
+                <Key>
+                    <PropertyRef Name="ClientID"/>
+                    <PropertyRef Name="TeamID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClientID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="TeamID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="DepartmentID" Type="Edm.String" MaxLength="10"/>
+                <Property Name="Name" Type="Edm.String" MaxLength="100"/>
+                <Property Name="Description" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityType Name="TeamDetails">
+                <Key>
+                    <PropertyRef Name="ClinetID"/>
+                    <PropertyRef Name="TeamID"/>
+                    <PropertyRef Name="EmployeeID"/>
+                </Key>
+                <Property Name="createdAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="createdBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="modifiedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="modifiedBy" Type="Edm.String" MaxLength="255"/>
+                <Property Name="ClinetID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="TeamID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="EmployeeID" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="RoleID" Type="Edm.String" MaxLength="100"/>
+                <NavigationProperty Name="TeamDetails" Type="SustainabilityService.TeamHeader">
+                    <ReferentialConstraint Property="TeamID" ReferencedProperty="TeamID"/>
+                </NavigationProperty>
+                <NavigationProperty Name="EmployeeDetails" Type="SustainabilityService.Employee">
+                    <ReferentialConstraint Property="EmployeeID" ReferencedProperty="EmployeeID"/>
+                </NavigationProperty>
+            </EntityType>
+            <Annotations Target="SustainabilityService.GoalTemplate/createdAt">
+                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                <Annotation Term="Core.Immutable" Bool="true"/>
+                <Annotation Term="Core.Computed" Bool="true"/>
+                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                </Annotations>
+                <Annotations Target="SustainabilityService.GoalTemplate/createdBy">
+                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                    <Annotation Term="Core.Immutable" Bool="true"/>
+                    <Annotation Term="Core.Computed" Bool="true"/>
+                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                        </Annotations>
+                        <Annotations Target="SustainabilityService.GoalTemplate/modifiedAt">
+                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                            <Annotation Term="Core.Computed" Bool="true"/>
+                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                            </Annotations>
+                            <Annotations Target="SustainabilityService.GoalTemplate/modifiedBy">
+                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                <Annotation Term="Core.Computed" Bool="true"/>
+                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                    </Annotations>
+                                    <Annotations Target="SustainabilityService.GoaTemplateFields/createdAt">
+                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                        </Annotations>
+                                        <Annotations Target="SustainabilityService.GoaTemplateFields/createdBy">
+                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                </Annotations>
+                                                <Annotations Target="SustainabilityService.GoaTemplateFields/modifiedAt">
+                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                    </Annotations>
+                                                    <Annotations Target="SustainabilityService.GoaTemplateFields/modifiedBy">
+                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                            </Annotations>
+                                                            <Annotations Target="SustainabilityService.GoalDetails/createdAt">
+                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                </Annotations>
+                                                                <Annotations Target="SustainabilityService.GoalDetails/createdBy">
+                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                        </Annotations>
+                                                                        <Annotations Target="SustainabilityService.GoalDetails/modifiedAt">
+                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                            </Annotations>
+                                                                            <Annotations Target="SustainabilityService.GoalDetails/modifiedBy">
+                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                    </Annotations>
+                                                                                    <Annotations Target="SustainabilityService.GoalDropdownValues/createdAt">
+                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                        </Annotations>
+                                                                                        <Annotations Target="SustainabilityService.GoalDropdownValues/createdBy">
+                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                </Annotations>
+                                                                                                <Annotations Target="SustainabilityService.GoalDropdownValues/modifiedAt">
+                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                    </Annotations>
+                                                                                                    <Annotations Target="SustainabilityService.GoalDropdownValues/modifiedBy">
+                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                            </Annotations>
+                                                                                                            <Annotations Target="SustainabilityService.EmployeeGoal/createdAt">
+                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                </Annotations>
+                                                                                                                <Annotations Target="SustainabilityService.EmployeeGoal/createdBy">
+                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                        </Annotations>
+                                                                                                                        <Annotations Target="SustainabilityService.EmployeeGoal/modifiedAt">
+                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                            </Annotations>
+                                                                                                                            <Annotations Target="SustainabilityService.EmployeeGoal/modifiedBy">
+                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                    </Annotations>
+                                                                                                                                    <Annotations Target="SustainabilityService.Employee/createdAt">
+                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                        </Annotations>
+                                                                                                                                        <Annotations Target="SustainabilityService.Employee/createdBy">
+                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                </Annotations>
+                                                                                                                                                <Annotations Target="SustainabilityService.Employee/modifiedAt">
+                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                    </Annotations>
+                                                                                                                                                    <Annotations Target="SustainabilityService.Employee/modifiedBy">
+                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                            </Annotations>
+                                                                                                                                                            <Annotations Target="SustainabilityService.Employee/ContactNumber">
+                                                                                                                                                                <Annotation Term="Validation.Pattern" String="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"/>
+                                                                                                                                                            </Annotations>
+                                                                                                                                                            <Annotations Target="SustainabilityService.SupplierHeader/createdAt">
+                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                </Annotations>
+                                                                                                                                                                <Annotations Target="SustainabilityService.SupplierHeader/createdBy">
+                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                        </Annotations>
+                                                                                                                                                                        <Annotations Target="SustainabilityService.SupplierHeader/modifiedAt">
+                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                            </Annotations>
+                                                                                                                                                                            <Annotations Target="SustainabilityService.SupplierHeader/modifiedBy">
+                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                    <Annotations Target="SustainabilityService.SupplierHeader/ContactNumber">
+                                                                                                                                                                                        <Annotation Term="Validation.Pattern" String="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"/>
+                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                    <Annotations Target="SustainabilityService.SupplierResources/createdAt">
+                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                        <Annotations Target="SustainabilityService.SupplierResources/createdBy">
+                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                <Annotations Target="SustainabilityService.SupplierResources/modifiedAt">
+                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                    <Annotations Target="SustainabilityService.SupplierResources/modifiedBy">
+                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                            <Annotations Target="SustainabilityService.ClientResources/createdAt">
+                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                <Annotations Target="SustainabilityService.ClientResources/createdBy">
+                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.ClientResources/modifiedAt">
+                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.ClientResources/modifiedBy">
+                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.Client/createdAt">
+                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.Client/createdBy">
+                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.Client/modifiedAt">
+                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.Client/modifiedBy">
+                                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.Client/ContactNumber">
+                                                                                                                                                                                                                                                                <Annotation Term="Validation.Pattern" String="^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$"/>
+                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.SupplierGoal/createdAt">
+                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.SupplierGoal/createdBy">
+                                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.SupplierGoal/modifiedAt">
+                                                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.SupplierGoal/modifiedBy">
+                                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.DepartmentHeader/createdAt">
+                                                                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.DepartmentHeader/createdBy">
+                                                                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.DepartmentHeader/modifiedAt">
+                                                                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.DepartmentHeader/modifiedBy">
+                                                                                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.DepartmentDetails/createdAt">
+                                                                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.DepartmentDetails/createdBy">
+                                                                                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.DepartmentDetails/modifiedAt">
+                                                                                                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.DepartmentDetails/modifiedBy">
+                                                                                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.TeamHeader/createdAt">
+                                                                                                                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.TeamHeader/createdBy">
+                                                                                                                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.TeamHeader/modifiedAt">
+                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                                                                                                                    <Annotations Target="SustainabilityService.TeamHeader/modifiedBy">
+                                                                                                                                                                                                                                                                                                                                                        <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.TeamDetails/createdAt">
+                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Common.Label" String="{i18n>CreatedAt}"/>
+                                                                                                                                                                                                                                                                                                                                                                </Annotations>
+                                                                                                                                                                                                                                                                                                                                                                <Annotations Target="SustainabilityService.TeamDetails/createdBy">
+                                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Immutable" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                                                                        <Annotation Term="Common.Label" String="{i18n>CreatedBy}"/>
+                                                                                                                                                                                                                                                                                                                                                                        </Annotations>
+                                                                                                                                                                                                                                                                                                                                                                        <Annotations Target="SustainabilityService.TeamDetails/modifiedAt">
+                                                                                                                                                                                                                                                                                                                                                                            <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                            <Annotation Term="Common.Label" String="{i18n>ChangedAt}"/>
+                                                                                                                                                                                                                                                                                                                                                                            </Annotations>
+                                                                                                                                                                                                                                                                                                                                                                            <Annotations Target="SustainabilityService.TeamDetails/modifiedBy">
+                                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="UI.HiddenFilter" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Computed" Bool="true"/>
+                                                                                                                                                                                                                                                                                                                                                                                <Annotation Term="Core.Description" String="{i18n>UserID.Description}"/>
+                                                                                                                                                                                                                                                                                                                                                                                    <Annotation Term="Common.Label" String="{i18n>ChangedBy}"/>
+                                                                                                                                                                                                                                                                                                                                                                                    </Annotations>
+                                                                                                                                                                                                                                                                                                                                                                                </Schema>
+                                                                                                                                                                                                                                                                                                                                                                            </edmx:DataServices>
+                                                                                                                                                                                                                                                                                                                                                                        </edmx:Edmx>

@@ -1,0 +1,148 @@
+<mvc:View controllerName="sustainabilitypro.controller.SD1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:viz="sap.viz.ui5.controls"
+    xmlns:viz.data="sap.viz.ui5.data"
+    xmlns:mc="sap.suite.ui.microchart">
+    <Page title="Dashboard" backgroundDesign="List">
+        <headerContent>
+            <!-- <Button text="Create Goal" tooltip="Create Goal" type="Emphasized" />
+            		<MenuButton text="File"> -->
+            <MenuButton text="Create Goal" type="Emphasized" >
+                <menu>
+                    <Menu id="GoalMenu" itemSelected="onMenuAction" items="{path: '/GoalTemplate'}">
+                        <MenuItem text="{TemplateName}" key="{GoalTemplateID}"/>
+                    </Menu>
+                </menu>
+            </MenuButton>
+            <Button icon="sap-icon://upload" text="Import Reports" press="onUploadRequest"/>
+            <Button type="Default" text="Logout" press="openLogout" class="btn-border sapUiHighlight login-btn122   `   " />
+        </headerContent>
+        <content>
+            <HBox>
+                <GenericTile id="idGoalTile" header="Total Goals Created" press="onTilePress" class="sapUiResponsiveMargin cl_GoalTile">
+                    <TileContent footer="view all">
+                        <NumericContent />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="idInternalTeamTile" header="Internal Teams" press="onTilePress" class="sapUiResponsiveMargin cl_InternalTeam">
+                    <TileContent footer="view all">
+                        <NumericContent />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile id="idExternalTeamTile" header="External Teams" press="onTilePress" class="sapUiResponsiveMargin cl_ExternalTeam">
+                    <TileContent footer="view all">
+                        <NumericContent />
+                    </TileContent>
+                </GenericTile>
+                <GenericTile header="Goal Status" press="onPress" class="sapUiResponsiveMargin cl_GoalStatus">
+                    <TileContent footer="view all">
+                        <mc:ComparisonMicroChart scale="%" size="Responsive">
+                            <mc:data>
+                                <mc:ComparisonMicroChartData title="Delayed" value="11" color="Error" />
+                                <mc:ComparisonMicroChartData title="Early" value="19" color="Critical" />
+                                <mc:ComparisonMicroChartData title="On Time" value="70" color="Good" />
+                            </mc:data>
+                        </mc:ComparisonMicroChart>
+                    </TileContent>
+                </GenericTile>
+            </HBox>
+        <VBox class="sapUiResponsiveMargin">
+        <Table id="idGoalsTable"
+		inset="false"
+        growing="true"
+        growingThreshold="5"
+		items="{
+			path: '/GoalHeader',
+			sorter: {
+				path: 'BeginDate',
+                descending: true
+			},
+            parameters: {expand: 'DepartmentAssignment'}
+		}">
+        <headerToolbar>
+			<OverflowToolbar>
+				<Title text="Recent Goals" level="H2"/>
+				<ToolbarSpacer/>
+                <Button text="Filter"
+                        tooltip="Filter"
+                        icon="sap-icon://filter"
+                        press="handleGoalFilter"/>
+			</OverflowToolbar>
+		</headerToolbar>
+        <columns>
+			<Column
+				width="12em">
+				<Text text="Visibility" />
+			</Column>
+			<Column>
+				<Text text="Goal Name" />
+			</Column>
+			<Column>
+				<Text text="Metric" />
+			</Column>
+			<Column>
+				<Text text="Start Date" />
+			</Column>
+			<Column>
+				<Text text="Due Date" />
+			</Column>
+			<Column>
+				<Text text="Business Status" />
+			</Column>
+			<Column>
+				<Text text="% Complete" />
+			</Column> 
+            <Column>
+				<Text text="System Status" />
+			</Column>                       
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle" type="{= ${GoalStatus_Sys} === '1' ?  'Inactive' : 'Navigation'}" press="showGoalDetails">
+				<cells>
+					<Text
+						text="{Visibility}"/>
+					<Text
+						text="{GoalName}" />
+                    <Text
+						text="{Metric}" />   
+                    <Text
+						text="{path:'BeginDate', type: 'sap.ui.model.odata.type.Date'}" />                        
+					<Text
+						text="{path:'EndDate', type: 'sap.ui.model.odata.type.Date'}" />
+					<Text text="{GoalStaus_Biz}"/>
+					<Text text="{GoalCompletion}"/>
+                    <Text text="{= ${GoalStatus_Sys} === '1' ?  'Draft' : ''}"/>
+                </cells>
+                </ColumnListItem>
+            </items>
+            </Table>
+            </VBox>
+            <HBox>
+
+            <FlexBox class="sapUiResponsiveMargin" width="22rem" height="13rem" alignItems="Start" justifyContent="SpaceBetween">
+                <mc:InteractiveDonutChart selectionChanged="onSelectionChanged" displayedSegments="4" press="press">
+				<mc:segments>
+					<mc:InteractiveDonutChartSegment label="Behind" value="11" displayedValue="5%" color="Error"/>
+					<mc:InteractiveDonutChartSegment label="On Track" value="70" displayedValue="30%" color="Good"/>
+					<mc:InteractiveDonutChartSegment label="Not Started" value="9" displayedValue="6%" color="Error"/>
+                    <mc:InteractiveDonutChartSegment label="Completed" value="10" displayedValue="5%" color="Good"/>
+				</mc:segments>
+			</mc:InteractiveDonutChart>
+            </FlexBox>
+        <FlexBox class="sapUiResponsiveMargin" width="22rem" height="13rem" alignItems="Start" justifyContent="SpaceBetween">
+		<items>
+			<mc:InteractiveDonutChart selectionChanged="onSelectionChanged" displayedSegments="4" press="press">
+				<mc:segments>
+					<mc:InteractiveDonutChartSegment label="Behind" value="11" displayedValue="6%" color="Error"/>
+					<mc:InteractiveDonutChartSegment label="On Track" value="70" displayedValue="40%" color="Good"/>
+					<mc:InteractiveDonutChartSegment label="Not Started" value="9" displayedValue="3%" color="Error"/>
+                    <mc:InteractiveDonutChartSegment label="Completed" value="10" displayedValue="5%" color="Good"/>
+				</mc:segments>
+			</mc:InteractiveDonutChart>
+		</items>
+	</FlexBox>
+            </HBox>
+        </content>
+    </Page>
+</mvc:View>

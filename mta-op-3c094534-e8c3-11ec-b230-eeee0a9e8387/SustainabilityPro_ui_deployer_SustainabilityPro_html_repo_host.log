@@ -1,0 +1,4 @@
+#2.0#2022 06 10 13:43:21.414#Z#DEBUG#com.sap.cloud.lm.sl.xs2.3c094534-e8c3-11ec-b230-eeee0a9e8387.SustainabilityPro_ui_deployer_SustainabilityPro_html_repo_host.startContentDeployTask#
+######org.cloudfoundry.multiapps.controller.persistence.services.ProcessLogger########flowable-async-job-executor-thread-2113###
+[PollDeployContentStatusExecution] [SustainabilityPro_ui_deployer] [INFO] Application content was successfully uploaded { CODE: '1002' }#
+

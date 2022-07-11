@@ -1,0 +1,166 @@
+###
+GET http://localhost:4004/sustainability/GoalHeader
+
+###
+POST http://localhost:4004/sustainability/EmployeeUser
+Content-Type: application/json
+
+{
+    "ClientID": "CL001",
+    "UserID": "abc7",
+    "EmployeeName": "Test",
+    "ContactNumber": "9178987654"
+}
+
+###
+POST http://localhost:4004/sustainability/DepartmentHeader
+Content-Type: application/json
+
+{
+    "ClientID": "CL001",
+    "HOD": "abc7",
+    "DepartmentName": "Test"
+}
+
+###
+GET http://localhost:4004/sustainability/DepartmentHeader
+
+###
+DELETE http://localhost:4004/sustainability/DepartmentHeader
+Content-Type: application/json
+
+{
+    "ClientID": "CL001",
+    "DepartmentID": "DT0NaN"
+}
+
+###
+POST http://localhost:4004/sustainability/TeamHeader
+Content-Type: application/json
+
+{
+    "ClientID": "CL001",
+    "DepartmentID": "DT0001",
+    "TeamName": "Test"
+}
+
+###
+POST http://localhost:4004/sustainability/SupplierHeader
+Content-Type: application/json
+
+{"ClientID":"CL0001","SupplierName":"Supplier 1","Email":"ss@sd.com","ContactNumber":"9291231233","DepartmentID":"DT0012","Address":"test","Country":"India","SupplierStatus":"01"}
+
+###
+POST http://localhost:4004/sustainability/EmployeeGoalUpdate
+Content-Type: application/json
+
+{"ClientID":"CL0002","GoalID":"5","EmployeeID":"EID0004","TargetAssigned":10,"TargetAchieved":1,"AdditionalInfo":"Test"}
+
+###
+POST http://localhost:4004/sustainability/EmployeeGoal
+Content-Type: application/json
+
+{
+    "ClientID":"CL0001",
+    "GoalID":"2",
+    "EmployeeID":"EID0001",
+    "TargetAssigned":"10"
+}
+
+###
+POST http://localhost:4004/sustainability/SupplierGoalUpdate
+Content-Type: application/json
+
+{
+    "ClientID":"CL0001",
+    "GoalID":"1",
+    "SupplierID":"SID0003",
+    "TargetAssigned":"10",
+    "TargetAchieved":"10",
+    "AdditionalInfo":"test",
+    "AssignmentID": "1"
+}
+
+###
+POST http://localhost:4004/sustainability/GoalHeader
+Content-Type: application/json
+
+{"GoalTemplateID":"GT0002","ClientID":"CL0001","GoalStatus_Sys":"1","Visibility":"Private","GoalName":"CO2 Emission","Metric":"","BeginDate":"2022-01-01","EndDate":"2022-05-01","GoalCompletion":"","GoalStaus_Biz":1,"ImpactCategory":"Environmental","GoalDetails":[{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"2","FieldValue":"Economic"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"4","FieldValue":"CO2 Emission"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"8","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"10","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"12","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"13","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"14","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"15","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"16","FieldValue":"Valid"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"17","FieldValue":"Submitted"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"18","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"19","FieldValue":"Yes"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"20","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"21","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"22","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"23","FieldValue":""},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"24","FieldValue":"High"},{"GoalTemplateID":"GT0002","ClientID":"CL0001","FieldID":"25","FieldValue":"High"}]}
+
+###
+GET http://localhost:4004/sustainability/GoalStatusReport
+
+###
+POST http://localhost:4004/sustainability/AgencyReportHeader
+Content-Type: application/json
+
+{
+"TemplateID":"TID001",
+"ClientID":"CL0001"
+}
+
+###
+POST http://localhost:4004/sustainability/AgencyReportTemplate
+Content-Type: application/json
+
+{
+"ClientID":"CL0001",
+"Agency": "test",
+"TemplateName": "Test",
+"TemplateType": "Internal"
+}
+
+###
+POST http://localhost:4004/v2/sustainability/UserLogin
+Content-Type: application/json
+
+{
+    "ClientID": "CL0001",
+    "UserID": "Ha543",
+    "Email": "ha@gmail.com",
+    "Password": "Ha@1234",
+    "UserType": "Internal",
+    "ValidFrom": "2021-06-27T14:52:23.123Z",
+    "ValidTo": "2022-12-27T14:52:23.123Z",
+    "UserStatus": "Active"
+}
+
+###
+POST http://localhost:4004/v2/sustainability/SupplierHeader
+Content-Type: application/json
+
+{
+    "ClientID": "CL0001",
+    "DepartmentID": "DT0001",
+    "SupplierName": "BISCOM1",
+    "ContactName": "",
+    "Email": "support@bis.com",
+    "PhoneNo": "",
+    "Address": "Atlanta",
+    "Country": "USA",
+    "ContactNumber": "999999999",
+    "SupplierStatus": "01"
+}
+
+###
+POST http://localhost:4004/v2/sustainability/RoleMaster
+Content-Type: application/json
+
+{
+    "ClientID": "CL0001",
+    "RoleName": "Test",
+    "RoleType": "T",
+    "Description": "Test1",
+    "RoleStatus": "Active",
+    "PermissionID": "1"
+}
+
+###
+POST http://localhost:4004/v2/sustainability/RolePermission
+Content-Type: application/json
+
+{
+    "ClientID": "CL0001",
+    "RoleID": "RL001",
+    "Description": "Create Goal"
+}

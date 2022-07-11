@@ -1,0 +1,52 @@
+<mvc:View controllerName="enterprisesustainabilitypro.controller.MaintainDepartment"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Page showHeader="false" backgroundDesign="List">
+        <VBox class="sapUiSmallMargin">
+            <f:Form id="FormAddDepartment" editable="true">
+                <f:title>
+                    <core:Title text="Add Department" />
+                </f:title>
+                <f:layout>
+                    <f:ResponsiveGridLayout labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false" />
+                </f:layout>
+                <f:formContainers>
+                    <f:FormContainer>
+                        <f:formElements>
+                            <f:FormElement label="Department Name">
+                                <f:fields>
+                                    <Input value="{DepartmentName}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Description">
+                                <f:fields>
+                                    <Input value="{DepartmentDescription}" />
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="HOD">
+                                <f:fields>
+                                    <Input value="{HOD}"/>
+                                </f:fields>
+                            </f:FormElement>
+                            <f:FormElement label="Department Type">
+                                <f:fields>
+                                    <Input value="{DepartmentType}"/>
+                                </f:fields>
+                            </f:FormElement>
+                        </f:formElements>
+                    </f:FormContainer>
+                </f:formContainers>
+            </f:Form>
+        </VBox>
+        <footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                <Button id="idDepButton" type="Emphasized" text="Add" press="onAddDepAction"/>
+                <Button type="Reject" text="Cancel"/>
+            </OverflowToolbar>
+        </footer>
+    </Page>
+</mvc:View>

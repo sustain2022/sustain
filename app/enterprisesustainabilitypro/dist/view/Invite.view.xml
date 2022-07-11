@@ -1,0 +1,22 @@
+<mvc:View controllerName="enterprisesustainabilitypro.controller.Invite"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified">
+    <Page showHeader="false" backgroundDesign="List">
+        <List>
+            <headerToolbar>
+                <OverflowToolbar>
+                    <Title text="Invites" level="H2" />
+                    <ToolbarSpacer />
+
+                    <u:FileUploader id="fileUploader" name="myFileUpload" uploadUrl="upload/" tooltip="Upload your file to the local server" uploadComplete="handleUploadComplete"/>
+                </OverflowToolbar>
+            </headerToolbar>
+            <items>
+                <StandardListItem title="p@gmail.com" info="Sent" infoState="Success"/>
+                <StandardListItem title="max@gmail.com" info="Sent" infoState="Success"/>
+                <StandardListItem title="john@gmail.com" info="Sent" infoState="Success"/>
+            </items>
+        </List>
+    </Page>
+</mvc:View>

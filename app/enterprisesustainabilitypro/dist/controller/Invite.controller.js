@@ -1,0 +1,1 @@
+sap.ui.define(["sap/ui/core/mvc/Controller"],function(t){"use strict";return t.extend("enterprisesustainabilitypro.controller.Invite",{onInit:function(){this.getOwnerComponent().getRouter().getRoute("Invite").attachPatternMatched(this._onRouteMatched,this)},_onRouteMatched:function(t){this.getView().getParent().getParent().getSideContent().setVisible(true)}})});

@@ -1,0 +1,71 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Add Goal Update" contentWidth="400px">
+        <content>
+            <f:Form id="addSupGoalUpdateForm"
+			editable="true">
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+                        <f:FormElement label="Supplier Name">
+							<f:fields>
+                                <ComboBox items="{path:'/SupplierGoal', parameters:{'expand':'SupplierDetails'}}">
+                                        <core:Item key="{SupplierID}" text="{SupplierDetails/SupplierName}">
+                                        <core:customData>
+                                            <core:CustomData key="{SupplierID}" value="{TargetAssigned}"/>
+                                        </core:customData>
+                                        </core:Item>
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Employee Name">
+							<f:fields>
+                                <ComboBox items="{path:'/EmployeeGoal', parameters:{'expand':'EmployeeDetails'}}">
+                                        <core:Item key="{EmployeeID}" text="{EmployeeDetails/EmployeeName}">
+                                        </core:Item>
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
+						<f:FormElement label="Target Achieved">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Additional Info">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+        </content>
+        <beginButton>
+            <Button text="Save" type="Emphasized" press="onSupUpdSave"/>
+        </beginButton>
+        <endButton>
+            <Button text="Close" press="onCloseAddSupUpdDlg"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>

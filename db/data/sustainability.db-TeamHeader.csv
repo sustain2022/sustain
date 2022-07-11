@@ -1,0 +1,10 @@
+createdAt,createdBy,modifiedAt,modifiedBy,ClientID,TeamID,DepartmentID,TeamName,TeamDescription
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM001,DT001,Sales,Sales Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM002,DT001,Finance,Finance Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM003,DT002,Production,Production Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM004,DT002,Operations,Operations Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM005,DT003,Marketing,Marketing Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0001,TM006,DT003,Purchase,Purchase Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0002,TM007,DT004,HR,HR Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0002,TM008,DT004,GM,GM Team
+2021-08-08 06:47:23,anonymous,2021-08-08 06:47:23,anonymous,CL0002,TM009,DT004,Transport,Transport Team

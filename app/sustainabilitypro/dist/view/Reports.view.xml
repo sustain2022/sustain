@@ -1,0 +1,16 @@
+<mvc:View controllerName="sustainabilitypro.controller.Reports"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+    xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1"
+    xmlns:t="sap.ui.table">
+    <Page title="Reports" backgroundDesign="List">
+    	<headerContent>
+		    <Button icon="sap-icon://upload" text="Import Reports" press="onUploadRequest"/>
+		</headerContent>
+        <Panel id="panelIntReports" expandable="true" headerText="Internal Reports" width="auto" class="sapUiResponsiveMargin">      
+        </Panel>
+        <Panel id="panelExtReports" expandable="true" headerText="External Reports" width="auto" class="sapUiResponsiveMargin">                     
+        </Panel>        
+    </Page>
+</mvc:View>

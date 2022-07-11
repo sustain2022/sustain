@@ -1,0 +1,70 @@
+<mvc:View
+    controllerName="enterprisesustainabilitypro.controller.App"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.f"
+    xmlns:tnt="sap.tnt"
+>
+    <!-- <Shell id="shell">
+        <App id="app">
+            <pages>
+                <Page id="page" title="{i18n>title}">
+                    <content />
+                </Page>
+            </pages>
+        </App>
+    </Shell> -->
+
+        <tnt:ToolPage id="toolPage">
+        <tnt:header>
+            <f:ShellBar title="Sustainability Pro" showMenuButton="true" homeIcon="./resources/sap/ui/documentation/sdk/images/logo_ui5.png" showCopilot="false" showNotifications="true" menuButtonPressed="onMenuButtonPress" showProductSwitcher="true" notificationsNumber="2">
+                <f:profile>
+                    <Avatar initials="UI"/>
+                </f:profile>
+                <f:searchManager>
+                    <f:SearchManager/>
+                </f:searchManager>
+            </f:ShellBar>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation id="sideNavigation" selectedKey="rootItem1" itemSelect="onItemSelect">
+                <tnt:NavigationList id="navigationList">
+                    <tnt:NavigationListItem text="Dashboard" key="rootItem1" icon="sap-icon://bbyd-dashboard"/>
+                    <tnt:NavigationListItem text="User Management" key="rootItem2" icon="sap-icon://account">
+                        <tnt:NavigationListItem text="Add User" key="rootItem2-1" />
+                        <tnt:NavigationListItem text="Invite User" key="rootItem2-2" />
+                        <tnt:NavigationListItem text="Activate/Deactivate User" key="rootItem2-3"/>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Maintain Enterprise" key="rootItem3" icon="sap-icon://building">
+                        <tnt:NavigationListItem text="Role Management" key="rootItem3-1"/>
+                        <tnt:NavigationListItem text="Org Structure" key="rootItem3-2"/>
+                        <tnt:NavigationListItem text="Update Profile" key="rootItem3-3" />
+                        <tnt:NavigationListItem text="Maintain Department" key="rootItem3-3" />
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Maintain Suppliers" key="rootItem4" icon="sap-icon://supplier">
+                        <tnt:NavigationListItem text="Add Supplier" key="rootItem4-1"/>
+                        <tnt:NavigationListItem text="Invite Supplier" key="rootItem4-2" />
+                        <tnt:NavigationListItem text="Activate/Deactivate Supplier" key="rootItem4-3"/>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Maintain Goal" key="rootItem5" icon="sap-icon://goal">
+                        <tnt:NavigationListItem text="Delete Goal" key="rootItem5-1"/>
+                        <tnt:NavigationListItem text="Deactivate Goal" key="rootItem5-2"/>
+                    </tnt:NavigationListItem>
+                    <tnt:NavigationListItem text="Enhancement Requests" key="rootItem6" icon="sap-icon://request"/>
+                </tnt:NavigationList>
+                <tnt:fixedItem>
+                    <tnt:NavigationList>
+                        <tnt:NavigationListItem text="About Us" key="rootItem5" icon="sap-icon://hint"/>
+                        <tnt:NavigationListItem text="Contact Us" key="rootItem6" icon="sap-icon://business-card"/>
+                        <tnt:NavigationListItem text="Support" key="rootItem7" icon="sap-icon://headset"/>
+                    </tnt:NavigationList>
+                </tnt:fixedItem>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+            <NavContainer id="rootControl">
+            </NavContainer>
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

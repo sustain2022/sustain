@@ -1,0 +1,31 @@
+{
+  "format_version": 1,
+  "imports": [
+    {
+      "target_table": "SUSTAINABILITY_DB_ROLEPERMISSION",
+      "source_data": {
+        "data_type": "CSV",
+        "file_name": "sustainability.db-RolePermission.csv",
+        "has_header": true,
+        "type_config": {
+          "delimiter": ","
+        }
+      },
+      "import_settings": {
+        "import_columns": [
+          "PERMISSIONID",
+          "ROLEID",
+          "DESCRIPTION",
+          "CLIENTID"
+        ],
+        "include_filter": []
+      },
+      "column_mappings": {
+        "PERMISSIONID": "PermissionID",
+        "ROLEID": "RoleID",
+        "DESCRIPTION": "Description",
+        "CLIENTID": "ClientID"
+      }
+    }
+  ]
+}

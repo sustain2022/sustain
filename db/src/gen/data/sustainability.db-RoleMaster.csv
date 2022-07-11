@@ -1,0 +1,6 @@
+RoleID,ClientID,RoleName,RoleType,Description,RoleStatus,PermissionID
+RL001,CL0001,Admin,T,Admin,Active,1
+RL002,CL0001,SUser,T,Super User,Active,2
+RL003,CL0001,HOD,B,HOD,Active,3
+RL004,CL0001,TeamLead,B,Team Lead,Active,4
+RL005,CL0001,Manager,B,Manager,Active,5

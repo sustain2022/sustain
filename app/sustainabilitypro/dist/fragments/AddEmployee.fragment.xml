@@ -1,0 +1,95 @@
+<core:FragmentDefinition xmlns="sap.m"
+    xmlns:smartForm="sap.ui.comp.smartform"
+	xmlns:smartField="sap.ui.comp.smartfield"
+    xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core">
+    <Dialog title="Add Employee" contentWidth="400px">
+        <content>
+            <f:Form id="addEmpForm"
+			editable="true">
+			<f:layout>
+				<f:ResponsiveGridLayout
+					labelSpanXL="4"
+					labelSpanL="3"
+					labelSpanM="4"
+					labelSpanS="12"
+					adjustLabelSpan="false"
+					emptySpanXL="0"
+					emptySpanL="4"
+					emptySpanM="0"
+					emptySpanS="0"
+					columnsXL="2"
+					columnsL="1"
+					columnsM="1"
+					singleContainerFullSize="false" />
+			</f:layout>
+			<f:formContainers>
+				<f:FormContainer>
+					<f:formElements>
+						<f:FormElement label="Employee Name">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="User ID">
+							<f:fields>
+								<Input value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Email">
+							<f:fields>
+								<Input type="Email" value=""/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Contact Number">
+							<f:fields>
+								<Input type="Tel"/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Department">
+							<f:fields>
+								<ComboBox id="addDptCB" items="{/DepartmentHeader}">
+                                        <core:Item key="{DepartmentID}" text="{DepartmentName}" />
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Valid From">
+							<f:fields>
+								<DatePicker/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Valid To">
+							<f:fields>
+								<DatePicker/>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Employee Type">
+							<f:fields>
+								<Select>
+                                    <core:Item key="Inernal" text="Inernal" />
+                                    <core:Item key="External" text="External" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="User Status">
+							<f:fields>
+								<Select>
+                                    <core:Item key="Active" text="Active" />
+                                    <core:Item key="Inactive" text="Inactive" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+					</f:formElements>
+				</f:FormContainer>
+			</f:formContainers>
+		</f:Form>
+        </content>
+        <beginButton>
+            <Button text="Save" type="Emphasized" press="onEmpSave"/>
+        </beginButton>
+        <endButton>
+            <Button text="Close" press="onCloseAddEmpDlg"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
