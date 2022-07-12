@@ -20,9 +20,9 @@
 		</layoutAlgorithm>
 		<nodes>
 			<Node icon="sap-icon://action-settings"
-				  key="{id}"
-				  description="{title}"
-				  title="{title}"
+				  key="{EmployeeID}"
+				  description="{EmployeeName}"
+				  title="{EmployeeName}"
 				  width="90"
 				  collapsed="{collapsed}"
 				  attributes="{attributes}"
@@ -50,7 +50,7 @@
 			</Node>
 		</nodes>
 		<lines>
-			<Line from="{from}" to="{to}" arrowOrientation="None" press="linePress" />
+			<Line from="{supervisor}" to="{employee}" arrowOrientation="None" press="linePress" />
 		</lines>
 	</Graph>
 

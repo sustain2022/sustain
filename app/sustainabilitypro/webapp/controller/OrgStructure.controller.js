@@ -21,7 +21,9 @@ var GraphController = Controller.extend("sustainabilitypro.controller.OrgStructu
 
 
             }.bind(this)})
-			this._oModel = new JSONModel(sap.ui.require.toUrl("sustainabilitypro/utils/graph.json"));
+			// this._oModel = new JSONModel(sap.ui.require.toUrl("sustainabilitypro/utils/graph.json"));
+            this._oModel = new JSONModel();
+            this._oModel.setData(this.getOwnerComponent().getModel("orgChart").getData());
 			this._oModel.setDefaultBindingMode(sap.ui.model.BindingMode.OneWay);
 
 			this._sTopSupervisor = STARTING_PROFILE;

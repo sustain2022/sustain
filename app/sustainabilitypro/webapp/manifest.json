@@ -67,6 +67,9 @@
             "utility": {
                 "type": "sap.ui.model.json.JSONModel"
             },
+            "orgChart": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
             "goals": {
                 "type": "sap.ui.model.json.JSONModel"
             },

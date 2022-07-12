@@ -6,7 +6,7 @@
 	controllerName="enterprisesustainabilitypro.controller.RoleMaintain"
 	height="100%">
 
-	<smartFilterBar:SmartFilterBar id="smartFilterBar"
+	<smartFilterBar:SmartFilterBar id="smartFilterBar" initialise="onInitialise" initialized="onInitialized"
 		entitySet="RoleMaster" persistencyKey="SmartFilter_Explored" />
 
 	<smartTable:SmartTable entitySet="RoleMaster"
@@ -14,7 +14,7 @@
 		useVariantManagement="true" useTablePersonalisation="true" header="Roles"
 		showRowCount="true" persistencyKey="SmartTableRefApp_Explored"
 		enableAutoBinding="true" class="sapUiResponsiveContentPadding"
-		tableType="ResponsiveTable" demandPopin="true" enableAutoColumnWidth="true"
-		showPasteButton="true" paste="onPaste" />
+		tableType="ResponsiveTable" demandPopin="true" enableAutoColumnWidth="false"
+		showPasteButton="false" beforeRebindTable="onBeforeRebindTable" paste="onPaste" initiallyVisibleFields="RoleName,RoleType,Description,RoleStatus"/>
 
 </mvc:View>
