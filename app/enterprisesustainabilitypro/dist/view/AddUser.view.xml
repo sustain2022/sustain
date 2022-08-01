@@ -18,32 +18,32 @@
                         <f:formElements>
                             <f:FormElement label="Employee Name">
                                 <f:fields>
-                                    <Input value="{EmployeeName}"/>
+                                    <Input value="{/EmployeeName}"/>
                                 </f:fields>
                             </f:FormElement>
                             <f:FormElement label="Email">
                                 <f:fields>
-                                    <Input value="{Email}" />
+                                    <Input value="{/Email}" />
                                 </f:fields>
                             </f:FormElement>
                             <f:FormElement label="ContactNumber">
                                 <f:fields>
-                                    <Input value="{ContactNumber}"/>
+                                    <Input value="{/ContactNumber}"/>
                                 </f:fields>
                             </f:FormElement>
                             <f:FormElement label="Country">
                                 <f:fields>
-                                    <Input value="{CountryID}"/>
+                                    <Input value="{/CountryID}"/>
                                 </f:fields>
                             </f:FormElement>
                             <f:FormElement label="Valid From">
                                 <f:fields>
-                                    <DatePicker value="{ValidFrom}"/>
+                                    <DatePicker value="{/ValidFrom}"/>
                                 </f:fields>
                             </f:FormElement>
                             <f:FormElement label="ValidTo">
                                 <f:fields>
-                                    <DatePicker value="{ValidTo}"/>
+                                    <DatePicker value="{/ValidTo}"/>
                                 </f:fields>
                             </f:FormElement>
                         </f:formElements>

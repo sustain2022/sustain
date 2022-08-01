@@ -18,8 +18,7 @@
           "ROLENAME",
           "ROLETYPE",
           "DESCRIPTION",
-          "ROLESTATUS",
-          "PERMISSIONID"
+          "ROLESTATUS"
         ],
         "include_filter": []
       },
@@ -29,8 +28,7 @@
         "ROLENAME": "RoleName",
         "ROLETYPE": "RoleType",
         "DESCRIPTION": "Description",
-        "ROLESTATUS": "RoleStatus",
-        "PERMISSIONID": "PermissionID"
+        "ROLESTATUS": "RoleStatus"
       }
     }
   ]

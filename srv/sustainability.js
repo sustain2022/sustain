@@ -23,6 +23,7 @@ module.exports = cds.service.impl(
         srv.before('CREATE', 'SupplierGoal', generateSupplierGoalAssgn);
 
         srv.before('CREATE', 'DepartmentGoal', generateDepartmentGoalAssgn);
+      //  srv.after('READ', 'DepartmentGoal', goalDepTargetAchievedCal);
 
         srv.before('CREATE', 'EmployeeGoal', generateEmployeeGoalAssgn);
         srv.before('CREATE', 'EmployeeUser', generateEmployeeID);
@@ -129,6 +130,13 @@ async function goalSupTargetAchievedCal(requestedData) {
         requestedData.TargetAchieved = targetAch;
     }
 
+}
+
+async function goalDepTargetAchievedCal(requestedData) {
+    var depID = requestedData[0].DepartmentID;
+    var SupplierUpdatedData = await cds.read(`SupplierGoal_Update`); //.where({GoalID: {'=': goalID}, and:{ ClientID: {'=': clientID }}});
+    var EmployeeUpdatedData = await cds.read(`EmployeeGoal_Update`);//.where({GoalID: {'=': goalID}, and:{ ClientID: {'=': clientID }}});
+    
 }
 
 async function generateSupplierGoalAssgn(requestData) {

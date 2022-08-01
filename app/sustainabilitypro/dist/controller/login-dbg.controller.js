@@ -28,6 +28,7 @@ sap.ui.define([
                 // this.getView().getParent().getParent().setMode("HideMode");
                 
                 if (localStorage.getItem('user') != undefined) {
+                    this.getView().setBusy(true);
                     this.getOwnerComponent().getModel().read("/UserLogin", {
                         urlParameters: {
                             '$filter': "Email eq '" + localStorage.getItem('Email') + "' and Password eq '" + localStorage.getItem('Password') + "'"
@@ -39,7 +40,8 @@ sap.ui.define([
                             // this.getView().getParent().getParent().setMode("ShowHideMode");
                             this.getView().getParent().getParent().getSideContent().setVisible(true);
                             this.getOwnerComponent()._clientId = resp.results[0].ClientID;
-                            oRouter.navTo("detailsd1");
+                            // oRouter.navTo("detailsd1");
+                            this._loadOrgChart();
                         }.bind(this)
                     });
                 }
@@ -56,7 +58,7 @@ sap.ui.define([
                 var lForm = this.getView().getModel("Login").getData();
                 // @ts-ignore
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                
+                this.getView().setBusy(true);
                 this.getOwnerComponent().getModel().read("/UserLogin", {
                     urlParameters: {
                         '$filter': "Email eq '" + lForm.uname + "' and Password eq '" + lForm.pwd + "'"
@@ -68,9 +70,20 @@ sap.ui.define([
                         // this.getView().getParent().getParent().setMode("ShowHideMode");
                         this.getView().getParent().getParent().getSideContent().setVisible(true);
                         this.getOwnerComponent()._clientId = resp.results[0].ClientID;
-                        oRouter.navTo("detailsd1");
+                        // oRouter.navTo("detailsd1");
+                        this._loadOrgChart();
                     }.bind(this)
                 });
+            },
+            _loadOrgChart: function() {
+                // this.getView().setBusy(true);
+                this.getOwnerComponent().getModel().read("/orgChart('"+this.getOwnerComponent()._clientId+"')",{success: function(resp){
+                            this.getOwnerComponent().getModel("orgChart").setData(resp);
+                            sap.ui.core.UIComponent.getRouterFor(this).navTo("detailsd1");
+                            this.getView().setBusy(false);
+                            
+                        }.bind(this)
+                    })  
             },
             validateEventFeedbackForm: function (requiredInputs) {
                 var _self = this;

@@ -33,6 +33,11 @@ sap.ui.define([
                    // oRouter.navTo("login");
                 }
                 this.getOwnerComponent()._clientId = 'CL0001';
+                // this.getOwnerComponent().getModel().read("/orgChart('CL0001')",{success: function(resp){
+                //         this.getOwnerComponent().getModel("orgChart").setData(resp);
+                //     }.bind(this)
+                // })
+                
                 
             },
             _onRouteMatched: function () {
@@ -63,6 +68,9 @@ sap.ui.define([
                         break;
                     case "rootItem5":
                         this.getOwnerComponent().getRouter().navTo("analytics");
+                        break;
+                    case "rootItem6":
+                        this.getOwnerComponent().getRouter().navTo("OrgStructure");                        
                     default:
                         break;
                 }

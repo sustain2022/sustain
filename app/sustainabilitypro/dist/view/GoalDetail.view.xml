@@ -137,7 +137,7 @@
 										<m:Text text="{path:'EndDate',type: 'sap.ui.model.odata.type.Date'}" />
 										<m:Text text="{TargetAssigned}" />
 										<m:Text text="{TargetAchieved}" />
-                                        <m:Text text="{= ${Status_Biz} === 1 ? 'Active':'Inactive'}" />
+                                        <m:Text text="{= ${Status_Biz} === 10 ? 'New':'In process'}" />
 									</m:ColumnListItem>
 								</m:items>
 							</m:Table>

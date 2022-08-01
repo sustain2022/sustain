@@ -10,7 +10,7 @@ sap.ui.define([
     function (Controller, Filter,util) {
         "use strict";
 
-        return Controller.extend("susproapp.controller.SD1", {
+        return Controller.extend("sustainabilitypro.controller.SD1", {
             onInit: function () {
                 var oModel = new sap.ui.model.json.JSONModel({client:"CL0001"});
                 this.getOwnerComponent().setModel(oModel,"prop");
@@ -42,8 +42,7 @@ sap.ui.define([
                     })],
                     success: function (count) {
                         this.byId("idGoalTile").getTileContent()[0].getContent().setValue(count);
-                }.bind(this)})
-
+                }.bind(this)});
 
                 this.getView().getModel().read('/TeamHeader/$count', {
                     filters: [new sap.ui.model.Filter({
@@ -72,12 +71,9 @@ sap.ui.define([
                     success: function (count) {
                         this.byId("idExternalTeamTile").getTileContent()[0].getContent().setValue(count);
                 }.bind(this)});
-
             // }
             util.clientFilter(this,"GoalMenu","items");
             util.clientFilter(this,"idGoalsTable","items");
-            
-            
             },
             _readTemplates: function(){
                 this.getOwnerComponent().getModel().read("/AgencyReportTemplate", {

@@ -1,6 +1,6 @@
 using sustainability.db as sustainability from '../db/sustainability';
 
-service SustainabilityService {
+service SustainabilityService @(requires: 'authenticated-user') {
     
     entity GoalTemplate as projection on sustainability.GoalTemplate;
      entity GoalTemp as projection on sustainability.GoalTemplate;

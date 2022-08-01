@@ -3,5 +3,7 @@ VIEW SustainabilityService_RolePermission AS SELECT
   RolePermission_0.ClientID,
   RolePermission_0.PermissionID,
   RolePermission_0.RoleID,
-  RolePermission_0.Description
+  RolePermission_0.Description,
+  RolePermission_0.PermissionByObject,
+  RolePermission_0.PermissionType
 FROM sustainability_db_RolePermission AS RolePermission_0

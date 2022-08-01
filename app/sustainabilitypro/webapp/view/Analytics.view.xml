@@ -1,4 +1,5 @@
-<mvc:View xmlns:mvc = "sap.ui.core.mvc"
+<mvc:View controllerName="sustainabilitypro.controller.Analytics"
+    xmlns:mvc = "sap.ui.core.mvc"
     xmlns:viz = "sap.viz.ui5.controls"
     xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
     xmlns:viz.data="sap.viz.ui5.data"

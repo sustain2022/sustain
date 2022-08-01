@@ -24,6 +24,10 @@ sap.ui.define([
                    // oRouter.navTo("login");
                 }
                 this.getOwnerComponent()._clientId = 'CL0001';
+                this.getOwnerComponent().getModel().read("/orgChart('CL0001')",{success: function(resp){
+                    this.getOwnerComponent().getModel("orgChart").setData(resp);
+                }.bind(this)
+            })
             },
             onMenuButtonPress : function() {
                 var toolPage = this.byId("toolPage");
@@ -50,9 +54,21 @@ sap.ui.define([
                     case "rootItem3":
                         this.getOwnerComponent().getRouter().navTo("teammgmnt");
                         break;
+                    case "rootItem3-1":
+                        this.getOwnerComponent().getRouter().navTo("RoleMaintain");
+                        break;
+                    case "rootItem3-2":
+                        this.getOwnerComponent().getRouter().navTo("OrgStructure");
+                        break;
+                    case "rootItem3-3":
+                        this.getOwnerComponent().getRouter().navTo("MaintainDepartment");
+                        break;                        
                     case "rootItem4-1":
                         this.getOwnerComponent().getRouter().navTo("AddSupplier");
                         break;
+                    case "rootItem4-3":
+                        this.getOwnerComponent().getRouter().navTo("ActivateSuppliers");
+                        break;                        
                     case "rootItem5-1":
                         this.getView().getModel("util").setProperty("/GoalAction","Delete");
                         this.getOwnerComponent().getRouter().navTo("MaintainGoal");

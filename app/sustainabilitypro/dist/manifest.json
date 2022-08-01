@@ -67,6 +67,9 @@
             "utility": {
                 "type": "sap.ui.model.json.JSONModel"
             },
+            "orgChart": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
             "goals": {
                 "type": "sap.ui.model.json.JSONModel"
             },
@@ -169,6 +172,13 @@
                     "target": [
                         "analytics"
                     ]
+                },
+                {
+                    "name": "OrgStructure",
+                    "pattern": "OrgStructure",
+                    "target": [
+                        "OrgStructure"
+                    ]
                 }
             ],
             "targets": {
@@ -252,6 +262,13 @@
                     "viewId": "reports",
                     "viewName": "Reports",
                     "level": 2
+                },
+                "OrgStructure": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "OrgStructure",
+                    "viewName": "OrgStructure"
                 },
                 "analytics": {
                     "viewType": "XML",

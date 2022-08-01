@@ -5,11 +5,66 @@
     xmlns="sap.m"
 >
 <Page showHeader="false" backgroundDesign="List">
-	<List
+	<!-- <List
 		headerText="Activate Users" items="{/EmployeeUser}">
 		<InputListItem label="{EmployeeName}">
 			<Switch state="true" />
 		</InputListItem>
-        </List>
+        </List> -->
+<Table id="idEmpUser"
+		inset="false"
+        mode="MultiSelect"
+		items="{
+			path: '/UserLogin'
+		}">
+		<headerToolbar>
+			<OverflowToolbar>
+				<content>
+					<Title text="Users" level="H2"/>
+					<ToolbarSpacer />
+					<Button
+						text="Activate Users"
+						press="onActivateUsers" />
+				</content>
+			</OverflowToolbar>
+		</headerToolbar>
+		<columns>
+			<Column>
+				<Text text="EmployeeName" />
+			</Column>
+			<Column>
+				<Text text="Email" />
+			</Column>
+			<Column>
+				<Text text="Valid From" />
+			</Column>
+            <Column>
+            <Text text="Valid To" />
+            </Column>
+            
+            <Column>
+            <Text text="User Status" />
+            </Column>
+
+		</columns>
+		<items>
+			<ColumnListItem vAlign="Middle">
+				<cells>
+					<ObjectIdentifier
+						title="{EmployeeName}"
+						text="{EmployeeType}"/>
+					<Text
+						text="{Email}" />
+					<Text
+						text="{ValidFrom}" />
+                    <Text
+						text="{ValidTo}" />
+                    <Text
+						text="{UserStatus}" />
+				</cells>
+			</ColumnListItem>
+		</items>
+	</Table>
+
 </Page>
 </mvc:View>

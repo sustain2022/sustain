@@ -67,6 +67,9 @@
     "requires": {
       "db": {
         "kind": "hana-cloud"
+      },
+      "auth": {
+          "impl": "srv/authentication.js"
       }
     }
   },

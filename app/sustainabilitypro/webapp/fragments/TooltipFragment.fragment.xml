@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<QuickView id="quickView">
+		<QuickViewPage
+				header="Employee"
+				icon="{/icon}"
+				title="{/EmployeeName}"
+				description="{/Position}">
+			<QuickViewGroup heading="Contact detail">
+				<QuickViewGroupElement
+						label="Location"
+						value="{/CountryID}"/>
+				<QuickViewGroupElement
+						label="Mobile"
+						value="{/ContactNumber}"
+						type="mobile"/>
+				<QuickViewGroupElement
+						label="Email"
+						value="{/Email}"
+						emailSubject="Subject"
+						type="email"/>
+                <QuickViewGroupElement
+						label="Goals Assigned"
+						value="{/GoalsAssigned}" />
+			</QuickViewGroup>
+			<QuickViewGroup heading="Team">
+				<QuickViewGroupElement
+						label="Team Members"
+						value="{/TeamMembers}" />
+                <QuickViewGroupElement
+						label="Team Goals"
+						value="{/TeamGoals}" />
+			</QuickViewGroup>
+		</QuickViewPage>
+	</QuickView>
+</core:FragmentDefinition>

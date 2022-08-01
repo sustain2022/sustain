@@ -153,7 +153,10 @@ sap.ui.define([
                 tmpModel.setDeferredGroups(["foo"]);
                 var mParameters = {
                     groupId: "foo",
-                    success: function (odata, resp) { sap.m.MessageToast.show("Employee Created"); },
+                    success: function (odata, resp) { 
+                        sap.m.MessageToast.show("Employee Created");
+                        this._loadOrgChart();
+                    }.bind(this),
                     error: function (odata, resp) { sap.m.MessageToast.show("Employee Creation Failed"); }
                 };
 
@@ -167,11 +170,14 @@ sap.ui.define([
                 empHeaderData.Email = aFormElem[2].getFields()[0].getValue();
                 empHeaderData.ContactNumber = parseInt(aFormElem[3].getFields()[0].getValue());
                 empHeaderData.DepartmentID = aFormElem[4].getFields()[0].getSelectedKey();
-                empHeaderData.ValidFrom = aFormElem[5].getFields()[0].getDateValue();
-                empHeaderData.ValidTo = aFormElem[6].getFields()[0].getDateValue();
-                empHeaderData.EmployeeType = aFormElem[7].getFields()[0].getSelectedKey();
-                empHeaderData.UserStatus = aFormElem[8].getFields()[0].getSelectedKey();
-
+                empHeaderData.Supervisor = aFormElem[5].getFields()[0].getSelectedKey();
+                empHeaderData.ValidFrom = aFormElem[6].getFields()[0].getDateValue();
+                empHeaderData.ValidTo = aFormElem[7].getFields()[0].getDateValue();
+                empHeaderData.EmployeeType = aFormElem[8].getFields()[0].getSelectedKey();
+                empHeaderData.UserStatus = aFormElem[9].getFields()[0].getSelectedKey();
+                empHeaderData.Position = aFormElem[10].getFields()[0].getSelectedKey();
+                empHeaderData.isSupervisor = aFormElem[11].getFields()[0].getSelected();
+                this.getView().setBusy(true);
                 tmpModel.create('/EmployeeUser', empHeaderData, mParameters);
                 tmpModel.submitChanges(mParameters);
                 this.empDialog.close();
@@ -184,7 +190,10 @@ sap.ui.define([
                 tmpModel.setDeferredGroups(["foo"]);
                 var mParameters = {
                     groupId: "foo",
-                    success: function (odata, resp) { sap.m.MessageToast.show("Supplier Created"); },
+                    success: function (odata, resp) { 
+                        sap.m.MessageToast.show("Supplier Created");
+                        this._loadOrgChart();
+                     }.bind(this),
                     error: function (odata, resp) { sap.m.MessageToast.show("Supplier Creation Failed"); }
                 };
 
@@ -200,10 +209,20 @@ sap.ui.define([
                 supHeaderData.Address = aFormElem[4].getFields()[0].getValue();
                 supHeaderData.Country = aFormElem[5].getFields()[0].getValue();
                 supHeaderData.SupplierStatus = aFormElem[6].getFields()[0].getSelectedKey();
-                
+                this.getView().setBusy(true);
                 tmpModel.create('/SupplierHeader', supHeaderData, mParameters);
                 tmpModel.submitChanges(mParameters);
                 this.supDialog.close();
+            },
+            _loadOrgChart: function() {
+                
+                this.getOwnerComponent().getModel().read("/orgChart('"+this.getOwnerComponent()._clientId+"')",{success: function(resp){
+                            this.getOwnerComponent().getModel("orgChart").setData(resp);
+                    
+                            this.getView().setBusy(false);
+                            
+                        }.bind(this)
+                    })  
             },
             onCloseAddDeptDlg: function (oEvent) {
                 oEvent.getSource().getParent().close();   
@@ -220,14 +239,34 @@ sap.ui.define([
             onNavback: function(){
                 var aSections = this.byId("ObjectPageLayout").getSections();
                 this.byId("ObjectPageLayout").setSelectedSection(aSections[0]);
-                this.getView().getParent().getParent().setMode("ShowHideMode");
+                // this.getView().getParent().getParent().setMode("ShowHideMode");
                 var oHistory = History.getInstance();
                 var sPreviousHash = oHistory.getPreviousHash();
-    
+                switch (sPreviousHash) {
+                    case 'detailsd1':
+                        this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem1");
+                        break;
+                    case 'goals':
+                        this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem2");
+                        break;
+                    case 'reports':
+                        this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem4");
+                        break;
+                    case 'analytics':
+                        this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem5");
+                        break;
+                    case 'OrgStructure':
+                        this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem6");
+                        break;                         
+                    default:
+                         this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem1");
+                        break;
+                }
                 if (sPreviousHash !== undefined) {
                     window.history.go(-1);
                 } else {
                     var oRouter = this.getOwnerComponent().getRouter();
+                    this.getView().getParent().getParent().getSideContent().setSelectedKey("rootItem1");
                     oRouter.navTo("detailsd1", {}, true);
                 }
                 

@@ -347,6 +347,7 @@ sap.ui.define([
                         "DepartmentID": oRowObj.DepartmentID,
                         "BeginDate": aRows[aIndex[i]].getCells()[3].getDateValue(),
                         "EndDate": aRows[aIndex[i]].getCells()[4].getDateValue(),
+                        "Status_Biz": 10,
                         "TargetAssigned": parseInt(aRows[aIndex[i]].getCells()[5].getValue())
                     }
                     tmpModel.create('/DepartmentGoal', assignmentData, mParameters);
@@ -527,7 +528,7 @@ sap.ui.define([
                 oEvent.getSource().getParent().close();   
             },
             onNavback: function(){
-                this.getView().getParent().getParent().setMode("ShowHideMode");
+                // this.getView().getParent().getParent().setMode("ShowHideMode");
                 var oHistory = History.getInstance();
                 var sPreviousHash = oHistory.getPreviousHash();
     

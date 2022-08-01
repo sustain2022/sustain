@@ -1,5 +1,2 @@
-PermissionID,RoleID,Description,ClientID
-PR001,RL001,Create Goal,CL0001
-PR002,RL001,Update User,CL0001
-PR003,RL001,Delete Goal,CL0001
-PR004,RL001,Update Goal,CL0001
+PermissionID;RoleID;Description;ClientID;PermissionType;PermissionByObject
+PR001;RL001;Admin;CL0001;Standard;[{"ObjectID":"Goal", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Team", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Analytics", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Reports", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Employee", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Department", "Read": true, "Delete": true, "Write": true}]

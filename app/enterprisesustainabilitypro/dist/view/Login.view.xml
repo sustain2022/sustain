@@ -5,49 +5,46 @@
     xmlns:f="sap.ui.layout.form"
     xmlns:core="sap.ui.core">
     <Page floatingFooter="true" showHeader="false" backgroundDesign="List">
-        <VBox class="sapUiSmallMargin">
-            <f:SimpleForm id="idSimpleRegistration" visible="{prop>/vRegister}" editable="true" layout="ResponsiveGridLayout" title="Enterprise Registration" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
-                <f:toolbar></f:toolbar>
-                <f:content>
-                    <Label text="Client Name" />
-                    <Input id="name" value="{ClientName}" />
-
-                    <Label text="Address" />
-                    <Input value="{Address}"/>
-                    <Label text="Contact Person" />
-                    <Input value="{ContactPerson}"/>
-                    <Label text="Contact Number" />
-                    <Input value="{ContactNumber}"/>
-                    <Label text="Email" />
-                    <Input value="{Email}"/>
-                    <Label text="Password" />
-                    <Input value="{Password}" type="Password"/>
-                    <!-- <Label text="Country" />
-				<Select id="country" selectedKey="{Country}">
-					<items>
-						<core:Item text="England" key="England"/>
-						<core:Item text="Germany" key="Germany"/>
-						<core:Item text="USA" key="USA"/>
-					</items>
-				</Select> -->
-                </f:content>
-            </f:SimpleForm>
-            <f:SimpleForm id="idSimpleLogin" visible="{= !${prop>/vRegister}}" editable="true" layout="ResponsiveGridLayout" title="Enterprise Login" labelSpanXL="3" labelSpanL="3" labelSpanM="3" labelSpanS="12" adjustLabelSpan="false" emptySpanXL="4" emptySpanL="4" emptySpanM="4" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1" singleContainerFullSize="false">
-                <f:content>
-                    <Label text="Email" />
-                    <Input value="{Email}"/>
-                    <Label text="Password" />
-                    <Input value="{Password}" type="Password"/>
-                </f:content>
-            </f:SimpleForm>            
+        <VBox id="idSimpleRegistration" visible="{prop>/vRegister}" height="100%" alignItems="Center" justifyContent="Center">
+           <!-- <IconTabHeader select="onAction" width="100%">
+		<items>
+			<IconTabFilter key="Register" text="Register" />
+			<IconTabFilter key="Login" text="Login" />
+		</items>
+	</IconTabHeader> -->
+            <VBox width="30em" height="20em" alignItems="Center" justifyContent="Center" class="cl_border">
+                <Title text="Register" class="sapUiMediumMarginBottom"/>
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Client Name" value="{/ClientName}" />
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Address" value="{/Address}"/>
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Contact Person" value="{/ContactPerson}"/>
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Contact Number" value="{/ContactNumber}"/>
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Email" value="{/Email}"/>
+                <Input  width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Password" value="{/Password}" type="Password"/>
+                <HBox alignItems="Center">
+                <Button type="Emphasized" text="Register" class="sapUiTinyMarginEnd"/>  
+                <Text text="OR" class="sapUiTinyMarginEnd cl_margintop4px"/>
+                <Link text="Login" press="onAction" class="sapUiTinyMarginTop"/>
+                </HBox>
+            </VBox>
+        </VBox>
+        <VBox id="idSimpleLogin" visible="{= !${prop>/vRegister}}" height="100%"  alignItems="Center" justifyContent="Center">
+            <VBox width="30em" height="15em" alignItems="Center" justifyContent="Center" class="cl_border">
+            <Title text="Login" class="sapUiMediumMarginBottom"/>
+                <Input width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Email" value="{/Email}"/>
+                <Input width="25em" class="sapUiTinyMarginBeginEnd" placeholder="Password" value="{/Password}" type="Password"/>
+                <HBox alignItems="Center">
+                <Button type="Emphasized" text="Login" class="sapUiTinyMarginEnd" press="onLogin"/>  
+                <Text text="OR" class="sapUiTinyMarginEnd cl_margintop4px"/>
+                <Link text="Register" press="onAction" class="sapUiTinyMarginTop" />
+                </HBox>
+            </VBox>
         </VBox>
         <footer>
-			<OverflowToolbar>
-				<ToolbarSpacer/>
-				<Button id="regButton" type="Emphasized" text="Register" press="onAction"/>
-                <Button id="logButton" text="Login" press="onAction"/>
-				<Button type="Reject" text="Cancel"/>
-			</OverflowToolbar>
-		</footer>
+            <OverflowToolbar>
+                <ToolbarSpacer/>
+                
+                
+            </OverflowToolbar>
+        </footer>
     </Page>
 </mvc:View>

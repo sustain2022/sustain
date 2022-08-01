@@ -3,26 +3,32 @@
 		<QuickViewPage
 				header="Employee"
 				icon="{/icon}"
-				title="{/title}"
-				description="{/description}">
+				title="{/EmployeeName}"
+				description="{/Position}">
 			<QuickViewGroup heading="Contact detail">
 				<QuickViewGroupElement
 						label="Location"
-						value="{/location}"/>
+						value="{/CountryID}"/>
 				<QuickViewGroupElement
 						label="Mobile"
-						value="{/phone}"
+						value="{/ContactNumber}"
 						type="mobile"/>
 				<QuickViewGroupElement
 						label="Email"
-						value="{/email}"
+						value="{/Email}"
 						emailSubject="Subject"
 						type="email"/>
+                <QuickViewGroupElement
+						label="Goals Assigned"
+						value="{/GoalsAssigned}" />
 			</QuickViewGroup>
-			<QuickViewGroup visible="{/showTeam}" heading="Team">
+			<QuickViewGroup heading="Team">
 				<QuickViewGroupElement
-						label="Size"
-						value="{/teamSize}" />
+						label="Team Members"
+						value="{/TeamMembers}" />
+                <QuickViewGroupElement
+						label="Team Goals"
+						value="{/TeamGoals}" />
 			</QuickViewGroup>
 		</QuickViewPage>
 	</QuickView>

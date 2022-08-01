@@ -21,7 +21,7 @@
                 "settings": {
                     "annotations": [],
                     "localUri": "localService/metadata.xml",
-                    "odataVersion": "4.0"
+                    "odataVersion": "2.0"
                 }
             }
         }
@@ -69,6 +69,9 @@
                 }
             },
             "prop": {
+                "type": "sap.ui.model.json.JSONModel"
+            },
+            "orgChart": {
                 "type": "sap.ui.model.json.JSONModel"
             },
             "util": {
@@ -140,10 +143,24 @@
                     ]
                 },
                 {
+                    "name": "ActivateSuppliers",
+                    "pattern": "ActivateSuppliers",
+                    "target": [
+                        "ActivateSuppliers"
+                    ]
+                },
+                {
                     "name": "AddSupplier",
                     "pattern": "AddSupplier",
                     "target": [
                         "AddSupplier"
+                    ]
+                },
+                {
+                    "name": "MaintainDepartment",
+                    "pattern": "MaintainDepartment",
+                    "target": [
+                        "MaintainDepartment"
                     ]
                 },
                 {
@@ -158,6 +175,20 @@
                     "pattern": "EnhancementReq",
                     "target": [
                         "EnhancementReq"
+                    ]
+                },
+                {
+                    "name": "OrgStructure",
+                    "pattern": "OrgStructure",
+                    "target": [
+                        "OrgStructure"
+                    ]
+                },
+                {
+                    "name": "RoleMaintain",
+                    "pattern": "RoleMaintain",
+                    "target": [
+                        "RoleMaintain"
                     ]
                 }
             ],
@@ -206,6 +237,20 @@
                     "viewId": "AddSupplier",
                     "viewName": "AddSupplier"
                 },
+                "ActivateSuppliers": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "ActivateSuppliers",
+                    "viewName": "ActivateSuppliers"
+                },
+                "MaintainDepartment": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "MaintainDepartment",
+                    "viewName": "MaintainDepartment"
+                },
                 "MaintainGoal": {
                     "viewType": "XML",
                     "transition": "slide",
@@ -219,6 +264,20 @@
                     "clearControlAggregation": false,
                     "viewId": "EnhancementReq",
                     "viewName": "EnhancementReq"
+                },
+                "OrgStructure": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "OrgStructure",
+                    "viewName": "OrgStructure"
+                },
+                "RoleMaintain": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "RoleMaintain",
+                    "viewName": "RoleMaintain"
                 }
             }
         },

@@ -42,8 +42,7 @@ sap.ui.define([
                     })],
                     success: function (count) {
                         this.byId("idGoalTile").getTileContent()[0].getContent().setValue(count);
-                }.bind(this)})
-
+                }.bind(this)});
 
                 this.getView().getModel().read('/TeamHeader/$count', {
                     filters: [new sap.ui.model.Filter({
@@ -72,12 +71,9 @@ sap.ui.define([
                     success: function (count) {
                         this.byId("idExternalTeamTile").getTileContent()[0].getContent().setValue(count);
                 }.bind(this)});
-
             // }
             util.clientFilter(this,"GoalMenu","items");
             util.clientFilter(this,"idGoalsTable","items");
-            
-            
             },
             _readTemplates: function(){
                 this.getOwnerComponent().getModel().read("/AgencyReportTemplate", {

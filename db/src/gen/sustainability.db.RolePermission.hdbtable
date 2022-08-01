@@ -4,5 +4,7 @@ COLUMN TABLE sustainability_db_RolePermission (
   PermissionID NVARCHAR(10) NOT NULL,
   RoleID NVARCHAR(10) NOT NULL,
   Description NVARCHAR(15),
+  PermissionByObject NCLOB,
+  PermissionType NVARCHAR(10),
   PRIMARY KEY(ClientID, PermissionID, RoleID)
 )

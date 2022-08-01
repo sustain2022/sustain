@@ -54,6 +54,13 @@
                                 </ComboBox>
 							</f:fields>
 						</f:FormElement>
+                        <f:FormElement label="Supervisor">
+							<f:fields>
+								<ComboBox id="addSupervisorCB" items="{path:'/EmployeeUser',filters: [{path: 'isSupervisor', operator: 'EQ', value1: true}]}">
+                                        <core:Item key="{EmployeeID}" text="{EmployeeName}" />
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
                         <f:FormElement label="Valid From">
 							<f:fields>
 								<DatePicker/>
@@ -67,7 +74,7 @@
                         <f:FormElement label="Employee Type">
 							<f:fields>
 								<Select>
-                                    <core:Item key="Inernal" text="Inernal" />
+                                    <core:Item key="Internal" text="Internal" />
                                     <core:Item key="External" text="External" />
                                 </Select>
 							</f:fields>
@@ -78,6 +85,19 @@
                                     <core:Item key="Active" text="Active" />
                                     <core:Item key="Inactive" text="Inactive" />
                                 </Select>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Position">
+							<f:fields>
+								<Select>
+                                    <core:Item key="Employee" text="Employee" />
+                                    <core:Item key="Manager" text="Manager" />
+                                </Select>
+							</f:fields>
+						</f:FormElement>
+                        <f:FormElement label="Is Supervisor">
+							<f:fields>
+								<CheckBox/>
 							</f:fields>
 						</f:FormElement>
 					</f:formElements>

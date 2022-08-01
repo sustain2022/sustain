@@ -124,7 +124,7 @@ entity EmployeeGoal : managed {
     key ClientID               : CLIENT;
     key GoalID                 : Integer64;
     key AssignmentID           : Integer64;
-        AgencyID               : String(10);
+        AgencyID                : String(10);
         EmployeeID             : String(10);
         TargetAssigned         : Integer64;
         virtual TargetAchieved : Integer64; // This field to be check with Hari to consider as virtual
@@ -319,11 +319,11 @@ entity RoleMaster { // to check with Hari, RoleID is required or not
         RoleType        : String(15);
         Description     : String(50);
         RoleStatus      : String(10); // Active, InAcive or Blocked
-        PermissionID    : String(10);
+       // PermissionID    : String(10); // not required here
         RolePermissions : Association to RolePermission
                               on  RolePermissions.ClientID     = ClientID
                               and RolePermissions.RoleID       = RoleID
-                              and RolePermissions.PermissionID = PermissionID
+                            //  and RolePermissions.PermissionID = PermissionID
 }
 
 entity RolePermission { // to check with Hari, RoleID is required or not
@@ -331,6 +331,18 @@ entity RolePermission { // to check with Hari, RoleID is required or not
     key PermissionID : String(10);
     key RoleID       : String(10);
         Description  : String(15);
+        PermissionByObject:  array of {
+                ObjectID: String(15);
+                Read: Boolean;
+                Write: Boolean;
+                Delete: Boolean;
+        };
+        PermissionType: String(10);
+}
+
+entity RolePermissionObject {
+    key RPObjectID: Integer;
+        ObjectName : String(15);
 }
 
 entity UserAssignedRoles {
@@ -592,12 +604,13 @@ entity orgChart {
             ContactNumber : Integer64;
             CountryID     : String(3);
             Position      : String(30); // CXO, HOD, Senior Manager, Employee
+            Supervisor    : String(15);
             TeamMembers   : Integer;
             GoalsAssigned : Integer;
             TeamGoals     : Integer;
         };
         lines             : array of {
-            supervisor    : String(10);
-            employee      : String(10);
+            supervisor    : String(15);
+            employee      : String(15);
         }
 }

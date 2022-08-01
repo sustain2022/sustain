@@ -23,6 +23,7 @@
                     <tnt:NavigationListItem text="Team Management" key="rootItem3" icon="sap-icon://collaborate"/>
                     <tnt:NavigationListItem text="Reports" key="rootItem4" icon="sap-icon://manager-insight"/>
                     <tnt:NavigationListItem text="Analytics" key="rootItem5" icon="sap-icon://kpi-corporate-performance"/>
+                    <tnt:NavigationListItem text="Hierarchical Report" key="rootItem6" icon="sap-icon://tree"/>
                 </tnt:NavigationList>
                 <tnt:fixedItem>
                     <tnt:NavigationList>

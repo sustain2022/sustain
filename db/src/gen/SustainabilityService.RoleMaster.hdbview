@@ -5,9 +5,8 @@ VIEW SustainabilityService_RoleMaster AS SELECT
   RoleMaster_0.RoleName,
   RoleMaster_0.RoleType,
   RoleMaster_0.Description,
-  RoleMaster_0.RoleStatus,
-  RoleMaster_0.PermissionID
+  RoleMaster_0.RoleStatus
 FROM sustainability_db_RoleMaster AS RoleMaster_0
 WITH ASSOCIATIONS (
-  MANY TO ONE JOIN SustainabilityService_RolePermission AS RolePermissions ON (RolePermissions.ClientID = ClientID AND RolePermissions.RoleID = RoleID AND RolePermissions.PermissionID = PermissionID)
+  MANY TO ONE JOIN SustainabilityService_RolePermission AS RolePermissions ON (RolePermissions.ClientID = ClientID AND RolePermissions.RoleID = RoleID)
 )
