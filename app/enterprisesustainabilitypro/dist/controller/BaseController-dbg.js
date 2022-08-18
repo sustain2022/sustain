@@ -6,10 +6,28 @@ sap.ui.define([
     "use strict";
 
     return Controller.extend("enterprisesustainabilitypro.controller.BaseController", {
-
+        getModel: function(sName) {
+            if(sName){
+                return this.getOwnerComponent().getModel(sName);
+            }else{
+                return this.getOwnerComponent().getModel();
+            }
+        },
         getRouter: function () {
             return UIComponent.getRouterFor(this);
         },
+        onOpenDialog : function () {
+			// create dialog lazily
+			if (!this.pDialog) {
+				this.pDialog = this.loadFragment({
+					name: "enterprisesustainabilitypro.fragments.BusyDialog"
+				});
+			}
+
+			this.pDialog.then(function(oDialog) {
+				oDialog.open();
+			});
+		},
 
         onNavBack: function () {
             var oHistory, sPreviousHash;

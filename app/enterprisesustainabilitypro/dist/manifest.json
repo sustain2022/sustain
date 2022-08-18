@@ -190,6 +190,13 @@
                     "target": [
                         "RoleMaintain"
                     ]
+                },
+                {
+                    "name": "RoleDetails",
+                    "pattern": "RoleDetails/{RoleID}",
+                    "target": [
+                        "RoleDetails"
+                    ]
                 }
             ],
             "targets": {
@@ -278,6 +285,13 @@
                     "clearControlAggregation": false,
                     "viewId": "RoleMaintain",
                     "viewName": "RoleMaintain"
+                },
+                "RoleDetails": {
+                    "viewType": "XML",
+                    "transition": "slide",
+                    "clearControlAggregation": false,
+                    "viewId": "RoleDetails",
+                    "viewName": "RoleDetails"
                 }
             }
         },

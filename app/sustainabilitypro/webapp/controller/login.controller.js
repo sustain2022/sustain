@@ -1,6 +1,6 @@
 // @ts-ignore
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "sustainabilitypro/controller/BaseController",
     "sap/ui/model/json/JSONModel",
     "sap/ui/core/routing/History",
     "sap/ui/model/Filter",
@@ -10,18 +10,18 @@ sap.ui.define([
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
 
-    function (Controller, JSONModel, History, Filter, oDataHelper) {
+    function (BaseController, JSONModel, History, Filter, oDataHelper) {
         "use strict";
 
-        return Controller.extend("susproapp.controller.login", {
+        return BaseController.extend("susproapp.controller.login", {
             onInit: function () {
-                this._oModel = this.getOwnerComponent().getModel();
+                this._oModel = this.getModel();
                 if (localStorage.getItem('user')) {
                     this.getOwnerComponent()._clientId = localStorage.getItem('user');
                 }
                 // @ts-ignore
 
-                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                var oRouter = this.getRouter();
                 oRouter.getRoute("login").attachMatched(this._onRouteMatched, this);
             },
             _onRouteMatched: function () {
@@ -34,7 +34,7 @@ sap.ui.define([
                                ];
 
                 if (localStorage.getItem('user') != undefined) {
-                    this.byId("BusyDialog").open();
+                    this.openBusyDialog();
                     oDataHelper.callGETOData(this._oModel, "/UserLogin", aFilters).then(function (resp) {
                         localStorage.setItem('user', resp.results[0].ClientID);
                         localStorage.setItem('Email', resp.results[0].Email);
@@ -44,10 +44,11 @@ sap.ui.define([
                         this.getOwnerComponent()._clientId = resp.results[0].ClientID;
                         // oRouter.navTo("detailsd1");
                         this._loadOrgChart();
-                        this._loadPermissions("Max12345");
+                        // this._loadPermissions(resp.results[0].UserID);
                     }.bind(this))
                         .catch(function (oError) {
-                            this.byId("BusyDialog").close();
+                            this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                            this.closeBusyDialog();
                         }.bind(this));
                 }
             },
@@ -63,7 +64,7 @@ sap.ui.define([
                 var lForm = this.getView().getModel("Login").getData();
                 // @ts-ignore
                 var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
-                this.byId("BusyDialog").open();
+                this.openBusyDialog();
                 var aFilters = [new Filter("Email", "EQ", lForm.uname),
                                 new Filter("Password", "EQ", lForm.pwd)];
                 oDataHelper.callGETOData(this._oModel, "/UserLogin", aFilters).then(function (resp) {
@@ -75,11 +76,12 @@ sap.ui.define([
                     this.getOwnerComponent()._clientId = resp.results[0].ClientID;
                     // oRouter.navTo("detailsd1");
                     this._loadOrgChart();
-                    this._loadPermissions("Max12345");
+                    // this._loadPermissions(resp.results[0].UserID);
                    
                 }.bind(this))
                 .catch(function (oError) {
-                    this.byId("BusyDialog").close();
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
                 }.bind(this));
             },
             _loadPermissions: function(UserID){
@@ -95,18 +97,26 @@ sap.ui.define([
                         }
                     }
                     this.byId("BusyDialog").close();
+                }.bind(this))
+                .catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
                 }.bind(this));
                 
             },
             _loadOrgChart: function () {
                 // this.getView().setBusy(true);
-                this.getOwnerComponent().getModel().read("/orgChart('" + this.getOwnerComponent()._clientId + "')", {
-                    success: function (resp) {
-                        this.getOwnerComponent().getModel("orgChart").setData(resp);
-                        sap.ui.core.UIComponent.getRouterFor(this).navTo("detailsd1");
-
+                this.openBusyDialog();
+                oDataHelper.callGETOData(this._oModel,"/orgChart('" + this.getOwnerComponent()._clientId + "')")
+                .then(function (resp) {
+                        this.getModel("orgChart").setData(resp);
+                        this.getRouter().navTo("detailsd1");
+                        this.closeBusyDialog();
                     }.bind(this)
-                })
+                ).catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
+                }.bind(this))
             },
             validateEventFeedbackForm: function (requiredInputs) {
                 var _self = this;
@@ -132,7 +142,7 @@ sap.ui.define([
             },
             onForgetPassword: function () {
                 // @ts-ignore
-                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                var oRouter = this.getRouter();
                 oRouter.navTo("Targetforgotpassword");
             },
 

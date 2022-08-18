@@ -4,7 +4,7 @@
     xmlns="sap.m">
 
     <Page title="Goals" backgroundDesign="List">
-        <Panel expandable="true" headerText="Economic" width="auto" class="sapUiResponsiveMargin">
+        <Panel expandable="true" headerText="Governance" width="auto" class="sapUiResponsiveMargin">
             <content>
                 <Table id ="GoalsTable1" width="95%" items="{path: '/GoalHeader', filters: [{path: 'ImpactCategory', operator: 'EQ', value1: 'Economical'}]}" class="sapUiResponsiveMargin">
                     <columns>
@@ -118,5 +118,8 @@
                 </Table>
             </content>
         </Panel>
+        <dependents>
+            <core:Fragment fragmentName="sustainabilitypro.fragments.BusyDialog" type="XML" />
+        </dependents>
     </Page>
 </mvc:View>

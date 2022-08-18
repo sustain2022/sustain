@@ -157,7 +157,7 @@ sap.ui.define([
                         sap.m.MessageToast.show("Employee Created");
                         this._loadOrgChart();
                     }.bind(this),
-                    error: function (odata, resp) { sap.m.MessageToast.show("Employee Creation Failed"); }
+                    error: function (oError) { sap.m.MessageToast.show("Employee Creation Failed"); }
                 };
 
                 var empHeaderData = {
@@ -174,9 +174,10 @@ sap.ui.define([
                 empHeaderData.ValidFrom = aFormElem[6].getFields()[0].getDateValue();
                 empHeaderData.ValidTo = aFormElem[7].getFields()[0].getDateValue();
                 empHeaderData.EmployeeType = aFormElem[8].getFields()[0].getSelectedKey();
-                empHeaderData.UserStatus = aFormElem[9].getFields()[0].getSelectedKey();
-                empHeaderData.Position = aFormElem[10].getFields()[0].getSelectedKey();
-                empHeaderData.isSupervisor = aFormElem[11].getFields()[0].getSelected();
+                empHeaderData.SupplierID = aFormElem[9].getFields()[0].getSelectedKey()
+                empHeaderData.UserStatus = aFormElem[10].getFields()[0].getSelectedKey();
+                empHeaderData.Position = aFormElem[11].getFields()[0].getSelectedKey();
+                empHeaderData.isSupervisor = aFormElem[12].getFields()[0].getSelected();
                 this.getView().setBusy(true);
                 tmpModel.create('/EmployeeUser', empHeaderData, mParameters);
                 tmpModel.submitChanges(mParameters);

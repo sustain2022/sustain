@@ -1,2 +1,0 @@
-PermissionID;RoleID;Description;ClientID;PermissionType;PermissionByObject
-PR001;RL001;Admin;CL0001;Standard;[{"ObjectID":"Goal", "Read": true, "Delete": true, "Write": true}, {"ObjectID":"Team", "Read": true, "Delete": true, "Write": true}]

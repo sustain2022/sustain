@@ -12,12 +12,18 @@ sap.ui.define([
      */
     function (JSONModel, Controller, LayeredLayout, ForceBasedLayout, ActionButton, Node, Fragment) {
         "use strict";
-        var STARTING_PROFILE = "EID0001";
+        var STARTING_PROFILE;
 return Controller.extend("sustainabilitypro.controller.OrgStructure",{	
 
 		onInit : function () {
             // this.getOwnerComponent().getModel().read("/orgChart",{success: function(){
-
+            let aNodes = this.getOwnerComponent().getModel("orgChart").getProperty("/nodes");
+            let aEmp = aNodes.filter(item=>{
+                    if(item.Supervisor =="INT_"){
+                        return item;
+                    }
+                });
+                STARTING_PROFILE = aEmp[0]?aEmp[0].EmployeeID : null;
             this.getOwnerComponent().getRouter().getRoute("OrgStructure").attachPatternMatched(this._onRouteMatched, this);
             // }.bind(this)})
 			this._oModel = new JSONModel(this.getOwnerComponent().getModel('orgChart').getData());

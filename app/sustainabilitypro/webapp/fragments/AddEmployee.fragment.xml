@@ -79,6 +79,13 @@
                                 </Select>
 							</f:fields>
 						</f:FormElement>
+                        <f:FormElement label="Supplier">
+							<f:fields>
+								<ComboBox id="addSupplierCB" items="{path:'/SupplierHeader'}">
+                                        <core:Item key="{SupplierID}" text="{SupplierName}" />
+                                </ComboBox>
+							</f:fields>
+						</f:FormElement>
                         <f:FormElement label="User Status">
 							<f:fields>
 								<Select>

@@ -1,16 +1,17 @@
 // @ts-ignore
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "sustainabilitypro/controller/BaseController",
     "sap/ui/model/Filter",
-    "../utils/util"
+    "../utils/util",
+    "sustainabilitypro/controller/oDataHelper"    
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Filter,util) {
+    function (BaseController, Filter,util,oDataHelper) {
         "use strict";
 
-        return Controller.extend("susproapp.controller.SD1", {
+        return BaseController.extend("sustainabilitypro.controller.SD1", {
             onInit: function () {
                 var oModel = new sap.ui.model.json.JSONModel({client:"CL0001"});
                 this.getOwnerComponent().setModel(oModel,"prop");
@@ -18,7 +19,7 @@ sap.ui.define([
                     this.getOwnerComponent()._clientId = localStorage.getItem('user');
                     // this.getView().getParent().getParent().getSideContent().setVisible(true);
                 }
-                this.getOwnerComponent().getRouter().getRoute("detailsd1").attachPatternMatched(this._onRouteMatched, this);
+                this.getRouter().getRoute("detailsd1").attachPatternMatched(this._onRouteMatched, this);
                 this._readTemplates();
                 
             },
@@ -34,58 +35,81 @@ sap.ui.define([
                 // }else{
                     // @ts-ignore
                   //  var oModel = new sap.ui.model.json.JSONModel("/sustainability/GoalTemplate");
-                  this.getView().getModel().read('/GoalHeader/$count', {
-                    filters: [new sap.ui.model.Filter({
-                        path: "ClientID",
-                        operator: 'EQ',
-                        value1: this.getOwnerComponent()._clientId
-                    })],
-                    success: function (count) {
+                  var aFilters = [new Filter({
+                    path: "ClientID",
+                    operator: 'EQ',
+                    value1: this.getOwnerComponent()._clientId
+                })];
+                this.openBusyDialog();
+                  oDataHelper.callGETOData(this.getModel(),'/GoalHeader/$count', aFilters)
+                  .then(function (count) {
                         this.byId("idGoalTile").getTileContent()[0].getContent().setValue(count);
-                }.bind(this)});
-
-                this.getView().getModel().read('/TeamHeader/$count', {
-                    filters: [new sap.ui.model.Filter({
-                        path: "ClientID",
-                        operator: 'EQ',
-                        value1: this.getOwnerComponent()._clientId
-                    }), new sap.ui.model.Filter({
-                        path: "TeamType",
-                        operator: 'EQ',
-                        value1: "Internal"
-                    })],
-                    success: function (count) {
+                        this.closeBusyDialog();
+                }.bind(this))
+                .catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
+                }.bind(this))
+                aFilters = [new Filter({
+                    path: "ClientID",
+                    operator: 'EQ',
+                    value1: this.getOwnerComponent()._clientId
+                }), new Filter({
+                    path: "TeamType",
+                    operator: 'EQ',
+                    value1: "Internal"
+                })];
+                this.openBusyDialog();
+                oDataHelper.callGETOData(this.getModel(),'/TeamHeader/$count',aFilters)
+                .then(function (count) {
+                    this.closeBusyDialog();
                         this.byId("idInternalTeamTile").getTileContent()[0].getContent().setValue(count);
-                }.bind(this)});
+                }.bind(this))
+                .catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
+                });
 
-                this.getView().getModel().read('/TeamHeader/$count', {
-                    filters: [new sap.ui.model.Filter({
-                        path: "ClientID",
-                        operator: 'EQ',
-                        value1: this.getOwnerComponent()._clientId
-                    }), new sap.ui.model.Filter({
-                        path: "TeamType",
-                        operator: 'EQ',
-                        value1: "External"
-                    })],
-                    success: function (count) {
+                aFilters = [new Filter({
+                    path: "ClientID",
+                    operator: 'EQ',
+                    value1: this.getOwnerComponent()._clientId
+                }), new Filter({
+                    path: "TeamType",
+                    operator: 'EQ',
+                    value1: "External"
+                })];
+                this.openBusyDialog();
+                oDataHelper.callGETOData(this.getModel(),'/TeamHeader/$count',aFilters)
+                .then(function (count) {
+                    this.closeBusyDialog();
                         this.byId("idExternalTeamTile").getTileContent()[0].getContent().setValue(count);
-                }.bind(this)});
+                }.bind(this))
+                .catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
+                });
+               
             // }
             util.clientFilter(this,"GoalMenu","items");
             util.clientFilter(this,"idGoalsTable","items");
             },
             _readTemplates: function(){
-                this.getOwnerComponent().getModel().read("/AgencyReportTemplate", {
-                    filters: [new sap.ui.model.Filter({
-                        path: "ClientID",
-                        operator: 'EQ',
-                        value1: this.getOwnerComponent()._clientId
-                    })],
-                    urlParameters: { '$expand': 'AgencyReportTemplateDetails' }, success: function (resp) {
+                var aFilters = [new Filter({
+                    path: "ClientID",
+                    operator: 'EQ',
+                    value1: this.getOwnerComponent()._clientId
+                })];
+                this.openBusyDialog();
+                oDataHelper.callGETOData(this.getModel(),"/AgencyReportTemplate", aFilters, { '$expand': 'AgencyReportTemplateDetails' })
+                 .then(function (resp) {
+                     this.closeBusyDialog();
                         this._templates = resp.results;
-                    }.bind(this)
-                });
+                    }.bind(this))
+                    .catch(function(oError){
+                        this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                        this.closeBusyDialog();
+                    }.bind(this))
             },
             openLogout: function () {
                 localStorage.removeItem('user');
@@ -239,7 +263,7 @@ sap.ui.define([
                         tmpModel.create('/AgencyReportHeader', reportHeaderData, mParameters);
                         // tmpModel.submitChanges(mParameters);
                     }
-                    tmpModel.submitChanges(mParameters);
+                    // tmpModel.submitChanges(mParameters);
                 }
                 this.uploadDialog.close();
             },
@@ -288,7 +312,7 @@ sap.ui.define([
                 AgencyReportTemplate.AgencyReportTemplateDetails = finalData;
 
                 tmpModel.create('/AgencyReportTemplate', AgencyReportTemplate, mParameters);
-                tmpModel.submitChanges(mParameters);
+                // tmpModel.submitChanges(mParameters);
             },
             onCloseUploadDlg: function () {
                 this.uploadDialog.close();

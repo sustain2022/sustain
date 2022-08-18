@@ -1,59 +1,36 @@
-<core:View
-		controllerName="sustainabilitypro.controller.OrgStructure"
-		xmlns:core="sap.ui.core"
-		xmlns="sap.suite.ui.commons.networkgraph"
-		xmlns:layout="sap.suite.ui.commons.networkgraph.layout"
-		height="100%">
-	<Graph enableWheelZoom="false"
-		   orientation="TopBottom"
-		   nodes="{/nodes}"
-		   lines="{/lines}"
-		   layout="Layered"
-		   searchSuggest="suggest"
-		   search="search"
-		   id="graph">
-		<layoutAlgorithm>
-			<layout:LayeredLayout
-					mergeEdges="true"
-					nodePlacement="Simple"
-					nodeSpacing="40"/>
-		</layoutAlgorithm>
-		<nodes>
-			<Node icon="sap-icon://action-settings"
-				  key="{EmployeeID}"
-				  description="{Position}"
-				  title="{EmployeeName}"
-				  width="90"
-				  collapsed="{collapsed}"
-				  attributes="{attributes}"
-				  showActionLinksButton="false"
-				  showDetailButton="false"
-				  descriptionLineSize="0"
-				  shape="Box">
-				<customData>
-					<core:CustomData key="supervisor" value="{Supervisor}"/>
-					<core:CustomData key="TeamMembers" value="{TeamMembers}"/>
-					<core:CustomData key="CountryID" value="{CountryID}"/>
-					<core:CustomData key="Position" value="{Position}"/>
-					<core:CustomData key="TeamGoals" value="{TeamGoals}"/>
+<core:View controllerName="sustainabilitypro.controller.OrgStructure"
+    xmlns:core="sap.ui.core"
+    xmlns="sap.suite.ui.commons.networkgraph"
+    xmlns:layout="sap.suite.ui.commons.networkgraph.layout" height="100%">
+    <Graph enableWheelZoom="false" orientation="TopBottom" nodes="{/nodes}" lines="{/lines}" layout="Layered" searchSuggest="suggest" search="search" id="graph">
+        <layoutAlgorithm>
+            <layout:LayeredLayout mergeEdges="true" nodePlacement="Simple" nodeSpacing="40"/>
+        </layoutAlgorithm>
+        <nodes>
+            <Node icon="sap-icon://action-settings" key="{EmployeeID}" selected="true" description="{Position}" title="{EmployeeName}" width="210px" collapsed="{collapsed}" attributes="{attributes}" showActionLinksButton="false" showDetailButton="false" descriptionLineSize="0" shape="Box">
+                <customData>
+                    <core:CustomData key="supervisor" value="{Supervisor}"/>
+                    <core:CustomData key="TeamMembers" value="{TeamMembers}"/>
+                    <core:CustomData key="CountryID" value="{CountryID}"/>
+                    <core:CustomData key="Position" value="{Position}"/>
+                    <core:CustomData key="TeamGoals" value="{TeamGoals}"/>
                     <core:CustomData key="GoalsAssigned" value="{GoalsAssigned}"/>
-					<core:CustomData key="Email" value="{Email}"/>
-					<core:CustomData key="ContactNumber" value="{ContactNumber}"/>
-				</customData>
-				<attributes>
-					<ElementAttribute label="{label}" value="{value}"/>
-				</attributes>
-				<image>
-					<NodeImage src="./utils/person-icon.png"
-							   width="80"
-							   height="80"/>
-				</image>
-			</Node>
-		</nodes>
-		<lines>
-			<Line from="{supervisor}" to="{employee}" arrowOrientation="None" press="linePress" />
-		</lines>
-	</Graph>
-
-
+                    <core:CustomData key="Email" value="{Email}"/>
+                    <core:CustomData key="ContactNumber" value="{ContactNumber}"/>
+                </customData>
+                <attributes>
+                    <ElementAttribute label="{label}" value="{value}"/>
+                </attributes>
+                <image>
+                    <NodeImage src="./utils/person-icon.png" width="80" height="80"/>
+                </image>
+            </Node>
+        </nodes>
+        <lines>
+            <Line from="{supervisor}" to="{employee}" arrowOrientation="None" press="linePress" />
+        </lines>
+        <dependents>
+            <core:Fragment fragmentName="sustainabilitypro.fragments.BusyDialog" type="XML" />
+        </dependents>
+    </Graph>
 </core:View>

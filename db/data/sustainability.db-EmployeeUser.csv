@@ -1,9 +1,0 @@
-createdAt,createdBy,modifiedAt,modifiedBy,ClientID,EmployeeID,UserID,SupplierID,EmployeeName,EmployeeType,Email,ContactNumber,CountryID,ValidFrom,ValidTo,UserStatus,DepartmentID,Position,Supervisor,isSupervisor
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0001,EID0001,Max1234,SID0001,Max,Internal,Max@gmail.com,9178550001,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0001,Manager,EID0001,true
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0001,EID0002,Vijay007,SID0002,Vijay,Internal,vijay@gmail.com,9178550002,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0001,Employee,EID0001,false
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0001,EID0003,Victor432,SID0003,Victor,Internal,victor@gmail.com,9178550003,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0002,Employee,EID0001,false
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0001,EID0004,Bradd543,SID0004,Bradd,Internal,bradt@gmail.com,9178550004,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0003,Employee,EID0001,false
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0002,EID0005,Peter123,SID0005,peter,External,p@gmail.com,9178550005,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0002,Manager,EID0001,true
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0002,EID0006,Mathew789,SID0006,mathew,External,mathew@gmail.com,9178550006,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0001,Employee,EID0005,false
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0002,EID0007,Wikings456,SID0007,wikings,External,w@gmail.com,9178550007,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0003,Employee,EID0005,false
-2021-02-02 04:04:00,anonymous,2021-02-02 04:04:00,anonymous,CL0002,EID0008,Al007,SID0008,Al,External,al@gmail.com,9178550008,1,2022-04-01 00:00:00,2023-04-01 00:00:00,Active,DT0001,Employee,EID0005,false

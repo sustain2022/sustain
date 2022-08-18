@@ -22,7 +22,7 @@ sap.ui.define([
                 // @ts-ignore
                 var oModel = new sap.ui.model.json.JSONModel();
                 // @ts-ignore
-                var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
+                // var oRouter = sap.ui.core.UIComponent.getRouterFor(this);
                 
                 oModel.setProperty("/regMsg", false);
                 

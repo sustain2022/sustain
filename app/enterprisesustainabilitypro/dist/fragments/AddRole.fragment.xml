@@ -4,18 +4,24 @@
             <f:SimpleForm id="AddRoleForm" editable="true" >
                 <f:content>
                     <Label id="lblName" text="RoleName" labelFor="inpName" />
-                    <Input id="inpName" editable="true" value="{name}"/>
+                    <Input id="inpName" editable="true" value="{RoleName}"/>
                     <Label id="lblDescription" text="Description" labelFor="inpDescription" />
                     <Input id="inpDescription" editable="true" value="{Description}"/>
                     <Label id="lblRoleStatus" text="Role Status" labelFor="inpRoleStatus" />
-                    <Input id="inpRoleStatus" editable="true" value="{name}"/>
-                    <Label id="lblRoleType" text="Role Type" labelFor="inpRoleType" />
-                    <Input id="inpRoleType" editable="true" value="{name}"/>
+                    <Select id="inpRoleStatus" selectedKey="{RoleStatus}">
+					    <core:Item key="Active" text="Active" />
+                        <core:Item key="Inactive" text="Inactive" />
+				    </Select>
+                    <Label  text="Role Type" labelFor="inpRoleType" />
+                    <Select id="inpRoleType" selectedKey="{RoleType}">
+					    <core:Item key="B" text="Business" />
+                        <core:Item key="T" text="Technical" />
+				    </Select>
                 </f:content>
             </f:SimpleForm>
         </content>
         <beginButton>
-            <Button type="Emphasized" text="Submit"/>
+            <Button type="Emphasized" text="Save" press="onRoleSave"/>
         </beginButton>
         <endButton>
             <Button text="Cancel" press="onDialogClose"/>

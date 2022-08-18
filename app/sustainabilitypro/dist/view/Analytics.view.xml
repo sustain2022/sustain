@@ -1,58 +1,139 @@
 <mvc:View controllerName="sustainabilitypro.controller.Analytics"
     xmlns:mvc = "sap.ui.core.mvc"
+    xmlns:core="sap.ui.core"
     xmlns:viz = "sap.viz.ui5.controls"
     xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
     xmlns:viz.data="sap.viz.ui5.data"
     xmlns="sap.m"
     xmlns:l="sap.ui.layout">
     <Page>
-        <FlexBox id="flex" alignItems="Start" justifyContent="Center" height="100%" class="sapUiLargeMarginTop">
-            <items>
-                <viz:Popover id="idPopOver1"></viz:Popover>
-                <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" vizType='donut' width="500px" height="400px" 
-                    vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}" class="sapUiLargeMarginEnd backgroundColor">
-                    <viz:dataset>
-                        <viz.data:FlattenedDataset data="{/GoalStatusRep}">
-                            <viz.data:dimensions>
-                                <viz.data:DimensionDefinition name="Goal Status" value="{GoalStatus}" />
-                            </viz.data:dimensions>
-                            <viz.data:measures>
-                                <viz.data:MeasureDefinition name="Number of Goals" value="{NumberOfGoals}" />
-                            </viz.data:measures>
-                        </viz.data:FlattenedDataset>
-                    </viz:dataset>
+        <VBox>
+            <FlexBox id="flex" alignItems="Start" justifyContent="Center" height="100%" class="sapUiLargeMargin">
+                <items>
+                    <viz:Popover id="idPopOver1"></viz:Popover>
+                    <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" vizType='donut' width="500px" height="400px" vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}" class="sapUiLargeMarginEnd backgroundColor">
+                        <viz:dataset>
+                            <viz.data:FlattenedDataset data="{/GoalStatusRep}">
+                                <viz.data:dimensions>
+                                    <viz.data:DimensionDefinition name="Goal Status" value="{GoalStatus}" />
+                                </viz.data:dimensions>
+                                <viz.data:measures>
+                                    <viz.data:MeasureDefinition name="Number of Goals" value="{NumberOfGoals}" />
+                                </viz.data:measures>
+                            </viz.data:FlattenedDataset>
+                        </viz:dataset>
 
-                    <viz:feeds>
-                        <viz.feeds:FeedItem uid="size" type="Measure" values="Number of Goals" />
-                        <viz.feeds:FeedItem uid="color" type="Dimension" values="Goal Status" />
-                    </viz:feeds>
-                </viz:VizFrame>
-                <viz:Popover id="idPopOver2"></viz:Popover>
-                <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType='pie' width="500px" height="400px" 
-                    class="backgroundColor" vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}">
-                    <viz:dataset>
-                        <viz.data:FlattenedDataset data="{/GoalStatusRep}">
-                            <viz.data:dimensions>
-                                <viz.data:DimensionDefinition name="Goal Status" value="{GoalStatus}" />
-                            </viz.data:dimensions>
-                            <viz.data:measures>
-                                <viz.data:MeasureDefinition name="Number of Goals" value="{NumberOfGoals}" />
-                            </viz.data:measures>
-                        </viz.data:FlattenedDataset>
-                    </viz:dataset>
+                        <viz:feeds>
+                            <viz.feeds:FeedItem uid="size" type="Measure" values="Number of Goals" />
+                            <viz.feeds:FeedItem uid="color" type="Dimension" values="Goal Status" />
+                        </viz:feeds>
+                    </viz:VizFrame>
+                    <viz:Popover id="idPopOver2"></viz:Popover>
+                    <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType='pie' width="500px" height="400px" class="backgroundColor" vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}">
+                        <viz:dataset>
+                            <viz.data:FlattenedDataset data="{/GoalStatusRep}">
+                                <viz.data:dimensions>
+                                    <viz.data:DimensionDefinition name="Goal Status" value="{GoalStatus}" />
+                                </viz.data:dimensions>
+                                <viz.data:measures>
+                                    <viz.data:MeasureDefinition name="Number of Goals" value="{NumberOfGoals}" />
+                                </viz.data:measures>
+                            </viz.data:FlattenedDataset>
+                        </viz:dataset>
 
-                    <viz:feeds>
-                        <viz.feeds:FeedItem uid="size" type="Measure" values="Number of Goals" />
-                        <viz.feeds:FeedItem uid="color" type="Dimension" values="Goal Status" />
-                    </viz:feeds>
-                </viz:VizFrame>
-            </items>
-        </FlexBox>
-        <VBox alignItems="Center">
-        <Image src="./utils/CDP.png"/>
-        <Text text="For Model Representation only"/>
-        <Image src="./utils/SBTi.png"/>
-        <Text text="For Model Representation only"/>        
+                        <viz:feeds>
+                            <viz.feeds:FeedItem uid="size" type="Measure" values="Number of Goals" />
+                            <viz.feeds:FeedItem uid="color" type="Dimension" values="Goal Status" />
+                        </viz:feeds>
+                    </viz:VizFrame>
+                </items>
+            </FlexBox>
+            <FlexBox justifyContent="Center" class="sapUiLargeMargin">
+                <items>
+                    <viz:Popover id="ghgReportPop"></viz:Popover>
+                    <viz:VizFrame id="ghgReport" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='stacked_bar' 
+                        vizProperties="{title: {text: 'GHG Emissions Totals'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        <viz:dataset>
+                            <viz.data:FlattenedDataset data="{ghgData>/}">
+                                <viz.data:dimensions>
+                                    <viz.data:DimensionDefinition name="Supplier Name" value="{ghgData>SupplierName}" />
+                                    <viz.data:DimensionDefinition name="GHG Emissions Totals" value="{ghgData>GHGEmissionsTotals}" />
+                                </viz.data:dimensions>
+                                <viz.data:measures>
+                                    <viz.data:MeasureDefinition name="Value(Metric Ton)" value="{ghgData>Value}" />
+                                </viz.data:measures>
+                            </viz.data:FlattenedDataset>
+                        </viz:dataset>
+
+                        <viz:feeds>
+                            <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Value(Metric Ton)" />
+                            <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Supplier Name" />
+                            <viz.feeds:FeedItem uid="color" type="Dimension" values="GHG Emissions Totals" />
+                        </viz:feeds>
+                    </viz:VizFrame>
+                </items>
+            </FlexBox>
+            <FlexBox justifyContent="Center" class="sapUiLargeMargin">
+                <items>
+                    <viz:Popover id="wasteMeasure"></viz:Popover>
+                    <viz:VizFrame id="wasteMeasureTrend" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='column' 
+                        vizProperties="{title: {text: 'Waste Measured and Trended'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        <viz:dataset>
+                            <viz.data:FlattenedDataset data="{wasData>/}">
+                                <viz.data:dimensions>
+                                    <viz.data:DimensionDefinition name="Supplier Name" value="{wasData>SupplierName}" />
+                                    <viz.data:DimensionDefinition name="Waste Measured and Trended" value="{wasData>WasteMeasuredAndTrended}" />
+                                </viz.data:dimensions>
+                                <viz.data:measures>
+                                    <viz.data:MeasureDefinition name="Value(Metric Ton)" value="{wasData>Value}" />
+                                </viz.data:measures>
+                            </viz.data:FlattenedDataset>
+                        </viz:dataset>
+
+                        <viz:feeds>
+                            <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Value(Metric Ton)" />
+                            <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Supplier Name" />
+                            <viz.feeds:FeedItem uid="color" type="Dimension" values="Waste Measured and Trended" />
+                        </viz:feeds>
+                    </viz:VizFrame>
+                </items>
+            </FlexBox>
+
+            <FlexBox justifyContent="Center" class="sapUiLargeMargin">
+                <items>
+                    <viz:Popover id="wateruse"></viz:Popover>
+                    <viz:VizFrame id="waterUseChart" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='column' 
+                        vizProperties="{title: {text: 'Water Use Target'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        <viz:dataset>
+                            <viz.data:FlattenedDataset data="{waterUse>/}">
+                                <viz.data:dimensions>
+                                    <viz.data:DimensionDefinition name="Supplier Name" value="{waterUse>SupplierName}" />
+                                    <viz.data:DimensionDefinition name="Year" value="{waterUse>Year}" />
+                                </viz.data:dimensions>
+                                <viz.data:measures>
+                                    <viz.data:MeasureDefinition name="Value(Percentage)" value="{waterUse>Value}" />
+                                </viz.data:measures>
+                            </viz.data:FlattenedDataset>
+                        </viz:dataset>
+
+                        <viz:feeds>
+                            <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Value(Percentage)" />
+                             <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Year" />
+                            <viz.feeds:FeedItem uid="color" type="Dimension" values="Supplier Name" />
+                        </viz:feeds>
+                    </viz:VizFrame>
+                </items>
+            </FlexBox>
+
+            <VBox alignItems="Center">
+                <Image src="./utils/CDP.png"/>
+                <Text text="For Model Representation only"/>
+                <Image src="./utils/SBTi.png"/>
+                <Text text="For Model Representation only"/>
+            </VBox>
         </VBox>
+        <dependents>
+            <core:Fragment fragmentName="sustainabilitypro.fragments.BusyDialog" type="XML" />
+        </dependents>
     </Page>
 </mvc:View>

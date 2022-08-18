@@ -7,7 +7,7 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("susproapp.controller.S1", {
+        return Controller.extend("sustainabilitypro.controller.S1", {
             onInit: function () {
                 if(localStorage.getItem('user')){
                     this.getOwnerComponent()._clientId = localStorage.getItem('user');

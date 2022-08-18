@@ -1,9 +1,9 @@
 <mvc:View controllerName="sustainabilitypro.controller.App"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m"
+    xmlns:core="sap.ui.core"
     xmlns:f="sap.f"
     xmlns:tnt="sap.tnt">
-
     <tnt:ToolPage id="toolPage">
         <tnt:header>
             <f:ShellBar title="Sustainability Pro" showMenuButton="true" homeIcon="./utils/logo.png" showCopilot="false" showNotifications="true" menuButtonPressed="onMenuButtonPress" showProductSwitcher="true" notificationsNumber="2">
@@ -18,11 +18,11 @@
         <tnt:sideContent>
             <tnt:SideNavigation id="sideNavigation" selectedKey="rootItem1" itemSelect="onItemSelect">
                 <tnt:NavigationList id="navigationList" width="320px">
-                    <tnt:NavigationListItem text="Dashboard" key="rootItem1" icon="sap-icon://bbyd-dashboard"/>
-                    <tnt:NavigationListItem text="Goals" key="rootItem2" icon="sap-icon://goal"/>
-                    <tnt:NavigationListItem text="Team Management" key="rootItem3" icon="sap-icon://collaborate"/>
-                    <tnt:NavigationListItem text="Reports" key="rootItem4" icon="sap-icon://manager-insight"/>
-                    <tnt:NavigationListItem text="Analytics" key="rootItem5" icon="sap-icon://kpi-corporate-performance"/>
+                    <tnt:NavigationListItem text="Dashboard" key="rootItem1" visible="{auth>/Dashboard/Read}" enabled="{auth>/Dashboard/Write}" icon="sap-icon://bbyd-dashboard"/>
+                    <tnt:NavigationListItem text="Goals" key="rootItem2" visible="{auth>/Goal/Read}" enabled="{auth>/Goal/Write}" icon="sap-icon://goal"/>
+                    <tnt:NavigationListItem text="Team Management" key="rootItem3" visible="{auth>/Team/Read}" enabled="{auth>/Team/Write}" icon="sap-icon://collaborate"/>
+                    <tnt:NavigationListItem text="Reports" key="rootItem4" visible="{auth>/Reports/Read}" enabled="{auth>/Reports/Write}" icon="sap-icon://manager-insight"/>
+                    <tnt:NavigationListItem text="Analytics" key="rootItem5" visible="{auth>/Analytics/Read}" enabled="{auth>/Analytics/Write}" icon="sap-icon://kpi-corporate-performance"/>
                     <tnt:NavigationListItem text="Hierarchical Report" key="rootItem6" icon="sap-icon://tree"/>
                 </tnt:NavigationList>
                 <tnt:fixedItem>

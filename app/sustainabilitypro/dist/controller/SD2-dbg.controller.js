@@ -1,25 +1,27 @@
 sap.ui.define([
-    "sap/ui/core/mvc/Controller",
+    "sustainabilitypro/controller/BaseController",
     "sap/m/Input",
     "sap/m/TextArea",
     "sap/m/DatePicker",
     "sap/ui/layout/form/FormElement",
     "sap/ui/core/Fragment",
-    "../utils/util"
+    "sap/ui/model/Filter",
+    "../utils/util",
+    "sustainabilitypro/controller/oDataHelper" 
 ],
     /**
      * @param {typeof sap.ui.core.mvc.Controller} Controller
      */
-    function (Controller, Input, TextArea, DatePicker, FormElement, Fragment, util) {
+    function (BaseController, Input, TextArea, DatePicker, FormElement, Fragment,Filter, util,oDataHelper) {
         "use strict";
 
-        return Controller.extend("susproapp.controller.SD2", {
+        return BaseController.extend("susproapp.controller.SD2", {
             onInit: function () {
                 if(localStorage.getItem('user')){
                     this.getOwnerComponent()._clientId = localStorage.getItem('user');
                     // this.getView().getParent().getParent().getSideContent().setVisible(true);
                 }
-                this.getOwnerComponent().getRouter().getRoute("detailsd2").attachPatternMatched(this._onRouteMatched, this);
+                this.getRouter().getRoute("detailsd2").attachPatternMatched(this._onRouteMatched, this);
 
                 this._formFragments = {};
 
@@ -29,22 +31,26 @@ sap.ui.define([
             },
             _onRouteMatched: function (oEvent) {
                 this._templateid = oEvent.getParameter("arguments").templateid;
-
-                this.getOwnerComponent().getModel().read("/GoaTemplateFields", {
-                    filters: [new sap.ui.model.Filter({
-                        path: "GoalTemplateID",
-                        operator: 'EQ',
-                        value1: this._templateid
-                    }), new sap.ui.model.Filter({
-                        path: "ClientID",
-                        operator: 'EQ',
-                        value1: this.getOwnerComponent()._clientId
-                    })],
-                    success: function (resp) {
+                var aFilters = [new Filter({
+                    path: "GoalTemplateID",
+                    operator: 'EQ',
+                    value1: this._templateid
+                }), new Filter({
+                    path: "ClientID",
+                    operator: 'EQ',
+                    value1: this.getOwnerComponent()._clientId
+                })];
+                this.openBusyDialog();
+                oDataHelper.callGETOData(this.getModel(),"/GoaTemplateFields",aFilters)
+                .then(function (resp) {
+                    this.closeBusyDialog();
                         this._aFields = resp.results;
                         this._generateFields(resp.results);
-                    }.bind(this)
-                });
+                    }.bind(this))
+                .catch(function(oError){
+                    this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                    this.closeBusyDialog();
+                }.bind(this))
             },
             _generateFields: function (aFields) {
                 var oFormCont = this.byId("FormGoal").getFormContainers()[0];
@@ -75,7 +81,7 @@ sap.ui.define([
             },
             onNavPress: function () {
                 this._toggleButtonsAndView(true);
-                this.getOwnerComponent().getRouter()
+                this.getRouter()
                     .navTo("detailsd1");
             },
             // onPreview: function () {
@@ -92,10 +98,9 @@ sap.ui.define([
             _onSave: function () {
                 //var oModel = new sap.ui.model.json.JSONModel();
                 var finalData = [];
-                var tmpModel = this.getOwnerComponent().getModel();
-                var goalModel = this.getOwnerComponent().getModel("goals");
+                var tmpModel = this.getModel();
+                var goalModel = this.getModel("goals");
                 // tmpModel.setDefaultBindingMode(sap.ui.model.BindingMode.TwoWay);
-                tmpModel.setUseBatch(true);
                 tmpModel.setDeferredGroups(["foo"]);
                 var mParameters = {
                     groupId: "foo",
@@ -127,9 +132,10 @@ sap.ui.define([
                         }
                         sap.m.MessageToast.show("Goal Saved");
                     }.bind(this),
-                    error: function (odata, resp) { 
+                    error: function (oError) { 
                         var oTemplate =  new sap.ui.layout.form.FormElement({label:"{GoalFields/FieldName}",fields:[new sap.m.Text({text:"{FieldValue}"})]});
-                        sap.m.MessageToast.show("Goal Saving Failed"); 
+                        this.openMessageBox(JSON.parse(oError.responseText).error.message.value);
+                        //sap.m.MessageToast.show("Goal Saving Failed"); 
                     }.bind(this)
                 };
 
@@ -185,12 +191,11 @@ sap.ui.define([
                 goalHeaderData.GoalDetails = finalData;
                 goalModel.setProperty("/displayFields",goalHeaderData);
                 tmpModel.create('/GoalHeader', goalHeaderData, mParameters);
-                tmpModel.submitChanges(mParameters);
+                tmpModel.submitChanges();
                 this._toggleButtonsAndView(false);
             },
             _onSubmit:function(){
-                var oModel = this.getOwnerComponent().getModel();
-                oModel.setUseBatch(true);
+                var oModel = this.getModel();
                 oModel.setDeferredGroups(["foo"]);
                 var mParameters = {
                     groupId: "foo",
@@ -240,7 +245,7 @@ sap.ui.define([
 
             handleCancelPress: function () {
 
-                this.getOwnerComponent().getRouter()
+                this.getRouter()
                     .navTo("detailsd1");
 
             },

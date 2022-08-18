@@ -1,6 +1,0 @@
-RoleID,ClientID,RoleName,RoleType,Description,RoleStatus
-RL001,CL0001,Adim Role,T,Admin,Active
-RL002,CL0001,SUser,T,Super User,Active
-RL003,CL0001,HOD,B,HOD,Active
-RL004,CL0001,TeamLead,B,Team Lead,Active
-RL005,CL0001,Manager,B,Manager,Active

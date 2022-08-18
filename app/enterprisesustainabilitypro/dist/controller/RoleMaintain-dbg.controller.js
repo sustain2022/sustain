@@ -27,17 +27,13 @@ sap.ui.define([
                     oEvent.getSource().getToolbar().insertContent(new sap.m.Button({text:"Add", press:this.onAddRoleDialog.bind(this)}), 4);
 
             },
-            addRole: function(oEvent){
-                var oDialog = new sap.m.Dialog({
-
-                });
-            },
             onAddRoleDialog: function(oEvent) {
                 if(!this._oAddDialog){
                         this._oAddDialog = sap.ui.xmlfragment("roleFragment", "enterprisesustainabilitypro.fragments.AddRole", this);
                         this.getView().addDependent(this._oAddDialog);
                 }
-            
+                var oEntry = this.getOwnerComponent().getModel().createEntry("/RoleMaster");
+                this._oAddDialog.getContent()[0].bindElement(oEntry.getPath());
                 // var sPathToBind = oEvent.getSource().getBindingContext().getPath();
                 // sap.ui.core.Fragment.byId("roleFragment","AddRoleForm").bindElement(sPathToBind);
             
@@ -47,7 +43,10 @@ sap.ui.define([
                 this._oAddDialog.close();
             },
             onItemPressed: function(oEvent){
-
+                this.getRouter().navTo("RoleDetails",{RoleID:"34"});
+            },
+            onRoleSave: function(oEvent) {
+                
             },
             onActivateUsers: function(oEvent){
                 var aContexts = this.byId("idEmpUser").getSelectedContexts();

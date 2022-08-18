@@ -1,0 +1,46 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="enterprisesustainabilitypro.controller.RoalDetails"
+    xmlns="sap.uxap"
+    xmlns:m="sap.m"
+    xmlns:blockcolor="sap.uxap.sample.SharedBlocks" height="100%">
+    <ObjectPageLayout id="RoleObjectPage" upperCaseAnchorBar="false">
+        <headerTitle>
+            <ObjectPageHeader objectTitle="Section sample">
+            </ObjectPageHeader>
+        </headerTitle>
+
+        <headerContent>
+            <m:ObjectAttribute title="" text="This example explains the rules for the rendering of sections"/>
+        </headerContent>
+
+        <sections>
+            <ObjectPageSection>
+                <subSections>
+                    <ObjectPageSubSection title="Permissions" showTitle="false">
+                        <blocks>
+                            <m:List headerText="Permissions" items="{/RolePermission}">
+                                <m:items>
+                                    <m:StandardListItem title="{Description}" />
+                                </m:items>
+                            </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+
+            <ObjectPageSection title="Users" showTitle="false">
+                <subSections>
+                    <ObjectPageSubSection title="Users" showTitle="false">
+                        <blocks>
+                            <m:List headerText="Users" items="{/UserAssignedRoles}">
+                                <m:items>
+                                    <m:StandardListItem title="{UserID}" />
+                                </m:items>
+                            </m:List>
+                        </blocks>
+                    </ObjectPageSubSection>
+                </subSections>
+            </ObjectPageSection>
+        </sections>
+
+    </ObjectPageLayout>
+</mvc:View>

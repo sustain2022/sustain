@@ -27,11 +27,6 @@ sap.ui.define([
                     oEvent.getSource().getToolbar().insertContent(new sap.m.Button({text:"Add", press:this.onAddRoleDialog.bind(this)}), 4);
 
             },
-            addRole: function(oEvent){
-                var oDialog = new sap.m.Dialog({
-
-                });
-            },
             onAddRoleDialog: function(oEvent) {
                 if(!this._oAddDialog){
                         this._oAddDialog = sap.ui.xmlfragment("roleFragment", "enterprisesustainabilitypro.fragments.AddRole", this);
@@ -48,7 +43,7 @@ sap.ui.define([
                 this._oAddDialog.close();
             },
             onItemPressed: function(oEvent){
-
+                this.getRouter().navTo("RoleDetails",{RoleID:"34"});
             },
             onRoleSave: function(oEvent) {
                 

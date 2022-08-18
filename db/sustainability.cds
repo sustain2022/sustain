@@ -79,7 +79,7 @@ entity GoalDetails : managed {
     key ClientID       : CLIENT;
     key GoalID         : Integer64;
     key FieldID        : Integer64;
-        FieldValue     : String(40);
+        FieldValue     : String(500);
         GoalFields     : Association to GoalTemplateFields
                              on  GoalFields.FieldID        = FieldID
                              and GoalFields.GoalTemplateID = GoalTemplateID;

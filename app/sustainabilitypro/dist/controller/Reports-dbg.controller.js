@@ -111,12 +111,28 @@ sap.ui.define([
                 var binding = oEvent.getParameter("bindingParams");
                 var oFilter = new sap.ui.model.Filter("TemplateID", 'EQ', sTemplate);
                 binding.filters.push(oFilter);
-
-                this._setColumnHeaders(sTemplate, oEvent.getSource().getTable().getColumns());
-                oEvent.getSource().getTable().setSelectionMode("None");
+                var oTable = oEvent.getSource().getTable();
+                this._setColumnHeaders(sTemplate, oTable.getColumns());
+                oTable.setSelectionMode("None");
+                // var length = oTable.getColumns().length;
+                // for(let i=0; i<length;i++){
+                //     oTable.autoResizeColumn(i);
+                // }
             },
             onInitialise: function (oEvent) {
-
+                oEvent.getSource().getTable().attachRowsUpdated(this._resizeColumns.bind(this));
+                // var oTable = oEvent.getSource().getTable();
+                // var length = oTable.getColumns().length;
+                // for(let i=0; i<length;i++){
+                //     oTable.autoResizeColumn(i);
+                // }
+            },
+            _resizeColumns: function(oEvent){
+                var oTable = oEvent.getSource();
+                var length = oTable.getColumns().length;
+                for(let i=length - 1; i >=0 ;i--){
+                    oTable.autoResizeColumn(i);
+                }
             },
             _setColumnHeaders: function (sTemplate, aColumns) {
                 var pos = this._templates.map(function (e) {
