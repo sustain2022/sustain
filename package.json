@@ -69,7 +69,12 @@
         "kind": "hana-cloud"
       },
       "auth": {
-          "impl": "srv/authentication.js"
+        "impl": "srv/authentication.js"
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana-cloud"
+        }
       }
     }
   },

@@ -11,7 +11,7 @@
             <FlexBox id="flex" alignItems="Start" justifyContent="Center" height="100%" class="sapUiLargeMargin">
                 <items>
                     <viz:Popover id="idPopOver1"></viz:Popover>
-                    <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" vizType='donut' width="500px" height="400px" vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}" class="sapUiLargeMarginEnd backgroundColor">
+                    <viz:VizFrame id="idVizFrame" uiConfig="{applicationSet:'fiori'}" vizType='donut' width="500px" height="400px" vizProperties="{title: {text: 'Goal Status'}, plotArea: {dataLabel: {visible: true}}}" class="sapUiLargeMarginEnd backgroundColor">
                         <viz:dataset>
                             <viz.data:FlattenedDataset data="{/GoalStatusRep}">
                                 <viz.data:dimensions>
@@ -29,7 +29,7 @@
                         </viz:feeds>
                     </viz:VizFrame>
                     <viz:Popover id="idPopOver2"></viz:Popover>
-                    <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType='pie' width="500px" height="400px" class="backgroundColor" vizProperties="{title: {text: 'Goal Stauts'}, plotArea: {dataLabel: {visible: true}}}">
+                    <viz:VizFrame id="idVizFrame1" uiConfig="{applicationSet:'fiori'}" vizType='pie' width="500px" height="400px" class="backgroundColor" vizProperties="{title: {text: 'Goal Status'}, plotArea: {dataLabel: {visible: true}}}">
                         <viz:dataset>
                             <viz.data:FlattenedDataset data="{/GoalStatusRep}">
                                 <viz.data:dimensions>
@@ -52,7 +52,7 @@
                 <items>
                     <viz:Popover id="ghgReportPop"></viz:Popover>
                     <viz:VizFrame id="ghgReport" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='stacked_bar' 
-                        vizProperties="{title: {text: 'GHG Emissions Totals'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        vizProperties="{title: {text: 'Supplier GHG Emissions Total (As per TSP)'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
                         <viz:dataset>
                             <viz.data:FlattenedDataset data="{ghgData>/}">
                                 <viz.data:dimensions>
@@ -77,7 +77,7 @@
                 <items>
                     <viz:Popover id="wasteMeasure"></viz:Popover>
                     <viz:VizFrame id="wasteMeasureTrend" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='column' 
-                        vizProperties="{title: {text: 'Waste Measured and Trended'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        vizProperties="{title: {text: 'Supplier Waste Measured and Trended (As per TSP)'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
                         <viz:dataset>
                             <viz.data:FlattenedDataset data="{wasData>/}">
                                 <viz.data:dimensions>
@@ -103,7 +103,7 @@
                 <items>
                     <viz:Popover id="wateruse"></viz:Popover>
                     <viz:VizFrame id="waterUseChart" uiConfig="{applicationSet:'fiori'}" height='30rem' width="80rem" vizType='column' 
-                        vizProperties="{title: {text: 'Water Use Target'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
+                        vizProperties="{title: {text: 'Supplier Water Use Target (As per TSP)'}, plotArea: {dataLabel: {visible: true}}}" class="backgroundColor">
                         <viz:dataset>
                             <viz.data:FlattenedDataset data="{waterUse>/}">
                                 <viz.data:dimensions>

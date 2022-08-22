@@ -65,10 +65,13 @@
                         </OverflowToolbar>
                     </headerToolbar>
                     <columns>
-                        <Column width="12em">
+                        <Column width="5em">
                             <Text text="Visibility" />
                         </Column>
-                        <Column>
+                        <Column width="9em">
+                            <Text text="Category" />
+                        </Column>
+                        <Column width="17em">
                             <Text text="Goal Name" />
                         </Column>
                         <Column>
@@ -86,14 +89,15 @@
                         <Column>
                             <Text text="% Complete" />
                         </Column>
-                        <Column>
-                            <Text text="System Status" />
+                        <Column width="6em">
+                            <Text text="Sys Status" />
                         </Column>
                     </columns>
                     <items>
                         <ColumnListItem vAlign="Middle" type="{= ${GoalStatus_Sys} === '1' ?  'Inactive' : 'Navigation'}" press="showGoalDetails">
                             <cells>
                                 <Text text="{Visibility}"/>
+                                <Text text="{ImpactCategory}"/>
                                 <Text text="{GoalName}" />
                                 <Text text="{Metric}" />
                                 <Text text="{path:'BeginDate', type: 'sap.ui.model.odata.type.Date'}" />
